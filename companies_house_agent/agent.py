@@ -1,4 +1,3 @@
-from companieshouse import CompaniesHouseClient
 from zoneinfo import ZoneInfo
 from google.adk.agents import Agent, ParallelAgent, SequentialAgent
 from google.adk.tools import agent_tool
