@@ -1,4 +1,3 @@
-
 # Companies House Agent
 
 This project provides a conversational agent powered by the Google ADK framework that can search for and retrieve information about companies from the UK Companies House database.
@@ -35,6 +34,28 @@ python -m companies_house_agent.main
 ```
 
 You can then interact with the agent by typing your queries into the console.
+
+## Testing the Agent with the ADK
+
+The Google Agent Development Kit (ADK) provides a web-based user interface for testing and debugging your agent.
+
+### Installing the ADK
+
+If you haven't already, you can install the ADK using pip:
+
+```bash
+pip install google-adk
+```
+
+### Running the Web UI
+
+To start the ADK web UI, run the following command from the root of the project directory:
+
+```bash
+adk web
+```
+
+This will open a new tab in your web browser with the testing UI. From here, you can interact with your agent, create and save test cases, and inspect the agent's execution trace for debugging.
 
 ## Use Cases
 

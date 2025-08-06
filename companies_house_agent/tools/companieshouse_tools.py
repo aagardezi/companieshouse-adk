@@ -41,14 +41,16 @@ def get_company_officers(company_number:str):
     """
     return chclient.get_company_officers(company_number)
 
-def get_company_filing_history(filing_history_url):
-    """
-    Gets the company filing history .
+# def get_company_filing_history(company_number):
+#     """
+#     Gets the company filing history .
 
-    Args:
-        filing_history_url: A final part of the filings url from the company profile record.
+#     Args:
+#         company_number: The company number.
 
-    Returns:
-        A dictionary containing the filing history.
-    """
-    return chclient.get_company_filing_history(filing_history_url)
+#     Returns:
+#         A dictionary containing the filing history.
+#     """
+#     # company = chclient.get_company_profile(company_number)
+
+#     # return chclient.get_company_filing_history(filing_history_url)

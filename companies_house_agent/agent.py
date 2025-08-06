@@ -3,7 +3,7 @@ from zoneinfo import ZoneInfo
 from google.adk.agents import Agent, ParallelAgent, SequentialAgent
 from google.adk.tools import agent_tool
 from google.adk.tools import google_search
-from .tools.companieshouse_tools import search_companies, get_company_profile, get_company_officers, get_company_filing_history
+from .tools.companieshouse_tools import search_companies, get_company_profile, get_company_officers
 
 search_companies_agent = Agent(
     name="search_companies_agent",
@@ -21,6 +21,22 @@ search_companies_agent = Agent(
     ),
     tools=[search_companies],
     output_key="search_companies_result"
+)
+
+search_companies_google_agent = Agent(
+    name="search_companies_google_agent",
+    model="gemini-2.5-flash",
+    description=(
+        "You are an agent helping to analyse companies and search in google search"
+    ),
+    instruction=(
+        "You are an agent looking searching for companies in the companies house database"
+        "Use the google_search tool to details of a company"
+        "if you retrieive multiple companies, make an assumption about what is the most likely symbol"
+        "return a full summary of the company include employee numbers etc"
+    ),
+    tools=[google_search],
+    output_key="search_companies_google_result"
 )
 
 get_company_profile_agent = Agent(
@@ -78,7 +94,7 @@ company_report_creation_agent =  Agent(
     ),
     instruction=(
         "You are a report creation agent for getting company details in the companies house database"
-        "Input summaries: {company_profile_result}, {company_officers_result}"
+        "Input summaries:{search_companies_google_result}, {company_profile_result}, {company_officers_result}"
         "Use all the above retrieved details to create a report that can be used to assess the company"
         "Make the report detailed and have a section at the end that is a viability assessment of the company"
         "Use only the data retrieved by all the previous agents to asses the company viability"
@@ -86,6 +102,22 @@ company_report_creation_agent =  Agent(
     )
 )
 
+data_retrieval_agent = ParallelAgent(
+    name="data_retrieval_agent",
+    # model="gemini-2.5-flash",
+    description=(
+        "You are an agent that helps a retreive info about a company"
+    ),
+    sub_agents=[get_company_profile_agent,get_company_officers_agent]
+)
+
+sequential_agent = SequentialAgent(
+    name="sequential_agent",
+    description=(
+        "you are the agent that runs the process for collecting the data and creating the report"
+    ),
+    sub_agents=[search_companies_google_agent, search_companies_agent, data_retrieval_agent, company_report_creation_agent]
+)
 
 
 root_agent = Agent(
@@ -97,8 +129,9 @@ root_agent = Agent(
     instruction=(
         "You are a highly skilled companies assessment agent"
         "Always use search_companies_agent to start the process"
+        "Also use the search_companies_google_agent to get an overview of the company"
         "Once the search is complete use all the other agents (get_company_profile_agent, get_company_officers_agent)"
         "finally when you have the data from the company use the company_report_creation_agent to create a final report"
     ),
-    sub_agents=[search_companies_agent, get_company_profile_agent, get_company_officers_agent, company_report_creation_agent]
+    sub_agents=[sequential_agent]
 )
