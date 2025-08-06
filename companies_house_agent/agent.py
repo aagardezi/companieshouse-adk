@@ -33,7 +33,7 @@ get_company_profile_agent = Agent(
         "You are an agent for getting company details in the companies house database"
         "Use the get_company_profile tool to get the details of the company from a company number"
         "the company details including officer details and filing_history_url will be needed for subsequent sub agents"
-        "return the summary of company details in the response including a list of filing_history_url"
+        "return the detailed summary of company details in the response including a list of filing_history_url"
     ),
     tools=[get_company_profile],
     output_key="company_profile_result"
@@ -54,31 +54,31 @@ get_company_officers_agent = Agent(
     output_key="company_officers_result"
 )
 
-get_company_filing_history_agent = Agent(
-    name="get_company_filing_history_agent",
-    model="gemini-2.5-flash",
-    description=(
-        "You are an agent helping to analyse companies filings history from company details from the companies house database"
-    ),
-    instruction=(
-        "You are an agent for getting company filing history details in the companies house database"
-        "Use the get_company_filing_history tool to get the details of the company filings history"
-        "use the filings_url in the company profile retrieved by the get_company_profile_agent"
-        "return the summary of company filings history details in the response"
-    ),
-    tools=[get_company_filing_history],
-    output_key="company_filing_history_result"
-)
+# get_company_filing_history_agent = Agent(
+#     name="get_company_filing_history_agent",
+#     model="gemini-2.5-flash",
+#     description=(
+#         "You are an agent helping to analyse companies filings history from company details from the companies house database"
+#     ),
+#     instruction=(
+#         "You are an agent for getting company filing history details in the companies house database"
+#         "Use the get_company_filing_history tool to get the details of the company filings history"
+#         "use the filings_url in the company profile retrieved by the get_company_profile_agent"
+#         "return the summary of company filings history details in the response"
+#     ),
+#     tools=[get_company_filing_history],
+#     output_key="company_filing_history_result"
+# )
 
 company_report_creation_agent =  Agent(
-    name="get_company_officers_agent",
+    name="company_report_creation_agent",
     model="gemini-2.5-flash",
     description=(
         "You are an agent helping a final report on a company based on the data retrieved from the companies house database"
     ),
     instruction=(
         "You are a report creation agent for getting company details in the companies house database"
-        "Input summaries: {company_profile_result}, {company_officers_result}, {company_filing_history_result}"
+        "Input summaries: {company_profile_result}, {company_officers_result}"
         "Use all the above retrieved details to create a report that can be used to assess the company"
         "Make the report detailed and have a section at the end that is a viability assessment of the company"
         "Use only the data retrieved by all the previous agents to asses the company viability"
@@ -96,9 +96,9 @@ root_agent = Agent(
     ),
     instruction=(
         "You are a highly skilled companies assessment agent"
-        "Use the input and the search_companies_agent to start the process"
-        "use all the other agents (get_company_profile_agent, get_company_officers_agent, get_company_filing_history_agent)"
-        "Once you have the data from the company use the company_report_creation_agent to create a final report"
+        "Always use search_companies_agent to start the process"
+        "Once the search is complete use all the other agents (get_company_profile_agent, get_company_officers_agent)"
+        "finally when you have the data from the company use the company_report_creation_agent to create a final report"
     ),
-    sub_agents=[search_companies_agent, get_company_profile_agent, get_company_officers_agent, get_company_filing_history_agent, company_report_creation_agent]
+    sub_agents=[search_companies_agent, get_company_profile_agent, get_company_officers_agent, company_report_creation_agent]
 )
