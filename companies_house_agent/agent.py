@@ -46,7 +46,9 @@ get_company_profile_agent = Agent(
     ),
     instruction=(
         "You are an agent for getting company details in the companies house database"
-        "Use the get_company_profile tool to get the details of the company from a company number"
+        "The company number has been provided in the search_companies_result below"
+        "Input: {search_companies_result}"
+        "Use the get_company_profile tool to get the details of the company from the company number"
         "the company details including officer details and filing_history_url will be needed for subsequent sub agents"
         "return the detailed summary of company details in the response including a list of filing_history_url"
     ),
@@ -62,6 +64,8 @@ get_company_officers_agent = Agent(
     ),
     instruction=(
         "You are an agent for getting company officer details in the companies house database"
+        "The company number has been provided in the search_companies_result below"
+        "Input: {search_companies_result}"
         "Use the get_company_officers tool to get the details of the company officers from a company number"
         "return the summary of company officer details in the response"
     ),
@@ -93,7 +97,7 @@ company_report_creation_agent =  Agent(
     ),
     instruction=(
         "You are a report creation agent for getting company details in the companies house database"
-        "Input summaries:{search_companies_google_result}, {company_profile_result}, {company_officers_result}"
+        "Input summaries: {search_companies_google_result}, {company_profile_result}, {company_officers_result}"
         "Use all the above retrieved details to create a report that can be used to assess the company"
         "Make the report detailed and have a section at the end that is a viability assessment of the company"
         "Use only the data retrieved by all the previous agents to asses the company viability"
@@ -107,7 +111,7 @@ data_retrieval_agent = ParallelAgent(
     description=(
         "You are an agent that helps a retreive info about a company"
     ),
-    sub_agents=[get_company_profile_agent,get_company_officers_agent]
+    sub_agents=[get_company_profile_agent,get_company_officers_agent,search_companies_google_agent]
 )
 
 sequential_agent = SequentialAgent(
@@ -115,7 +119,7 @@ sequential_agent = SequentialAgent(
     description=(
         "you are the agent that runs the process for collecting the data and creating the report"
     ),
-    sub_agents=[search_companies_google_agent, search_companies_agent, data_retrieval_agent, company_report_creation_agent]
+    sub_agents=[search_companies_agent, data_retrieval_agent, company_report_creation_agent]
 )
 
 
