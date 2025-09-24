@@ -1,5 +1,6 @@
 from zoneinfo import ZoneInfo
 from google.adk.agents import Agent, ParallelAgent, SequentialAgent
+from google.adk.agents.callback_context import CallbackContext
 from google.adk.tools import agent_tool
 from google.adk.tools import google_search
 from .tools.companieshouse_tools import search_companies, get_company_profile, get_company_officers
@@ -89,6 +90,9 @@ get_company_officers_agent = Agent(
 #     output_key="company_filing_history_result"
 # )
 
+def registerendcallback(callback_context: CallbackContext):
+   callback_context.state['final_message'] = True
+
 company_report_creation_agent =  Agent(
     name="company_report_creation_agent",
     model="gemini-2.5-flash",
@@ -102,7 +106,8 @@ company_report_creation_agent =  Agent(
         "Make the report detailed and have a section at the end that is a viability assessment of the company"
         "Use only the data retrieved by all the previous agents to asses the company viability"
         "Make the report comprehensive"
-    )
+    ),
+    after_agent_callback=registerendcallback
 )
 
 data_retrieval_agent = ParallelAgent(
@@ -132,7 +137,6 @@ root_agent = Agent(
     instruction=(
         "You are a highly skilled companies assessment agent"
         "Always use search_companies_agent to start the process"
-        "Also use the search_companies_google_agent to get an overview of the company"
         "Once the search is complete use all the other agents (get_company_profile_agent, get_company_officers_agent)"
         "finally when you have the data from the company use the company_report_creation_agent to create a final report"
     ),
