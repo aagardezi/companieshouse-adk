@@ -4,10 +4,13 @@ from google.adk.agents.callback_context import CallbackContext
 from google.adk.tools import agent_tool
 from google.adk.tools import google_search
 from .tools.companieshouse_tools import search_companies, get_company_profile, get_company_officers
+from .config import config
+
 
 search_companies_agent = Agent(
     name="search_companies_agent",
-    model="gemini-2.5-flash",
+    # model="gemini-2.5-flash",
+    model=config.gemini_model,
     description=(
         "You are an agent helping to analyse companies and search in the companies house database"
     ),
@@ -25,7 +28,8 @@ search_companies_agent = Agent(
 
 search_companies_google_agent = Agent(
     name="search_companies_google_agent",
-    model="gemini-2.5-flash",
+    # model="gemini-2.5-flash",
+    model=config.gemini_model,
     description=(
         "You are an agent helping to analyse companies and search in google search"
     ),
@@ -41,7 +45,8 @@ search_companies_google_agent = Agent(
 
 get_company_profile_agent = Agent(
     name="get_company_profile_agent",
-    model="gemini-2.5-flash",
+    # model="gemini-2.5-flash",
+    model=config.gemini_model,
     description=(
         "You are an agent helping to analyse companies get company details from the companies house database"
     ),
@@ -59,7 +64,8 @@ get_company_profile_agent = Agent(
 
 get_company_officers_agent = Agent(
     name="get_company_officers_agent",
-    model="gemini-2.5-flash",
+    # model="gemini-2.5-flash",
+    model=config.gemini_model,
     description=(
         "You are an agent helping to analyse companies officers from company details from the companies house database"
     ),
@@ -95,7 +101,8 @@ def registerendcallback(callback_context: CallbackContext):
 
 company_report_creation_agent =  Agent(
     name="company_report_creation_agent",
-    model="gemini-2.5-flash",
+    # model="gemini-2.5-flash",
+    model=config.gemini_model,
     description=(
         "You are an agent helping a final report on a company based on the data retrieved from the companies house database"
     ),
@@ -112,7 +119,6 @@ company_report_creation_agent =  Agent(
 
 data_retrieval_agent = ParallelAgent(
     name="data_retrieval_agent",
-    # model="gemini-2.5-flash",
     description=(
         "You are an agent that helps a retreive info about a company"
     ),
@@ -130,7 +136,8 @@ sequential_agent = SequentialAgent(
 
 root_agent = Agent(
     name="company_assessment_agent",
-    model="gemini-2.5-flash",
+    # model="gemini-2.5-flash",
+    model=config.gemini_model,
     description=(
         "You are an agent helping analyse companies listed in the companies house database"
     ),

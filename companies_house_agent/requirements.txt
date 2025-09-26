@@ -1,0 +1,6 @@
+google-adk
+companies-house-api-lib
+requests
+google-cloud-secret-manager
+google-auth
+beautifulsoup4
