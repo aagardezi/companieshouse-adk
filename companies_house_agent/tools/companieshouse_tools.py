@@ -1,5 +1,6 @@
 from companieshouse import CompaniesHouseClient
-import companies_house_agent.tools.helpercode as helpercode
+from . import helpercode
+import requests
 
 PROJECT_ID = helpercode.get_project_id()
 
@@ -15,7 +16,14 @@ def search_companies(search_query:str):
     Returns:
         A dictionary containing the search results.
     """
-    return chclient.search_companies(search_query)
+    try:
+        return chclient.search_companies(search_query)
+    except requests.exceptions.HTTPError as e:
+        if e.response.status_code == 404:
+            return {"items": [], "total_results": 0}
+        raise
+    except Exception as e:
+        return {"error": str(e)}
 
 def get_company_profile(company_number:str):
     """
@@ -27,7 +35,14 @@ def get_company_profile(company_number:str):
     Returns:
         A dictionary containing the company profile.
     """
-    return chclient.get_company_profile(company_number)
+    try:
+        return chclient.get_company_profile(company_number)
+    except requests.exceptions.HTTPError as e:
+        if e.response.status_code == 404:
+            return {"error": "Company not found"}
+        raise
+    except Exception as e:
+        return {"error": str(e)}
 
 def get_company_officers(company_number:str):
     """
@@ -39,18 +54,221 @@ def get_company_officers(company_number:str):
     Returns:
         A dictionary containing the company officers details.
     """
-    return chclient.get_company_officers(company_number)
+    try:
+        return chclient.get_company_officers(company_number)
+    except requests.exceptions.HTTPError as e:
+        if e.response.status_code == 404:
+            return {"items": [], "total_results": 0}
+        raise
+    except Exception as e:
+        return {"error": str(e)}
 
-# def get_company_filing_history(company_number):
-#     """
-#     Gets the company filing history .
+def get_company_address(company_number:str):
+    """
+    Gets the registered office address of a company.
 
-#     Args:
-#         company_number: The company number.
+    Args:
+        company_number: The company number.
 
-#     Returns:
-#         A dictionary containing the filing history.
-#     """
-#     # company = chclient.get_company_profile(company_number)
+    Returns:
+        A dictionary containing the registered office address.
+    """
+    try:
+        return chclient.get_company_registered_office_address(company_number)
+    except requests.exceptions.HTTPError as e:
+        if e.response.status_code == 404:
+            return {"error": "Address not found"}
+        raise
+    except Exception as e:
+        return {"error": str(e)}
 
-#     # return chclient.get_company_filing_history(filing_history_url)
+def get_company_establishments(company_number:str):
+    """
+    Gets the UK establishments of a company.
+
+    Args:
+        company_number: The company number.
+
+    Returns:
+        A dictionary containing the UK establishments.
+    """
+    try:
+        return chclient.get_company_uk_establishments(company_number)
+    except requests.exceptions.HTTPError as e:
+        if e.response.status_code == 404:
+            return {"items": []}
+        raise
+    except Exception as e:
+        return {"error": str(e)}
+
+def get_company_registers(company_number:str):
+    """
+    Gets the company registers.
+
+    Args:
+        company_number: The company number.
+
+    Returns:
+        A dictionary containing the company registers.
+    """
+    try:
+        return chclient.get_company_registers(company_number)
+    except requests.exceptions.HTTPError as e:
+        if e.response.status_code == 404:
+            return {"registers": {}}
+        raise
+    except Exception as e:
+        return {"error": str(e)}
+
+def get_company_exemptions(company_number:str):
+    """
+    Gets the company exemptions.
+
+    Args:
+        company_number: The company number.
+
+    Returns:
+        A dictionary containing the company exemptions.
+    """
+    try:
+        return chclient.get_company_exemptions(company_number)
+    except requests.exceptions.HTTPError as e:
+        if e.response.status_code == 404:
+            return {"exemptions": {}}
+        raise
+    except Exception as e:
+        return {"error": str(e)}
+
+def get_company_charges(company_number:str):
+    """
+    Gets the company charges (mortgages).
+
+    Args:
+        company_number: The company number.
+
+    Returns:
+        A dictionary containing the company charges.
+    """
+    try:
+        return chclient.get_company_charges(company_number)
+    except requests.exceptions.HTTPError as e:
+        if e.response.status_code == 404:
+            return {"items": [], "total_count": 0}
+        raise
+    except Exception as e:
+        return {"error": str(e)}
+
+def get_company_insolvency(company_number:str):
+    """
+    Gets the company insolvency records.
+
+    Args:
+        company_number: The company number.
+
+    Returns:
+        A dictionary containing the insolvency records.
+    """
+    try:
+        return chclient.get_company_insolvency(company_number)
+    except requests.exceptions.HTTPError as e:
+        if e.response.status_code == 404:
+            return {"cases": []}
+        raise
+    except Exception as e:
+        return {"error": str(e)}
+
+def get_company_filing_history(company_number: str):
+    """
+    Gets the company filing history.
+
+    Args:
+        company_number: The company number.
+
+    Returns:
+        A dictionary containing the filing history.
+    """
+    try:
+        return chclient.get_company_filing_history(company_number)
+    except requests.exceptions.HTTPError as e:
+        if e.response.status_code == 404:
+            return {"items": [], "total_count": 0}
+        raise
+    except Exception as e:
+        return {"error": str(e)}
+
+def get_company_filing_detail(company_number: str, transaction_id: str):
+    """
+    Gets the details of a specific company filing.
+
+    Args:
+        company_number: The company number.
+        transaction_id: The transaction ID.
+
+    Returns:
+        A dictionary containing the filing details.
+    """
+    try:
+        return chclient.get_company_filing_detail(company_number, transaction_id)
+    except requests.exceptions.HTTPError as e:
+        if e.response.status_code == 404:
+            return {"error": "Filing not found"}
+        raise
+    except Exception as e:
+        return {"error": str(e)}
+
+def get_corporate_officer_disqualifications(officer_id: str):
+    """
+    Gets corporate officer disqualifications.
+
+    Args:
+        officer_id: The officer ID.
+
+    Returns:
+        A dictionary containing the disqualification details.
+    """
+    try:
+        return chclient.get_corporate_officer_disqualifications(officer_id)
+    except requests.exceptions.HTTPError as e:
+        if e.response.status_code == 404:
+            return {"disqualifications": []}
+        raise
+    except Exception as e:
+        return {"error": str(e)}
+
+def get_natural_officer_disqualifications(officer_id: str):
+    """
+    Gets natural officer disqualifications.
+
+    Args:
+        officer_id: The officer ID.
+
+    Returns:
+        A dictionary containing the disqualification details.
+    """
+    try:
+        return chclient.get_natural_officer_disqualifications(officer_id)
+    except requests.exceptions.HTTPError as e:
+        if e.response.status_code == 404:
+            return {"disqualifications": []}
+        raise
+    except Exception as e:
+        return {"error": str(e)}
+
+def get_office_appointments(officer_id: str):
+    """
+    Gets office appointments for an officer.
+
+    Args:
+        officer_id: The officer ID.
+
+    Returns:
+        A dictionary containing the appointments.
+    """
+    try:
+        return chclient.get_office_appointments(officer_id)
+    except requests.exceptions.HTTPError as e:
+        if e.response.status_code == 404:
+            return {"appointments": []}
+        raise
+    except Exception as e:
+        return {"error": str(e)}

@@ -1,5 +1,5 @@
 google-adk
-companies-house-api-lib
+companies-house-api-lib==0.4
 requests
 google-cloud-secret-manager
 google-auth

@@ -57,6 +57,36 @@ adk web
 
 This will open a new tab in your web browser with the testing UI. From here, you can interact with your agent, create and save test cases, and inspect the agent's execution trace for debugging.
 
+## Recent Updates (v0.4)
+
+The agent has been updated to use version 0.4 of the `companies-house-api-lib`. This update introduces improved filing history capabilities:
+*   **Filing History Listing**: Retrieve a list of filings for a company.
+*   **Filing Details**: Fetch individual filing details (including annotations and detailed descriptions) based on transaction IDs from the list.
+*   **Automatic Detail Fetching**: The agent can now automatically fetch details for the most recent filings when requested, providing richer context for analysis.
+
+## Test Prompts
+
+You can use the following example prompts to test the agent's capabilities:
+
+### Company Search and Profile
+*   "Search for companies named 'Tesla'."
+*   "Get the company profile for 'London Stock Exchange Group'."
+*   "What is the company number for 'DeepMind'?"
+
+### Officers and Appointments
+*   "List the active officers for 'London Stock Exchange Group'."
+*   "Who are the directors of 'DeepMind'?"
+*   "Show appointments for officer 'Lisa Margaret Condron'."
+
+### Filing History and Compliance
+*   "Get the filing history for 'London Stock Exchange Group'."
+*   "What are the 3 most recent filings for company 05369106?"
+*   "Show me the details for the most recent filing of 'DeepMind'."
+
+### Comprehensive Analysis
+*   "Perform a viability assessment for 'London Stock Exchange Group' based on its profile, officers, and filing history."
+*   "Analyze the credit risk for 'Tesla' based on available information."
+
 ## Use Cases
 
 This agent can be used for a variety of purposes, including:

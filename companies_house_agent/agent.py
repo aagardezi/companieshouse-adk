@@ -1,10 +1,146 @@
-from zoneinfo import ZoneInfo
+import os
+import sys
 from google.adk.agents import Agent, ParallelAgent, SequentialAgent
 from google.adk.agents.callback_context import CallbackContext
 from google.adk.tools import agent_tool
 from google.adk.tools import google_search
-from .tools.companieshouse_tools import search_companies, get_company_profile, get_company_officers
+from .tools.companieshouse_tools import (
+    search_companies,
+    get_company_profile,
+    get_company_officers,
+    get_company_address,
+    get_company_establishments,
+    get_company_registers,
+    get_company_exemptions,
+    get_company_charges,
+    get_company_insolvency,
+    get_corporate_officer_disqualifications,
+    get_natural_officer_disqualifications,
+    get_office_appointments,
+    get_company_filing_history,
+    get_company_filing_detail
+)
 from .config import config
+
+
+from google.adk.events.event import Event
+from google.adk.utils.context_utils import Aclosing
+
+class SubAgentEvent(Event):
+    """Event wrapper that hides final response status.
+    
+    This is used to prevent parent agents from breaking their execution loop
+    prematurely when a subagent finishes.
+    """
+    def is_final_response(self) -> bool:
+        return False
+
+# Workaround Patches
+original_seq_run_async_impl = SequentialAgent._run_async_impl
+
+async def workaround_seq_run_async_impl(self, ctx):
+    if not self.sub_agents:
+        return
+
+    from google.adk.agents.sequential_agent import SequentialAgentState
+    agent_state = self._load_agent_state(ctx, SequentialAgentState)
+    start_index = self._get_start_index(agent_state)
+
+    pause_invocation = False
+    resuming_sub_agent = agent_state is not None
+    
+    for i in range(start_index, len(self.sub_agents)):
+        sub_agent = self.sub_agents[i]
+        if not resuming_sub_agent:
+            if ctx.is_resumable:
+                agent_state = SequentialAgentState(current_sub_agent=sub_agent.name)
+                ctx.set_agent_state(self.name, agent_state=agent_state)
+                yield self._create_agent_state_event(ctx)
+
+        async with Aclosing(sub_agent.run_async(ctx)) as agen:
+            async for event in agen:
+                # Wrap event if NOT the last subagent
+                if i < len(self.sub_agents) - 1:
+                    if event.author != self.name:
+                        wrapped_event = SubAgentEvent(author=event.author, content=event.content, timestamp=event.timestamp, actions=event.actions)
+                        yield wrapped_event
+                    else:
+                        yield event
+                else:
+                    # Last subagent, yield unwrapped
+                    yield event
+                
+                if ctx.should_pause_invocation(event):
+                    pause_invocation = True
+
+        if pause_invocation:
+            return
+
+        resuming_sub_agent = False
+
+    if ctx.is_resumable:
+        ctx.set_agent_state(self.name, end_of_agent=True)
+        yield self._create_agent_state_event(ctx)
+
+SequentialAgent._run_async_impl = workaround_seq_run_async_impl
+
+original_parallel_run_async_impl = ParallelAgent._run_async_impl
+
+async def workaround_parallel_run_async_impl(self, ctx):
+    if not self.sub_agents:
+        return
+
+    from google.adk.agents.base_agent import BaseAgentState
+    agent_state = self._load_agent_state(ctx, BaseAgentState)
+    if ctx.is_resumable and agent_state is None:
+        ctx.set_agent_state(self.name, agent_state=BaseAgentState())
+        yield self._create_agent_state_event(ctx)
+
+    agent_runs = []
+    from google.adk.agents.parallel_agent import _create_branch_ctx_for_sub_agent
+    for sub_agent in self.sub_agents:
+        sub_agent_ctx = _create_branch_ctx_for_sub_agent(self, sub_agent, ctx)
+        if not sub_agent_ctx.end_of_agents.get(sub_agent.name):
+            agent_runs.append(sub_agent.run_async(sub_agent_ctx))
+
+    pause_invocation = False
+    try:
+        from google.adk.agents.parallel_agent import _merge_agent_run, _merge_agent_run_pre_3_11
+        merge_func = _merge_agent_run if sys.version_info >= (3, 11) else _merge_agent_run_pre_3_11
+        
+        last_event = None
+        async with Aclosing(merge_func(agent_runs)) as agen:
+            async for event in agen:
+                last_event = event
+                # Always wrap subagent events in ParallelAgent
+                if event.author != self.name:
+                    wrapped_event = SubAgentEvent(author=event.author, content=event.content, timestamp=event.timestamp, actions=event.actions)
+                    yield wrapped_event
+                else:
+                    yield event
+                
+                if ctx.should_pause_invocation(event):
+                    pause_invocation = True
+
+        if pause_invocation:
+            return
+
+        # Yield a final response event if last_event was final
+        if last_event and last_event.is_final_response():
+            final_event = Event(**last_event.model_dump())
+            yield final_event
+
+        if ctx.is_resumable and all(
+            ctx.end_of_agents.get(sub_agent.name) for sub_agent in self.sub_agents
+        ):
+            ctx.set_agent_state(self.name, end_of_agent=True)
+            yield self._create_agent_state_event(ctx)
+
+    finally:
+        for sub_agent_run in agent_runs:
+            await sub_agent_run.aclose()
+
+ParallelAgent._run_async_impl = workaround_parallel_run_async_impl
 
 
 search_companies_agent = Agent(
@@ -80,21 +216,78 @@ get_company_officers_agent = Agent(
     output_key="company_officers_result"
 )
 
-# get_company_filing_history_agent = Agent(
-#     name="get_company_filing_history_agent",
-#     model="gemini-2.5-flash",
-#     description=(
-#         "You are an agent helping to analyse companies filings history from company details from the companies house database"
-#     ),
-#     instruction=(
-#         "You are an agent for getting company filing history details in the companies house database"
-#         "Use the get_company_filing_history tool to get the details of the company filings history"
-#         "use the filings_url in the company profile retrieved by the get_company_profile_agent"
-#         "return the summary of company filings history details in the response"
-#     ),
-#     tools=[get_company_filing_history],
-#     output_key="company_filing_history_result"
-# )
+credit_risk_agent = Agent(
+    name="credit_risk_agent",
+    # model="gemini-2.5-flash",
+    model=config.gemini_model,
+    description=(
+        "You are an agent helping to analyse companies credit risk from company details from the companies house database"
+    ),
+    instruction=(
+        "You are an agent for getting company credit risk details in the companies house database"
+        "The company number has been provided in the search_companies_result below"
+        "Input: {search_companies_result}"
+        "Use the get_company_charges and get_company_insolvency tools to get relevant data"
+        "return the summary of company credit risk details in the response"
+    ),
+    tools=[get_company_charges, get_company_insolvency],
+    output_key="credit_risk_result"
+)
+
+compliance_kyc_agent = Agent(
+    name="compliance_kyc_agent",
+    # model="gemini-2.5-flash",
+    model=config.gemini_model,
+    description=(
+        "You are an agent helping to analyse companies compliance and KYC details from company details from the companies house database"
+    ),
+    instruction=(
+        "You are an agent for getting company compliance and KYC details in the companies house database"
+        "The company number has been provided in the search_companies_result below"
+        "Input: {search_companies_result}"
+        "Use the get_company_officers, get_company_exemptions, get_corporate_officer_disqualifications, get_natural_officer_disqualifications, get_office_appointments tools to get relevant data"
+        "return the summary of company compliance and KYC details in the response"
+    ),
+    tools=[get_company_officers, get_company_exemptions, get_corporate_officer_disqualifications, get_natural_officer_disqualifications, get_office_appointments],
+    output_key="compliance_kyc_result"
+)
+
+corporate_structure_agent = Agent(
+    name="corporate_structure_agent",
+    # model="gemini-2.5-flash",
+    model=config.gemini_model,
+    description=(
+        "You are an agent helping to analyse companies corporate structure from company details from the companies house database"
+    ),
+    instruction=(
+        "You are an agent for getting company corporate structure details in the companies house database"
+        "The company number has been provided in the search_companies_result below"
+        "Input: {search_companies_result}"
+        "Use the get_company_establishments and get_company_registers tools"
+        "return the summary of company corporate structure details in the response"
+    ),
+    tools=[get_company_establishments, get_company_registers],
+    output_key="corporate_structure_result"
+)
+
+filing_history_agent = Agent(
+    name="filing_history_agent",
+    # model="gemini-2.5-flash",
+    model=config.gemini_model,
+    description=(
+        "You are an agent helping to analyse companies filings history from company details from the companies house database"
+    ),
+    instruction=(
+        "You are an agent for getting company filing history details in the companies house database"
+        "The company number has been provided in the search_companies_result below"
+        "Input: {search_companies_result}"
+        "Use the get_company_filing_history tool to get the list of company filings"
+        "Then use the get_company_filing_detail tool to get the details for the 3 most recent filings."
+        "return the summary of company filings history details and the specific details of these 3 filings in the response"
+    ),
+    tools=[get_company_filing_history, get_company_filing_detail],
+    output_key="company_filing_history_result"
+)
 
 def registerendcallback(callback_context: CallbackContext):
    callback_context.state['final_message'] = True
@@ -108,7 +301,7 @@ company_report_creation_agent =  Agent(
     ),
     instruction=(
         "You are a report creation agent for getting company details in the companies house database"
-        "Input summaries: {search_companies_google_result}, {company_profile_result}, {company_officers_result}"
+        "Input summaries: {search_companies_google_result}, {company_profile_result}, {company_officers_result}, {credit_risk_result}, {compliance_kyc_result}, {corporate_structure_result}, {company_filing_history_result}"
         "Use all the above retrieved details to create a report that can be used to assess the company"
         "Make the report detailed and have a section at the end that is a viability assessment of the company"
         "Use only the data retrieved by all the previous agents to asses the company viability"
@@ -122,30 +315,18 @@ data_retrieval_agent = ParallelAgent(
     description=(
         "You are an agent that helps a retreive info about a company"
     ),
-    sub_agents=[get_company_profile_agent,get_company_officers_agent,search_companies_google_agent]
+    sub_agents=[
+        get_company_profile_agent,
+        get_company_officers_agent,
+        search_companies_google_agent,
+        credit_risk_agent,
+        compliance_kyc_agent,
+        corporate_structure_agent,
+        filing_history_agent
+    ]
 )
 
-sequential_agent = SequentialAgent(
-    name="sequential_agent",
-    description=(
-        "you are the agent that runs the process for collecting the data and creating the report"
-    ),
+root_agent = SequentialAgent(
+    name="root_agent",
     sub_agents=[search_companies_agent, data_retrieval_agent, company_report_creation_agent]
-)
-
-
-root_agent = Agent(
-    name="company_assessment_agent",
-    # model="gemini-2.5-flash",
-    model=config.gemini_model,
-    description=(
-        "You are an agent helping analyse companies listed in the companies house database"
-    ),
-    instruction=(
-        "You are a highly skilled companies assessment agent"
-        "Always use search_companies_agent to start the process"
-        "Once the search is complete use all the other agents (get_company_profile_agent, get_company_officers_agent)"
-        "finally when you have the data from the company use the company_report_creation_agent to create a final report"
-    ),
-    sub_agents=[sequential_agent]
 )
