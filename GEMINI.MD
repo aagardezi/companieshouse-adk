@@ -1,5 +1,5 @@
 ## Gemini Added Memories
-- The user prefers to use the `python3.12` command instead of `python3` for executing python scripts.
+- The user prefers to use the `python3` command for executing python scripts.
 
 
 # Guide to Building ADK Agents
