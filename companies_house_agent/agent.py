@@ -24,6 +24,7 @@ from .config import config
 
 
 from google.adk.events.event import Event
+from google.adk.events.event_actions import EventActions
 from google.adk.utils.context_utils import Aclosing
 
 class SubAgentEvent(Event):
@@ -109,9 +110,15 @@ async def workaround_parallel_run_async_impl(self, ctx):
         merge_func = _merge_agent_run if sys.version_info >= (3, 11) else _merge_agent_run_pre_3_11
         
         last_event = None
+        accumulated_state_delta = {}
         async with Aclosing(merge_func(agent_runs)) as agen:
             async for event in agen:
                 last_event = event
+                
+                # Accumulate state delta
+                if event.actions and event.actions.state_delta:
+                    accumulated_state_delta.update(event.actions.state_delta)
+                
                 # Always wrap subagent events in ParallelAgent
                 if event.author != self.name:
                     wrapped_event = SubAgentEvent(author=event.author, content=event.content, timestamp=event.timestamp, actions=event.actions)
@@ -128,6 +135,11 @@ async def workaround_parallel_run_async_impl(self, ctx):
         # Yield a final response event if last_event was final
         if last_event and last_event.is_final_response():
             final_event = Event(**last_event.model_dump())
+            if final_event.actions:
+                final_event.actions.state_delta = accumulated_state_delta
+            else:
+                final_event.actions = EventActions(state_delta=accumulated_state_delta)
+            final_event.author = self.name
             yield final_event
 
         if ctx.is_resumable and all(
