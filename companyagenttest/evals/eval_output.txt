@@ -1,0 +1,38 @@
+/Users/sgardezi/homebrew/lib/python3.12/site-packages/google/adk/evaluation/metric_evaluator_registry.py:106: UserWarning: [EXPERIMENTAL] MetricEvaluatorRegistry: This feature is experimental and may change or be removed in future versions without notice. It may introduce breaking changes at any time.
+  metric_evaluator_registry = MetricEvaluatorRegistry()
+4b6d0dad-8c0c-404d-9a31-6a918d34a685
+/Users/sgardezi/homebrew/lib/python3.12/site-packages/google/adk/evaluation/agent_evaluator.py:153: UserWarning: [EXPERIMENTAL] UserSimulatorProvider: This feature is experimental and may change or be removed in future versions without notice. It may introduce breaking changes at any time.
+  user_simulator_provider = UserSimulatorProvider(
+/Users/sgardezi/homebrew/lib/python3.12/site-packages/google/adk/evaluation/local_eval_service.py:124: UserWarning: [EXPERIMENTAL] UserSimulatorProvider: This feature is experimental and may change or be removed in future versions without notice. It may introduce breaking changes at any time.
+  user_simulator_provider: UserSimulatorProvider = UserSimulatorProvider(),
+/Users/sgardezi/homebrew/lib/python3.12/site-packages/google/adk/evaluation/agent_evaluator.py:557: UserWarning: [EXPERIMENTAL] LocalEvalService: This feature is experimental and may change or be removed in future versions without notice. It may introduce breaking changes at any time.
+  eval_service = LocalEvalService(
+/Users/sgardezi/homebrew/lib/python3.12/site-packages/google/adk/evaluation/simulation/user_simulator_provider.py:77: UserWarning: [EXPERIMENTAL] StaticUserSimulator: This feature is experimental and may change or be removed in future versions without notice. It may introduce breaking changes at any time.
+  return StaticUserSimulator(static_conversation=eval_case.conversation)
+/Users/sgardezi/homebrew/lib/python3.12/site-packages/google/adk/evaluation/simulation/static_user_simulator.py:39: UserWarning: [EXPERIMENTAL] UserSimulator: This feature is experimental and may change or be removed in future versions without notice. It may introduce breaking changes at any time.
+  super().__init__(
+/Users/sgardezi/homebrew/lib/python3.12/site-packages/google/adk/evaluation/simulation/user_simulator_provider.py:77: UserWarning: [EXPERIMENTAL] StaticUserSimulator: This feature is experimental and may change or be removed in future versions without notice. It may introduce breaking changes at any time.
+  return StaticUserSimulator(static_conversation=eval_case.conversation)
+/Users/sgardezi/homebrew/lib/python3.12/site-packages/google/adk/evaluation/simulation/static_user_simulator.py:39: UserWarning: [EXPERIMENTAL] UserSimulator: This feature is experimental and may change or be removed in future versions without notice. It may introduce breaking changes at any time.
+  super().__init__(
+/Users/sgardezi/homebrew/lib/python3.12/site-packages/google/adk/evaluation/simulation/user_simulator_provider.py:77: UserWarning: [EXPERIMENTAL] StaticUserSimulator: This feature is experimental and may change or be removed in future versions without notice. It may introduce breaking changes at any time.
+  return StaticUserSimulator(static_conversation=eval_case.conversation)
+/Users/sgardezi/homebrew/lib/python3.12/site-packages/google/adk/evaluation/simulation/static_user_simulator.py:39: UserWarning: [EXPERIMENTAL] UserSimulator: This feature is experimental and may change or be removed in future versions without notice. It may introduce breaking changes at any time.
+  super().__init__(
+/Users/sgardezi/homebrew/lib/python3.12/site-packages/google/adk/evaluation/simulation/user_simulator_provider.py:77: UserWarning: [EXPERIMENTAL] StaticUserSimulator: This feature is experimental and may change or be removed in future versions without notice. It may introduce breaking changes at any time.
+  return StaticUserSimulator(static_conversation=eval_case.conversation)
+/Users/sgardezi/homebrew/lib/python3.12/site-packages/google/adk/evaluation/simulation/static_user_simulator.py:39: UserWarning: [EXPERIMENTAL] UserSimulator: This feature is experimental and may change or be removed in future versions without notice. It may introduce breaking changes at any time.
+  super().__init__(
+Warning: there are non-text parts in the response: ['function_call'], returning concatenated text result from text parts. Check the full candidates.content.parts accessor to get the full model response.
+/Users/sgardezi/homebrew/lib/python3.12/site-packages/google/cloud/aiplatform/models.py:52: FutureWarning: Support for google-cloud-storage < 3.0.0 will be removed in a future version of google-cloud-aiplatform. Please upgrade to google-cloud-storage >= 3.0.0.
+  from google.cloud.aiplatform.utils import gcs_utils
+Registered metrics in DEFAULT: ['tool_trajectory_avg_score', 'response_evaluation_score', 'response_match_score', 'safety_v1', 'final_response_match_v2', 'rubric_based_final_response_quality_v1', 'hallucinations_v1', 'rubric_based_tool_use_quality_v1', 'per_turn_user_simulator_quality_v1']
+DEBUG RUNNER: _setup_context_for_new_invocation returned invocation_id=e-18ae6889-b9ff-4cee-bf9b-ea2f06205895
+DEBUG RUNNER: _setup_context_for_new_invocation returned invocation_id=e-484d3b4d-5b9f-4744-8798-5dac8cde1ea2
+DEBUG RUNNER: _setup_context_for_new_invocation returned invocation_id=e-c94b27b5-4df1-4459-a66c-9d94576c3bd3
+DEBUG RUNNER: _setup_context_for_new_invocation returned invocation_id=e-32f35198-0cb2-4410-ae2e-fbba14b5b2b8
+Computing Metrics for Evaluation Dataset:   0%|          | 0/1 [00:00<?, ?it/s]Computing Metrics for Evaluation Dataset: 100%|██████████| 1/1 [00:05<00:00,  5.48s/it]Computing Metrics for Evaluation Dataset: 100%|██████████| 1/1 [00:05<00:00,  5.48s/it]
+Computing Metrics for Evaluation Dataset:   0%|          | 0/1 [00:00<?, ?it/s]Computing Metrics for Evaluation Dataset: 100%|██████████| 1/1 [00:05<00:00,  5.08s/it]Computing Metrics for Evaluation Dataset: 100%|██████████| 1/1 [00:05<00:00,  5.08s/it]
+Computing Metrics for Evaluation Dataset:   0%|          | 0/1 [00:00<?, ?it/s]Computing Metrics for Evaluation Dataset: 100%|██████████| 1/1 [00:05<00:00,  5.28s/it]Computing Metrics for Evaluation Dataset: 100%|██████████| 1/1 [00:05<00:00,  5.28s/it]
+Computing Metrics for Evaluation Dataset:   0%|          | 0/1 [00:00<?, ?it/s]Computing Metrics for Evaluation Dataset: 100%|██████████| 1/1 [00:04<00:00,  4.71s/it]Computing Metrics for Evaluation Dataset: 100%|██████████| 1/1 [00:04<00:00,  4.71s/it]
+Evaluations completed successfully.

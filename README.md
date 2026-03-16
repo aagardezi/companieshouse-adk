@@ -57,6 +57,49 @@ adk web
 
 This will open a new tab in your web browser with the testing UI. From here, you can interact with your agent, create and save test cases, and inspect the agent's execution trace for debugging.
 
+## Running Evaluations
+
+This project includes a suite of automated evaluations to verify the agent's performance and tool usage. These evaluations are built using the ADK evaluation framework.
+
+### Prerequisites
+
+Ensure you have installed the dependencies:
+```bash
+pip install -r requirements.txt
+```
+
+### Running the Evals
+
+You can run evaluations using either the `adk eval` command or the provided script.
+
+#### Option 1: Running with `adk eval` (Recommended)
+
+The `adk eval` command provides more configuration options and detailed output. From the root of the project directory, run:
+
+```bash
+adk eval --config_file_path companyagenttest/evals/test_config.json companies_house_agent companyagenttest/evals/companies_house_agent.test.json
+```
+
+**Note**: You must provide the `--config_file_path` to ensure the correct evaluation criteria are applied. You can also add `--print_detailed_results` to see detailed scoring information for each test case.
+
+#### Option 2: Running with `run_evals.py` Script
+
+To run the evaluations using the script, execute it from the `companyagenttest/evals` directory:
+
+```bash
+cd companyagenttest/evals
+python3.12 run_evals.py
+```
+
+This will run the evaluation cases defined in `companies_house_agent.test.json` and display the results. Detailed output, including any failures, will be saved to `eval_output.txt`.
+
+### Evaluation Dataset
+
+The evaluation dataset (`companies_house_agent.test.json`) contains test cases designed to verify:
+-   **UK Company Focus**: The dataset exclusively tests with verified UK companies (e.g., Google UK Limited, Barclays Capital Securities Limited, The Co-mission Churches Trust) to align with Companies House data.
+-   **Tool Trajectory**: Verifies that the agent calls the correct tools in the expected sequence.
+-   **Response Accuracy**: Verifies that the agent provides accurate and concise answers based on the retrieved data.
+
 ## Recent Updates (v0.4)
 
 The agent has been updated to use version 0.4 of the `companies-house-api-lib`. This update introduces improved filing history capabilities:
@@ -78,14 +121,17 @@ You can use the following example prompts to test the agent's capabilities:
 *   "Who are the directors of 'DeepMind'?"
 *   "Show appointments for officer 'Lisa Margaret Condron'."
 
-### Filing History and Compliance
+### Filing History, Charges, and Insolvency
 *   "Get the filing history for 'London Stock Exchange Group'."
 *   "What are the 3 most recent filings for company 05369106?"
 *   "Show me the details for the most recent filing of 'DeepMind'."
+*   "Check if company 07496944 has any charges."
+*   "Does company 07496944 have insolvency records?"
 
 ### Comprehensive Analysis
 *   "Perform a viability assessment for 'London Stock Exchange Group' based on its profile, officers, and filing history."
 *   "Analyze the credit risk for 'Tesla' based on available information."
+*   "Create a comprehensive report on 'London Stock Exchange Group'."
 
 ## Use Cases
 

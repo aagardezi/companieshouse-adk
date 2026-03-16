@@ -1,0 +1,155 @@
+{
+  "eval_set_id": "companies_house_agent_eval_v1",
+  "name": "Companies House Agent Evaluation Set",
+  "description": "Comprehensive evaluation set for Companies House Agent.",
+  "eval_cases": [
+    {
+      "eval_id": "case_1_search_and_details",
+      "conversation": [
+        {
+          "invocation_id": "inv_1",
+          "user_content": {
+            "parts": [
+              {
+                "text": "Search for company GOOGLE UK LIMITED and give me its details."
+              }
+            ],
+            "role": "user"
+          },
+          "final_response": {
+            "parts": [
+              {
+                "text": "The company GOOGLE UK LIMITED, company number 03977902, is active, was incorporated on 2000-04-20, has its registered office at 1 St. Giles High Street, London, United Kingdom, WC2H 8AG, and its last accounts were made up up to 2024-12-31, with the next accounts due on 2026-09-30."
+              }
+            ],
+            "role": "model"
+          },
+          "intermediate_data": {
+            "tool_uses": [
+              {
+                "name": "search_companies",
+                "args": {
+                  "search_query": "GOOGLE UK LIMITED"
+                }
+              },
+              {
+                "name": "get_company_profile",
+                "args": {
+                  "company_number": "03977902"
+                }
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "eval_id": "case_2_officers",
+      "conversation": [
+        {
+          "invocation_id": "inv_2",
+          "user_content": {
+            "parts": [
+              {
+                "text": "Who are the officers of company 07496944?"
+              }
+            ],
+            "role": "user"
+          },
+          "final_response": {
+            "parts": [
+              {
+                "text": "The officers of company 07496944 are secretary Stephen Andrew HATHERALL, and directors Philip David COOPER, Rosemary Patricia DUNN, Gregor James FERGUSON, Chevonese GILHOOLY, John Clive MARLAND, Josephine Elizabeth MATHEW, Robert TURNER, Stephen Finlay Heron LAWES, Gordon William REID, and Mark Lewis VERNON."
+              }
+            ],
+            "role": "model"
+          },
+          "intermediate_data": {
+            "tool_uses": [
+              {
+                "name": "get_company_officers",
+                "args": {
+                  "company_number": "07496944"
+                }
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "eval_id": "case_3_charges_insolvency",
+      "conversation": [
+        {
+          "invocation_id": "inv_3",
+          "user_content": {
+            "parts": [
+              {
+                "text": "Check if company 07496944 has any charges or insolvency records."
+              }
+            ],
+            "role": "user"
+          },
+          "final_response": {
+            "parts": [
+              {
+                "text": "The company 07496944 has 8 charges, two of which are fully satisfied, and no insolvency records."
+              }
+            ],
+            "role": "model"
+          },
+          "intermediate_data": {
+            "tool_uses": [
+              {
+                "name": "get_company_charges",
+                "args": {
+                  "company_number": "07496944"
+                }
+              },
+              {
+                "name": "get_company_insolvency",
+                "args": {
+                  "company_number": "07496944"
+                }
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "eval_id": "case_4_barclays",
+      "conversation": [
+        {
+          "invocation_id": "inv_4",
+          "user_content": {
+            "parts": [
+              {
+                "text": "Get details for company 01929333."
+              }
+            ],
+            "role": "user"
+          },
+          "final_response": {
+            "parts": [
+              {
+                "text": "BARCLAYS CAPITAL SECURITIES LIMITED (Company Number: 01929333) is a private limited company incorporated on 09 July 1985. Its registered office address is 1 Churchill Place, London, E14 5HP."
+              }
+            ],
+            "role": "model"
+          },
+          "intermediate_data": {
+            "tool_uses": [
+              {
+                "name": "get_company_profile",
+                "args": {
+                  "company_number": "01929333"
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}
