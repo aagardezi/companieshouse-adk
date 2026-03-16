@@ -1,0 +1,1583 @@
+{
+  "eval_set_result_id": "companies_house_agent_companies_house_agent_eval_v1_1773625706.885241",
+  "eval_set_result_name": "companies_house_agent_companies_house_agent_eval_v1_1773625706.885241",
+  "eval_set_id": "companies_house_agent_eval_v1",
+  "eval_case_results": [
+    {
+      "eval_set_file": "companies_house_agent_eval_v1",
+      "eval_set_id": "companies_house_agent_eval_v1",
+      "eval_id": "case_3_charges_insolvency",
+      "final_eval_status": 2,
+      "eval_metric_results": null,
+      "overall_eval_metric_results": [
+        {
+          "metric_name": "tool_trajectory_avg_score",
+          "threshold": 0.8,
+          "criterion": {
+            "threshold": 0.8
+          },
+          "custom_function_path": null,
+          "score": 1.0,
+          "eval_status": 1,
+          "details": {
+            "rubric_scores": null
+          }
+        },
+        {
+          "metric_name": "response_evaluation_score",
+          "threshold": 0.8,
+          "criterion": {
+            "threshold": 0.8
+          },
+          "custom_function_path": null,
+          "score": 5.0,
+          "eval_status": 1,
+          "details": {
+            "rubric_scores": null
+          }
+        },
+        {
+          "metric_name": "response_match_score",
+          "threshold": 0.7,
+          "criterion": {
+            "threshold": 0.7
+          },
+          "custom_function_path": null,
+          "score": 0.6153846153846154,
+          "eval_status": 2,
+          "details": {
+            "rubric_scores": null
+          }
+        }
+      ],
+      "eval_metric_result_per_invocation": [
+        {
+          "actual_invocation": {
+            "invocation_id": "e-0d16746f-c112-4d22-be14-ecd5ea9cc0b5",
+            "user_content": {
+              "parts": [
+                {
+                  "media_resolution": null,
+                  "code_execution_result": null,
+                  "executable_code": null,
+                  "file_data": null,
+                  "function_call": null,
+                  "function_response": null,
+                  "inline_data": null,
+                  "text": "Check if company 07496944 has any charges or insolvency records.",
+                  "thought": null,
+                  "thought_signature": null,
+                  "video_metadata": null
+                }
+              ],
+              "role": "user"
+            },
+            "final_response": {
+              "parts": [
+                {
+                  "media_resolution": null,
+                  "code_execution_result": null,
+                  "executable_code": null,
+                  "file_data": null,
+                  "function_call": null,
+                  "function_response": null,
+                  "inline_data": null,
+                  "text": "Company 07496944 has 6 outstanding charges and no insolvency records.",
+                  "thought": null,
+                  "thought_signature": "CqAEAY89a18gT941DvXiFEHjTbXHt4WeC95cHy5Ta2Vg3NbpYDlb7X3hU39rOQExDshOV5bVKoNlrVByKFUkkPqkTfHbN4p0tKV9sCC6h9aN5YYbS1pu5gWoJjODXqdKmW7HNwuAZTaPhwzIWelIFh4UHF-QijfDf_jp2Fhlk7_zTBguE_ny5WO43WF2d8uXPbyo5YLYtjObsCjcxZpgjbp-q7QhJGJ_J8guu8BRJz2FkzMUlEksbk74K5GV1DzJpGxxGpxJHCZpipFOXTRrUGE-WI9DG9IOxh2pEOIW-wdTnHNicJIv_RC-x4FYI6ZoMqyfSFrE6FFb0B51G8je02loCKblEpQ0aJ6ZVnCKK2VTNtTRsJ_PM0t6UbngodUc8z-R05Tn7435a_y-LlQp5V9nJbRlYxQqwbtcplWJVO3yzyw4CyKSyY6uf-0_3bmsHW0OAXs71mxZ4J5o9Shuj4i6XPXsjIinKu4qsrm-APdcsr5sDi5-gEiiKOaakWbfMxWQFuo62esPksfI1Ev-BaZ2_Dx7QaqYiuJzw92nUV2R0OKUIIHdx4j9XqfeOMQos9YPNESDslHpg8804zspvJPTTqsyGEllJDmcX-e5CGzKSofJLiUW470SPcALPM4mZzb6iqwmY3J8IJzEdtI8o894nbmKXZJ5yLypHHnyaP_Qe7ClaSytnFsAsJNfrjelxN8pDuQTtvEn0__iWDuvxHQX2Q==",
+                  "video_metadata": null
+                }
+              ],
+              "role": "model"
+            },
+            "intermediate_data": {
+              "invocation_events": [
+                {
+                  "author": "root_agent",
+                  "content": {
+                    "parts": [
+                      {
+                        "media_resolution": null,
+                        "code_execution_result": null,
+                        "executable_code": null,
+                        "file_data": null,
+                        "function_call": {
+                          "id": "adk-26839aba-a1b1-47bd-8288-09bbdbb59da4",
+                          "args": {
+                            "company_number": "07496944"
+                          },
+                          "name": "get_company_charges",
+                          "partial_args": null,
+                          "will_continue": null
+                        },
+                        "function_response": null,
+                        "inline_data": null,
+                        "text": null,
+                        "thought": null,
+                        "thought_signature": "CqcCAY89a19FbgH3rad5ai4AGzUVPrpd6Q1IffKaR_vEWSqElyYtjnx6L-dkOFrz5YO0YSUKrNx8sRl5m6Q2XHAbPsyleT6x6ZMGC8iA2kdmx-ExjOjX7J9VSf7M1DEJf1z1W_2kb0zIzIfbSKy00D9nl1qqOSi2tVTSWjRKPvR3_8C84U6NqD4FXsTG2wZax0IF79f-DxSl-9Qvv8Yjplw3rt3uAIYrWgvcN71cxM2mk9dmEOTFqBFSYPLzPUrDAQSkY9z3dn9V1gnETGfDQr1Z6wnlYBrwOQKaQMQmzswXVo6OR2kPrY46Umu7VFG4UEBO9owKslCnG8GEPnG9-e2yJfU1n8fKo26ZFpmtYHxGkD1riuItoUouNdo8nkCLMO_lxAaDaXmpyQ==",
+                        "video_metadata": null
+                      },
+                      {
+                        "media_resolution": null,
+                        "code_execution_result": null,
+                        "executable_code": null,
+                        "file_data": null,
+                        "function_call": {
+                          "id": "adk-bd23c7d0-1650-44ff-9b3e-d04814edf97f",
+                          "args": {
+                            "company_number": "07496944"
+                          },
+                          "name": "get_company_insolvency",
+                          "partial_args": null,
+                          "will_continue": null
+                        },
+                        "function_response": null,
+                        "inline_data": null,
+                        "text": null,
+                        "thought": null,
+                        "thought_signature": null,
+                        "video_metadata": null
+                      }
+                    ],
+                    "role": "model"
+                  }
+                },
+                {
+                  "author": "root_agent",
+                  "content": {
+                    "parts": [
+                      {
+                        "media_resolution": null,
+                        "code_execution_result": null,
+                        "executable_code": null,
+                        "file_data": null,
+                        "function_call": null,
+                        "function_response": {
+                          "will_continue": null,
+                          "scheduling": null,
+                          "parts": null,
+                          "id": "adk-26839aba-a1b1-47bd-8288-09bbdbb59da4",
+                          "name": "get_company_charges",
+                          "response": {
+                            "etag": "2447a6fe0cab8dfdd0a68c83fcc21e126c5f37c8",
+                            "total_count": 8,
+                            "unfiltered_count": 8,
+                            "satisfied_count": 2,
+                            "part_satisfied_count": 0,
+                            "items": [
+                              {
+                                "etag": "a9d1c8e8327736ff343a7b523cbf918ac129bddb",
+                                "charge_code": "074969440008",
+                                "classification": {
+                                  "type": "charge-description",
+                                  "description": "A registered charge"
+                                },
+                                "charge_number": 8,
+                                "status": "outstanding",
+                                "delivered_on": "2026-02-09",
+                                "created_on": "2026-02-06",
+                                "particulars": {
+                                  "type": "brief-description",
+                                  "description": "The freehold property known as 92 grand drive, london SW20 9DY and registered at hm land registry with title number SGL286520.",
+                                  "contains_fixed_charge": true,
+                                  "contains_negative_pledge": true
+                                },
+                                "persons_entitled": [
+                                  {
+                                    "name": "Kingdom Bank Limited"
+                                  }
+                                ],
+                                "transactions": [
+                                  {
+                                    "filing_type": "create-charge-with-deed",
+                                    "delivered_on": "2026-02-09",
+                                    "links": {
+                                      "filing": "/company/07496944/filing-history/MzUwMzgyMDA0OGFkaXF6a2N4"
+                                    }
+                                  }
+                                ],
+                                "links": {
+                                  "self": "/company/07496944/charges/wB0ON8m6PFjWKMgor6uuNrMEO_I"
+                                }
+                              },
+                              {
+                                "etag": "079dd35672580a91fca4e2b90e686b092f0b935d",
+                                "charge_code": "074969440007",
+                                "classification": {
+                                  "type": "charge-description",
+                                  "description": "A registered charge"
+                                },
+                                "charge_number": 7,
+                                "status": "outstanding",
+                                "delivered_on": "2025-12-22",
+                                "created_on": "2025-12-19",
+                                "particulars": {
+                                  "type": "brief-description",
+                                  "description": "All that freehold property known as 13 leafield road, sutton SM1 2NH and registered at hm land registry with title number SGL590454.",
+                                  "contains_fixed_charge": true,
+                                  "contains_negative_pledge": true
+                                },
+                                "persons_entitled": [
+                                  {
+                                    "name": "Kingdom Bank Limited"
+                                  }
+                                ],
+                                "transactions": [
+                                  {
+                                    "filing_type": "create-charge-with-deed",
+                                    "delivered_on": "2025-12-22",
+                                    "links": {
+                                      "filing": "/company/07496944/filing-history/MzQ5NTc1OTc4MWFkaXF6a2N4"
+                                    }
+                                  }
+                                ],
+                                "links": {
+                                  "self": "/company/07496944/charges/1CqAJDin0ut2O-XkxUI10XAML58"
+                                }
+                              },
+                              {
+                                "etag": "a651be497227b09e94042214f955af9fedecedf0",
+                                "charge_code": "074969440006",
+                                "classification": {
+                                  "type": "charge-description",
+                                  "description": "A registered charge"
+                                },
+                                "charge_number": 6,
+                                "status": "outstanding",
+                                "delivered_on": "2025-07-30",
+                                "created_on": "2025-07-30",
+                                "particulars": {
+                                  "type": "brief-description",
+                                  "description": "All that leasehold property known as flat 9, 1 limerick close, atkins road, london and parking space SW12 0BQ and registered at the land registry with absolute title under title number TGL416419.",
+                                  "contains_fixed_charge": true,
+                                  "contains_negative_pledge": true
+                                },
+                                "persons_entitled": [
+                                  {
+                                    "name": "Kingdom Bank Limited"
+                                  }
+                                ],
+                                "transactions": [
+                                  {
+                                    "filing_type": "create-charge-with-deed",
+                                    "delivered_on": "2025-07-30",
+                                    "links": {
+                                      "filing": "/company/07496944/filing-history/MzQ3NTY5MjAyOWFkaXF6a2N4"
+                                    }
+                                  }
+                                ],
+                                "links": {
+                                  "self": "/company/07496944/charges/BSjNolHalFOyvOyMmo4A-6XrcAw"
+                                }
+                              },
+                              {
+                                "etag": "cedfd4bbd2fbca3b5eb918f2e84adcc5364e88bf",
+                                "charge_code": "074969440005",
+                                "classification": {
+                                  "type": "charge-description",
+                                  "description": "A registered charge"
+                                },
+                                "charge_number": 5,
+                                "status": "outstanding",
+                                "delivered_on": "2024-04-29",
+                                "created_on": "2024-04-29",
+                                "particulars": {
+                                  "type": "brief-description",
+                                  "description": "All that freehold property known as 53 dyers lane, london, SW156JT and registered at the land registry with absolute title under title number TGL414441.",
+                                  "contains_fixed_charge": true,
+                                  "contains_negative_pledge": true
+                                },
+                                "persons_entitled": [
+                                  {
+                                    "name": "Kingdom Bank Limited"
+                                  }
+                                ],
+                                "transactions": [
+                                  {
+                                    "filing_type": "create-charge-with-deed",
+                                    "delivered_on": "2024-04-29",
+                                    "links": {
+                                      "filing": "/company/07496944/filing-history/MzQyMDA0Mzg5NWFkaXF6a2N4"
+                                    }
+                                  }
+                                ],
+                                "links": {
+                                  "self": "/company/07496944/charges/q1131joOws4RybgNM7Vguu91348"
+                                }
+                              },
+                              {
+                                "etag": "8f76ae3f29ca84ce7a469ea67c99562d9afcea85",
+                                "charge_code": "074969440004",
+                                "classification": {
+                                  "type": "charge-description",
+                                  "description": "A registered charge"
+                                },
+                                "charge_number": 4,
+                                "status": "outstanding",
+                                "delivered_on": "2021-06-14",
+                                "created_on": "2021-06-14",
+                                "particulars": {
+                                  "type": "brief-description",
+                                  "description": "15 wontner road, london, SW17 7QT.",
+                                  "contains_floating_charge": true,
+                                  "contains_fixed_charge": true,
+                                  "contains_negative_pledge": true
+                                },
+                                "persons_entitled": [
+                                  {
+                                    "name": "Reliance Bank Limited"
+                                  }
+                                ],
+                                "transactions": [
+                                  {
+                                    "filing_type": "create-charge-with-deed",
+                                    "delivered_on": "2021-06-14",
+                                    "links": {
+                                      "filing": "/company/07496944/filing-history/MzMwNDMzNjgwOGFkaXF6a2N4"
+                                    }
+                                  }
+                                ],
+                                "links": {
+                                  "self": "/company/07496944/charges/XT5vKQD-JzzwpcHy_5tjC1qsbYM"
+                                }
+                              },
+                              {
+                                "etag": "fb4f86c106f8dda71618021a995b503176265183",
+                                "charge_code": "074969440003",
+                                "classification": {
+                                  "type": "charge-description",
+                                  "description": "A registered charge"
+                                },
+                                "charge_number": 3,
+                                "status": "outstanding",
+                                "delivered_on": "2021-04-29",
+                                "created_on": "2021-04-26",
+                                "particulars": {
+                                  "type": "brief-description",
+                                  "description": "All that freehold property known as 577 kingston road, raynes park, london SW20 8SA registered at the land registry with title number SY327876.",
+                                  "contains_floating_charge": true,
+                                  "contains_negative_pledge": true
+                                },
+                                "persons_entitled": [
+                                  {
+                                    "name": "Kingdom Bank Limited (Company Number 04346834)"
+                                  }
+                                ],
+                                "transactions": [
+                                  {
+                                    "filing_type": "create-charge-with-deed",
+                                    "delivered_on": "2021-04-29",
+                                    "links": {
+                                      "filing": "/company/07496944/filing-history/MzI5OTQzNjIyN2FkaXF6a2N4"
+                                    }
+                                  }
+                                ],
+                                "links": {
+                                  "self": "/company/07496944/charges/jv-JFvbAKoDSdiq9hWifI5yDBhk"
+                                }
+                              },
+                              {
+                                "etag": "3b7f7ecfb8cd7f00881632ec7e5b32b63e31fe11",
+                                "charge_code": "074969440002",
+                                "classification": {
+                                  "type": "charge-description",
+                                  "description": "A registered charge"
+                                },
+                                "charge_number": 2,
+                                "status": "fully-satisfied",
+                                "delivered_on": "2019-10-04",
+                                "created_on": "2019-10-04",
+                                "satisfied_on": "2024-10-10",
+                                "particulars": {
+                                  "type": "brief-description",
+                                  "description": "264 worple road, wimbledon, SW20 8RG and filed at hm land registry under title number SY271510.",
+                                  "contains_negative_pledge": true
+                                },
+                                "persons_entitled": [
+                                  {
+                                    "name": "Reliance Bank Limited"
+                                  }
+                                ],
+                                "transactions": [
+                                  {
+                                    "filing_type": "create-charge-with-deed",
+                                    "delivered_on": "2019-10-04",
+                                    "links": {
+                                      "filing": "/company/07496944/filing-history/MzI0NjA1MDAxNWFkaXF6a2N4"
+                                    }
+                                  },
+                                  {
+                                    "filing_type": "charge-satisfaction",
+                                    "delivered_on": "2024-10-10",
+                                    "links": {
+                                      "filing": "/company/07496944/filing-history/MzQzOTA0Mzg1MGFkaXF6a2N4"
+                                    }
+                                  }
+                                ],
+                                "links": {
+                                  "self": "/company/07496944/charges/I7kXL7DbA987FiC0mC-35-K6M7c"
+                                }
+                              },
+                              {
+                                "etag": "14855514c1e55c7208ab68141290005b0b2f49e2",
+                                "charge_code": "074969440001",
+                                "classification": {
+                                  "type": "charge-description",
+                                  "description": "A registered charge"
+                                },
+                                "charge_number": 1,
+                                "status": "fully-satisfied",
+                                "delivered_on": "2014-02-11",
+                                "created_on": "2014-02-10",
+                                "satisfied_on": "2014-07-15",
+                                "particulars": {
+                                  "type": "brief-description",
+                                  "description": "Notification of addition to or amendment of charge.",
+                                  "contains_floating_charge": true,
+                                  "contains_fixed_charge": true,
+                                  "floating_charge_covers_all": true
+                                },
+                                "persons_entitled": [
+                                  {
+                                    "name": "Barclays Bank PLC"
+                                  }
+                                ],
+                                "transactions": [
+                                  {
+                                    "filing_type": "create-charge-with-deed",
+                                    "delivered_on": "2014-02-11",
+                                    "links": {
+                                      "filing": "/company/07496944/filing-history/MzA5NDMyMzYzOGFkaXF6a2N4"
+                                    }
+                                  },
+                                  {
+                                    "filing_type": "charge-satisfaction",
+                                    "delivered_on": "2014-07-15",
+                                    "links": {
+                                      "filing": "/company/07496944/filing-history/MzEwNDI0NzI5NGFkaXF6a2N4"
+                                    }
+                                  }
+                                ],
+                                "links": {
+                                  "self": "/company/07496944/charges/2AtoEEfRuJOYB05lukPRLMTaZeY"
+                                }
+                              }
+                            ]
+                          }
+                        },
+                        "inline_data": null,
+                        "text": null,
+                        "thought": null,
+                        "thought_signature": null,
+                        "video_metadata": null
+                      },
+                      {
+                        "media_resolution": null,
+                        "code_execution_result": null,
+                        "executable_code": null,
+                        "file_data": null,
+                        "function_call": null,
+                        "function_response": {
+                          "will_continue": null,
+                          "scheduling": null,
+                          "parts": null,
+                          "id": "adk-bd23c7d0-1650-44ff-9b3e-d04814edf97f",
+                          "name": "get_company_insolvency",
+                          "response": {
+                            "cases": []
+                          }
+                        },
+                        "inline_data": null,
+                        "text": null,
+                        "thought": null,
+                        "thought_signature": null,
+                        "video_metadata": null
+                      }
+                    ],
+                    "role": "user"
+                  }
+                }
+              ]
+            },
+            "creation_timestamp": 1773625668.569717,
+            "rubrics": null,
+            "app_details": {
+              "agent_details": {
+                "root_agent": {
+                  "name": "root_agent",
+                  "instructions": "You are a Companies House Assistant. You have access to tools.**Guideline**: Use tools directly to answer specific questions whenever possible.1. If you need to find a company number from a name, use the `search_companies` tool.2. To get general profile details, use the `get_company_profile` tool.3. To get officer details, use the `get_company_officers` tool.4. To check charges, use the `get_company_charges` tool.5. To check insolvency, use the `get_company_insolvency` tool.6. To get filing history, use the `get_company_filing_history` tool.7. To get corporate structure, use the `get_company_establishments` and `get_company_registers` tools.8. If the user explicitly asks for a **full report** or a comprehensive analysis, transfer to `report_generation_agent`.**Important**: You are a concise question-answering system. Answer specific questions in a single **short** natural language sentence. Do NOT use bullet points, lists, headers, or bold text. Just provide the direct answer to the question.\n\nYou are an agent. Your internal name is \"root_agent\". The description about you is \"Companies House Assistant. Uses tools to answer questions, or transfers to report_generation_agent for full reports.\".\n\n\nYou have a list of other agents to transfer to:\n\n\nAgent name: report_generation_agent\nAgent description: Generates a comprehensive report on a company.\n\n\nIf you are the best to answer the question according to your description,\nyou can answer it.\n\nIf another agent is better for answering the question according to its\ndescription, call `transfer_to_agent` function to transfer the question to that\nagent. When transferring, do not generate any text other than the function\ncall.\n\n**NOTE**: the only available agents for `transfer_to_agent` function are\n`report_generation_agent`.\n",
+                  "tool_declarations": [
+                    {
+                      "retrieval": null,
+                      "computer_use": null,
+                      "file_search": null,
+                      "code_execution": null,
+                      "enterprise_web_search": null,
+                      "function_declarations": [
+                        {
+                          "description": "Transfer the question to another agent.\n\nThis tool hands off control to another agent when it's more suitable to\nanswer the user's question according to the agent's description.\n\nNote:\n  For most use cases, you should use TransferToAgentTool instead of this\n  function directly. TransferToAgentTool provides additional enum constraints\n  that prevent LLMs from hallucinating invalid agent names.\n\nArgs:\n  agent_name: the agent name to transfer to.\n",
+                          "name": "transfer_to_agent",
+                          "parameters": {
+                            "additional_properties": null,
+                            "defs": null,
+                            "ref": null,
+                            "any_of": null,
+                            "default": null,
+                            "description": null,
+                            "enum": null,
+                            "example": null,
+                            "format": null,
+                            "items": null,
+                            "max_items": null,
+                            "max_length": null,
+                            "max_properties": null,
+                            "maximum": null,
+                            "min_items": null,
+                            "min_length": null,
+                            "min_properties": null,
+                            "minimum": null,
+                            "nullable": null,
+                            "pattern": null,
+                            "properties": {
+                              "agent_name": {
+                                "additional_properties": null,
+                                "defs": null,
+                                "ref": null,
+                                "any_of": null,
+                                "default": null,
+                                "description": null,
+                                "enum": [
+                                  "report_generation_agent"
+                                ],
+                                "example": null,
+                                "format": null,
+                                "items": null,
+                                "max_items": null,
+                                "max_length": null,
+                                "max_properties": null,
+                                "maximum": null,
+                                "min_items": null,
+                                "min_length": null,
+                                "min_properties": null,
+                                "minimum": null,
+                                "nullable": null,
+                                "pattern": null,
+                                "properties": null,
+                                "property_ordering": null,
+                                "required": null,
+                                "title": null,
+                                "type": "STRING"
+                              }
+                            },
+                            "property_ordering": null,
+                            "required": [
+                              "agent_name"
+                            ],
+                            "title": null,
+                            "type": "OBJECT"
+                          },
+                          "parameters_json_schema": null,
+                          "response": {
+                            "additional_properties": null,
+                            "defs": null,
+                            "ref": null,
+                            "any_of": null,
+                            "default": null,
+                            "description": null,
+                            "enum": null,
+                            "example": null,
+                            "format": null,
+                            "items": null,
+                            "max_items": null,
+                            "max_length": null,
+                            "max_properties": null,
+                            "maximum": null,
+                            "min_items": null,
+                            "min_length": null,
+                            "min_properties": null,
+                            "minimum": null,
+                            "nullable": null,
+                            "pattern": null,
+                            "properties": null,
+                            "property_ordering": null,
+                            "required": null,
+                            "title": null,
+                            "type": "NULL"
+                          },
+                          "response_json_schema": null,
+                          "behavior": null
+                        },
+                        {
+                          "description": "\nGets the profile of a company in the Companies House database based on the given company number.\n\nArgs:\n    company_number: The company number of the company. Usaully returned in the company search response\n\nReturns:\n    A dictionary containing the company profile.\n",
+                          "name": "get_company_profile",
+                          "parameters": {
+                            "additional_properties": null,
+                            "defs": null,
+                            "ref": null,
+                            "any_of": null,
+                            "default": null,
+                            "description": null,
+                            "enum": null,
+                            "example": null,
+                            "format": null,
+                            "items": null,
+                            "max_items": null,
+                            "max_length": null,
+                            "max_properties": null,
+                            "maximum": null,
+                            "min_items": null,
+                            "min_length": null,
+                            "min_properties": null,
+                            "minimum": null,
+                            "nullable": null,
+                            "pattern": null,
+                            "properties": {
+                              "company_number": {
+                                "additional_properties": null,
+                                "defs": null,
+                                "ref": null,
+                                "any_of": null,
+                                "default": null,
+                                "description": null,
+                                "enum": null,
+                                "example": null,
+                                "format": null,
+                                "items": null,
+                                "max_items": null,
+                                "max_length": null,
+                                "max_properties": null,
+                                "maximum": null,
+                                "min_items": null,
+                                "min_length": null,
+                                "min_properties": null,
+                                "minimum": null,
+                                "nullable": null,
+                                "pattern": null,
+                                "properties": null,
+                                "property_ordering": null,
+                                "required": null,
+                                "title": null,
+                                "type": "STRING"
+                              }
+                            },
+                            "property_ordering": null,
+                            "required": [
+                              "company_number"
+                            ],
+                            "title": null,
+                            "type": "OBJECT"
+                          },
+                          "parameters_json_schema": null,
+                          "response": {
+                            "additional_properties": null,
+                            "defs": null,
+                            "ref": null,
+                            "any_of": null,
+                            "default": null,
+                            "description": null,
+                            "enum": null,
+                            "example": null,
+                            "format": null,
+                            "items": null,
+                            "max_items": null,
+                            "max_length": null,
+                            "max_properties": null,
+                            "maximum": null,
+                            "min_items": null,
+                            "min_length": null,
+                            "min_properties": null,
+                            "minimum": null,
+                            "nullable": null,
+                            "pattern": null,
+                            "properties": null,
+                            "property_ordering": null,
+                            "required": null,
+                            "title": null,
+                            "type": null
+                          },
+                          "response_json_schema": null,
+                          "behavior": null
+                        },
+                        {
+                          "description": "\nGets the company officers from the Companies House database based on the given company number.\n\nArgs:\n    company_number: The company number.\n\nReturns:\n    A dictionary containing the company officers details.\n",
+                          "name": "get_company_officers",
+                          "parameters": {
+                            "additional_properties": null,
+                            "defs": null,
+                            "ref": null,
+                            "any_of": null,
+                            "default": null,
+                            "description": null,
+                            "enum": null,
+                            "example": null,
+                            "format": null,
+                            "items": null,
+                            "max_items": null,
+                            "max_length": null,
+                            "max_properties": null,
+                            "maximum": null,
+                            "min_items": null,
+                            "min_length": null,
+                            "min_properties": null,
+                            "minimum": null,
+                            "nullable": null,
+                            "pattern": null,
+                            "properties": {
+                              "company_number": {
+                                "additional_properties": null,
+                                "defs": null,
+                                "ref": null,
+                                "any_of": null,
+                                "default": null,
+                                "description": null,
+                                "enum": null,
+                                "example": null,
+                                "format": null,
+                                "items": null,
+                                "max_items": null,
+                                "max_length": null,
+                                "max_properties": null,
+                                "maximum": null,
+                                "min_items": null,
+                                "min_length": null,
+                                "min_properties": null,
+                                "minimum": null,
+                                "nullable": null,
+                                "pattern": null,
+                                "properties": null,
+                                "property_ordering": null,
+                                "required": null,
+                                "title": null,
+                                "type": "STRING"
+                              }
+                            },
+                            "property_ordering": null,
+                            "required": [
+                              "company_number"
+                            ],
+                            "title": null,
+                            "type": "OBJECT"
+                          },
+                          "parameters_json_schema": null,
+                          "response": {
+                            "additional_properties": null,
+                            "defs": null,
+                            "ref": null,
+                            "any_of": null,
+                            "default": null,
+                            "description": null,
+                            "enum": null,
+                            "example": null,
+                            "format": null,
+                            "items": null,
+                            "max_items": null,
+                            "max_length": null,
+                            "max_properties": null,
+                            "maximum": null,
+                            "min_items": null,
+                            "min_length": null,
+                            "min_properties": null,
+                            "minimum": null,
+                            "nullable": null,
+                            "pattern": null,
+                            "properties": null,
+                            "property_ordering": null,
+                            "required": null,
+                            "title": null,
+                            "type": null
+                          },
+                          "response_json_schema": null,
+                          "behavior": null
+                        },
+                        {
+                          "description": "\nGets the company charges (mortgages).\n\nArgs:\n    company_number: The company number.\n\nReturns:\n    A dictionary containing the company charges.\n",
+                          "name": "get_company_charges",
+                          "parameters": {
+                            "additional_properties": null,
+                            "defs": null,
+                            "ref": null,
+                            "any_of": null,
+                            "default": null,
+                            "description": null,
+                            "enum": null,
+                            "example": null,
+                            "format": null,
+                            "items": null,
+                            "max_items": null,
+                            "max_length": null,
+                            "max_properties": null,
+                            "maximum": null,
+                            "min_items": null,
+                            "min_length": null,
+                            "min_properties": null,
+                            "minimum": null,
+                            "nullable": null,
+                            "pattern": null,
+                            "properties": {
+                              "company_number": {
+                                "additional_properties": null,
+                                "defs": null,
+                                "ref": null,
+                                "any_of": null,
+                                "default": null,
+                                "description": null,
+                                "enum": null,
+                                "example": null,
+                                "format": null,
+                                "items": null,
+                                "max_items": null,
+                                "max_length": null,
+                                "max_properties": null,
+                                "maximum": null,
+                                "min_items": null,
+                                "min_length": null,
+                                "min_properties": null,
+                                "minimum": null,
+                                "nullable": null,
+                                "pattern": null,
+                                "properties": null,
+                                "property_ordering": null,
+                                "required": null,
+                                "title": null,
+                                "type": "STRING"
+                              }
+                            },
+                            "property_ordering": null,
+                            "required": [
+                              "company_number"
+                            ],
+                            "title": null,
+                            "type": "OBJECT"
+                          },
+                          "parameters_json_schema": null,
+                          "response": {
+                            "additional_properties": null,
+                            "defs": null,
+                            "ref": null,
+                            "any_of": null,
+                            "default": null,
+                            "description": null,
+                            "enum": null,
+                            "example": null,
+                            "format": null,
+                            "items": null,
+                            "max_items": null,
+                            "max_length": null,
+                            "max_properties": null,
+                            "maximum": null,
+                            "min_items": null,
+                            "min_length": null,
+                            "min_properties": null,
+                            "minimum": null,
+                            "nullable": null,
+                            "pattern": null,
+                            "properties": null,
+                            "property_ordering": null,
+                            "required": null,
+                            "title": null,
+                            "type": null
+                          },
+                          "response_json_schema": null,
+                          "behavior": null
+                        },
+                        {
+                          "description": "\nGets the company insolvency records.\n\nArgs:\n    company_number: The company number.\n\nReturns:\n    A dictionary containing the insolvency records.\n",
+                          "name": "get_company_insolvency",
+                          "parameters": {
+                            "additional_properties": null,
+                            "defs": null,
+                            "ref": null,
+                            "any_of": null,
+                            "default": null,
+                            "description": null,
+                            "enum": null,
+                            "example": null,
+                            "format": null,
+                            "items": null,
+                            "max_items": null,
+                            "max_length": null,
+                            "max_properties": null,
+                            "maximum": null,
+                            "min_items": null,
+                            "min_length": null,
+                            "min_properties": null,
+                            "minimum": null,
+                            "nullable": null,
+                            "pattern": null,
+                            "properties": {
+                              "company_number": {
+                                "additional_properties": null,
+                                "defs": null,
+                                "ref": null,
+                                "any_of": null,
+                                "default": null,
+                                "description": null,
+                                "enum": null,
+                                "example": null,
+                                "format": null,
+                                "items": null,
+                                "max_items": null,
+                                "max_length": null,
+                                "max_properties": null,
+                                "maximum": null,
+                                "min_items": null,
+                                "min_length": null,
+                                "min_properties": null,
+                                "minimum": null,
+                                "nullable": null,
+                                "pattern": null,
+                                "properties": null,
+                                "property_ordering": null,
+                                "required": null,
+                                "title": null,
+                                "type": "STRING"
+                              }
+                            },
+                            "property_ordering": null,
+                            "required": [
+                              "company_number"
+                            ],
+                            "title": null,
+                            "type": "OBJECT"
+                          },
+                          "parameters_json_schema": null,
+                          "response": {
+                            "additional_properties": null,
+                            "defs": null,
+                            "ref": null,
+                            "any_of": null,
+                            "default": null,
+                            "description": null,
+                            "enum": null,
+                            "example": null,
+                            "format": null,
+                            "items": null,
+                            "max_items": null,
+                            "max_length": null,
+                            "max_properties": null,
+                            "maximum": null,
+                            "min_items": null,
+                            "min_length": null,
+                            "min_properties": null,
+                            "minimum": null,
+                            "nullable": null,
+                            "pattern": null,
+                            "properties": null,
+                            "property_ordering": null,
+                            "required": null,
+                            "title": null,
+                            "type": null
+                          },
+                          "response_json_schema": null,
+                          "behavior": null
+                        },
+                        {
+                          "description": "\nSearches for companies in the Companies House database based on the given search query.\n\nArgs:\n    search_query (str): The search query. Usually a name of a company\n\nReturns:\n    A dictionary containing the search results.\n",
+                          "name": "search_companies",
+                          "parameters": {
+                            "additional_properties": null,
+                            "defs": null,
+                            "ref": null,
+                            "any_of": null,
+                            "default": null,
+                            "description": null,
+                            "enum": null,
+                            "example": null,
+                            "format": null,
+                            "items": null,
+                            "max_items": null,
+                            "max_length": null,
+                            "max_properties": null,
+                            "maximum": null,
+                            "min_items": null,
+                            "min_length": null,
+                            "min_properties": null,
+                            "minimum": null,
+                            "nullable": null,
+                            "pattern": null,
+                            "properties": {
+                              "search_query": {
+                                "additional_properties": null,
+                                "defs": null,
+                                "ref": null,
+                                "any_of": null,
+                                "default": null,
+                                "description": null,
+                                "enum": null,
+                                "example": null,
+                                "format": null,
+                                "items": null,
+                                "max_items": null,
+                                "max_length": null,
+                                "max_properties": null,
+                                "maximum": null,
+                                "min_items": null,
+                                "min_length": null,
+                                "min_properties": null,
+                                "minimum": null,
+                                "nullable": null,
+                                "pattern": null,
+                                "properties": null,
+                                "property_ordering": null,
+                                "required": null,
+                                "title": null,
+                                "type": "STRING"
+                              }
+                            },
+                            "property_ordering": null,
+                            "required": [
+                              "search_query"
+                            ],
+                            "title": null,
+                            "type": "OBJECT"
+                          },
+                          "parameters_json_schema": null,
+                          "response": {
+                            "additional_properties": null,
+                            "defs": null,
+                            "ref": null,
+                            "any_of": null,
+                            "default": null,
+                            "description": null,
+                            "enum": null,
+                            "example": null,
+                            "format": null,
+                            "items": null,
+                            "max_items": null,
+                            "max_length": null,
+                            "max_properties": null,
+                            "maximum": null,
+                            "min_items": null,
+                            "min_length": null,
+                            "min_properties": null,
+                            "minimum": null,
+                            "nullable": null,
+                            "pattern": null,
+                            "properties": null,
+                            "property_ordering": null,
+                            "required": null,
+                            "title": null,
+                            "type": null
+                          },
+                          "response_json_schema": null,
+                          "behavior": null
+                        },
+                        {
+                          "description": "\nGets the UK establishments of a company.\n\nArgs:\n    company_number: The company number.\n\nReturns:\n    A dictionary containing the UK establishments.\n",
+                          "name": "get_company_establishments",
+                          "parameters": {
+                            "additional_properties": null,
+                            "defs": null,
+                            "ref": null,
+                            "any_of": null,
+                            "default": null,
+                            "description": null,
+                            "enum": null,
+                            "example": null,
+                            "format": null,
+                            "items": null,
+                            "max_items": null,
+                            "max_length": null,
+                            "max_properties": null,
+                            "maximum": null,
+                            "min_items": null,
+                            "min_length": null,
+                            "min_properties": null,
+                            "minimum": null,
+                            "nullable": null,
+                            "pattern": null,
+                            "properties": {
+                              "company_number": {
+                                "additional_properties": null,
+                                "defs": null,
+                                "ref": null,
+                                "any_of": null,
+                                "default": null,
+                                "description": null,
+                                "enum": null,
+                                "example": null,
+                                "format": null,
+                                "items": null,
+                                "max_items": null,
+                                "max_length": null,
+                                "max_properties": null,
+                                "maximum": null,
+                                "min_items": null,
+                                "min_length": null,
+                                "min_properties": null,
+                                "minimum": null,
+                                "nullable": null,
+                                "pattern": null,
+                                "properties": null,
+                                "property_ordering": null,
+                                "required": null,
+                                "title": null,
+                                "type": "STRING"
+                              }
+                            },
+                            "property_ordering": null,
+                            "required": [
+                              "company_number"
+                            ],
+                            "title": null,
+                            "type": "OBJECT"
+                          },
+                          "parameters_json_schema": null,
+                          "response": {
+                            "additional_properties": null,
+                            "defs": null,
+                            "ref": null,
+                            "any_of": null,
+                            "default": null,
+                            "description": null,
+                            "enum": null,
+                            "example": null,
+                            "format": null,
+                            "items": null,
+                            "max_items": null,
+                            "max_length": null,
+                            "max_properties": null,
+                            "maximum": null,
+                            "min_items": null,
+                            "min_length": null,
+                            "min_properties": null,
+                            "minimum": null,
+                            "nullable": null,
+                            "pattern": null,
+                            "properties": null,
+                            "property_ordering": null,
+                            "required": null,
+                            "title": null,
+                            "type": null
+                          },
+                          "response_json_schema": null,
+                          "behavior": null
+                        },
+                        {
+                          "description": "\nGets the company registers.\n\nArgs:\n    company_number: The company number.\n\nReturns:\n    A dictionary containing the company registers.\n",
+                          "name": "get_company_registers",
+                          "parameters": {
+                            "additional_properties": null,
+                            "defs": null,
+                            "ref": null,
+                            "any_of": null,
+                            "default": null,
+                            "description": null,
+                            "enum": null,
+                            "example": null,
+                            "format": null,
+                            "items": null,
+                            "max_items": null,
+                            "max_length": null,
+                            "max_properties": null,
+                            "maximum": null,
+                            "min_items": null,
+                            "min_length": null,
+                            "min_properties": null,
+                            "minimum": null,
+                            "nullable": null,
+                            "pattern": null,
+                            "properties": {
+                              "company_number": {
+                                "additional_properties": null,
+                                "defs": null,
+                                "ref": null,
+                                "any_of": null,
+                                "default": null,
+                                "description": null,
+                                "enum": null,
+                                "example": null,
+                                "format": null,
+                                "items": null,
+                                "max_items": null,
+                                "max_length": null,
+                                "max_properties": null,
+                                "maximum": null,
+                                "min_items": null,
+                                "min_length": null,
+                                "min_properties": null,
+                                "minimum": null,
+                                "nullable": null,
+                                "pattern": null,
+                                "properties": null,
+                                "property_ordering": null,
+                                "required": null,
+                                "title": null,
+                                "type": "STRING"
+                              }
+                            },
+                            "property_ordering": null,
+                            "required": [
+                              "company_number"
+                            ],
+                            "title": null,
+                            "type": "OBJECT"
+                          },
+                          "parameters_json_schema": null,
+                          "response": {
+                            "additional_properties": null,
+                            "defs": null,
+                            "ref": null,
+                            "any_of": null,
+                            "default": null,
+                            "description": null,
+                            "enum": null,
+                            "example": null,
+                            "format": null,
+                            "items": null,
+                            "max_items": null,
+                            "max_length": null,
+                            "max_properties": null,
+                            "maximum": null,
+                            "min_items": null,
+                            "min_length": null,
+                            "min_properties": null,
+                            "minimum": null,
+                            "nullable": null,
+                            "pattern": null,
+                            "properties": null,
+                            "property_ordering": null,
+                            "required": null,
+                            "title": null,
+                            "type": null
+                          },
+                          "response_json_schema": null,
+                          "behavior": null
+                        },
+                        {
+                          "description": "\nGets the company filing history.\n\nArgs:\n    company_number: The company number.\n\nReturns:\n    A dictionary containing the filing history.\n",
+                          "name": "get_company_filing_history",
+                          "parameters": {
+                            "additional_properties": null,
+                            "defs": null,
+                            "ref": null,
+                            "any_of": null,
+                            "default": null,
+                            "description": null,
+                            "enum": null,
+                            "example": null,
+                            "format": null,
+                            "items": null,
+                            "max_items": null,
+                            "max_length": null,
+                            "max_properties": null,
+                            "maximum": null,
+                            "min_items": null,
+                            "min_length": null,
+                            "min_properties": null,
+                            "minimum": null,
+                            "nullable": null,
+                            "pattern": null,
+                            "properties": {
+                              "company_number": {
+                                "additional_properties": null,
+                                "defs": null,
+                                "ref": null,
+                                "any_of": null,
+                                "default": null,
+                                "description": null,
+                                "enum": null,
+                                "example": null,
+                                "format": null,
+                                "items": null,
+                                "max_items": null,
+                                "max_length": null,
+                                "max_properties": null,
+                                "maximum": null,
+                                "min_items": null,
+                                "min_length": null,
+                                "min_properties": null,
+                                "minimum": null,
+                                "nullable": null,
+                                "pattern": null,
+                                "properties": null,
+                                "property_ordering": null,
+                                "required": null,
+                                "title": null,
+                                "type": "STRING"
+                              }
+                            },
+                            "property_ordering": null,
+                            "required": [
+                              "company_number"
+                            ],
+                            "title": null,
+                            "type": "OBJECT"
+                          },
+                          "parameters_json_schema": null,
+                          "response": {
+                            "additional_properties": null,
+                            "defs": null,
+                            "ref": null,
+                            "any_of": null,
+                            "default": null,
+                            "description": null,
+                            "enum": null,
+                            "example": null,
+                            "format": null,
+                            "items": null,
+                            "max_items": null,
+                            "max_length": null,
+                            "max_properties": null,
+                            "maximum": null,
+                            "min_items": null,
+                            "min_length": null,
+                            "min_properties": null,
+                            "minimum": null,
+                            "nullable": null,
+                            "pattern": null,
+                            "properties": null,
+                            "property_ordering": null,
+                            "required": null,
+                            "title": null,
+                            "type": null
+                          },
+                          "response_json_schema": null,
+                          "behavior": null
+                        },
+                        {
+                          "description": "\nGets the details of a specific company filing.\n\nArgs:\n    company_number: The company number.\n    transaction_id: The transaction ID.\n\nReturns:\n    A dictionary containing the filing details.\n",
+                          "name": "get_company_filing_detail",
+                          "parameters": {
+                            "additional_properties": null,
+                            "defs": null,
+                            "ref": null,
+                            "any_of": null,
+                            "default": null,
+                            "description": null,
+                            "enum": null,
+                            "example": null,
+                            "format": null,
+                            "items": null,
+                            "max_items": null,
+                            "max_length": null,
+                            "max_properties": null,
+                            "maximum": null,
+                            "min_items": null,
+                            "min_length": null,
+                            "min_properties": null,
+                            "minimum": null,
+                            "nullable": null,
+                            "pattern": null,
+                            "properties": {
+                              "company_number": {
+                                "additional_properties": null,
+                                "defs": null,
+                                "ref": null,
+                                "any_of": null,
+                                "default": null,
+                                "description": null,
+                                "enum": null,
+                                "example": null,
+                                "format": null,
+                                "items": null,
+                                "max_items": null,
+                                "max_length": null,
+                                "max_properties": null,
+                                "maximum": null,
+                                "min_items": null,
+                                "min_length": null,
+                                "min_properties": null,
+                                "minimum": null,
+                                "nullable": null,
+                                "pattern": null,
+                                "properties": null,
+                                "property_ordering": null,
+                                "required": null,
+                                "title": null,
+                                "type": "STRING"
+                              },
+                              "transaction_id": {
+                                "additional_properties": null,
+                                "defs": null,
+                                "ref": null,
+                                "any_of": null,
+                                "default": null,
+                                "description": null,
+                                "enum": null,
+                                "example": null,
+                                "format": null,
+                                "items": null,
+                                "max_items": null,
+                                "max_length": null,
+                                "max_properties": null,
+                                "maximum": null,
+                                "min_items": null,
+                                "min_length": null,
+                                "min_properties": null,
+                                "minimum": null,
+                                "nullable": null,
+                                "pattern": null,
+                                "properties": null,
+                                "property_ordering": null,
+                                "required": null,
+                                "title": null,
+                                "type": "STRING"
+                              }
+                            },
+                            "property_ordering": null,
+                            "required": [
+                              "company_number",
+                              "transaction_id"
+                            ],
+                            "title": null,
+                            "type": "OBJECT"
+                          },
+                          "parameters_json_schema": null,
+                          "response": {
+                            "additional_properties": null,
+                            "defs": null,
+                            "ref": null,
+                            "any_of": null,
+                            "default": null,
+                            "description": null,
+                            "enum": null,
+                            "example": null,
+                            "format": null,
+                            "items": null,
+                            "max_items": null,
+                            "max_length": null,
+                            "max_properties": null,
+                            "maximum": null,
+                            "min_items": null,
+                            "min_length": null,
+                            "min_properties": null,
+                            "minimum": null,
+                            "nullable": null,
+                            "pattern": null,
+                            "properties": null,
+                            "property_ordering": null,
+                            "required": null,
+                            "title": null,
+                            "type": null
+                          },
+                          "response_json_schema": null,
+                          "behavior": null
+                        }
+                      ],
+                      "google_maps": null,
+                      "google_search": null,
+                      "google_search_retrieval": null,
+                      "url_context": null
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "expected_invocation": {
+            "invocation_id": "inv_3",
+            "user_content": {
+              "parts": [
+                {
+                  "media_resolution": null,
+                  "code_execution_result": null,
+                  "executable_code": null,
+                  "file_data": null,
+                  "function_call": null,
+                  "function_response": null,
+                  "inline_data": null,
+                  "text": "Check if company 07496944 has any charges or insolvency records.",
+                  "thought": null,
+                  "thought_signature": null,
+                  "video_metadata": null
+                }
+              ],
+              "role": "user"
+            },
+            "final_response": {
+              "parts": [
+                {
+                  "media_resolution": null,
+                  "code_execution_result": null,
+                  "executable_code": null,
+                  "file_data": null,
+                  "function_call": null,
+                  "function_response": null,
+                  "inline_data": null,
+                  "text": "The company 07496944 has 8 charges, two of which are fully satisfied, and no insolvency records.",
+                  "thought": null,
+                  "thought_signature": null,
+                  "video_metadata": null
+                }
+              ],
+              "role": "model"
+            },
+            "intermediate_data": {
+              "tool_uses": [
+                {
+                  "id": null,
+                  "args": {
+                    "company_number": "07496944"
+                  },
+                  "name": "get_company_charges",
+                  "partial_args": null,
+                  "will_continue": null
+                },
+                {
+                  "id": null,
+                  "args": {
+                    "company_number": "07496944"
+                  },
+                  "name": "get_company_insolvency",
+                  "partial_args": null,
+                  "will_continue": null
+                }
+              ],
+              "tool_responses": [],
+              "intermediate_responses": []
+            },
+            "creation_timestamp": 0.0,
+            "rubrics": null,
+            "app_details": null
+          },
+          "eval_metric_results": [
+            {
+              "metric_name": "tool_trajectory_avg_score",
+              "threshold": 0.8,
+              "criterion": {
+                "threshold": 0.8
+              },
+              "custom_function_path": null,
+              "score": 1.0,
+              "eval_status": 1,
+              "details": {
+                "rubric_scores": null
+              }
+            },
+            {
+              "metric_name": "response_evaluation_score",
+              "threshold": 0.8,
+              "criterion": {
+                "threshold": 0.8
+              },
+              "custom_function_path": null,
+              "score": 5.0,
+              "eval_status": 1,
+              "details": {
+                "rubric_scores": null
+              }
+            },
+            {
+              "metric_name": "response_match_score",
+              "threshold": 0.7,
+              "criterion": {
+                "threshold": 0.7
+              },
+              "custom_function_path": null,
+              "score": 0.6153846153846154,
+              "eval_status": 2,
+              "details": {
+                "rubric_scores": null
+              }
+            }
+          ]
+        }
+      ],
+      "session_id": "___eval___session___a6cb0292-7cad-4547-bd04-ebb7f73b5ec8",
+      "session_details": null,
+      "user_id": "test_user_id"
+    }
+  ],
+  "creation_timestamp": 1773625706.885241
+}

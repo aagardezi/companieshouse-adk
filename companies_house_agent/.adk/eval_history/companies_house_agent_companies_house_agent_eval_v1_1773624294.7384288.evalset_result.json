@@ -1,0 +1,1527 @@
+{
+  "eval_set_result_id": "companies_house_agent_companies_house_agent_eval_v1_1773624294.7384288",
+  "eval_set_result_name": "companies_house_agent_companies_house_agent_eval_v1_1773624294.7384288",
+  "eval_set_id": "companies_house_agent_eval_v1",
+  "eval_case_results": [
+    {
+      "eval_set_file": "companies_house_agent_eval_v1",
+      "eval_set_id": "companies_house_agent_eval_v1",
+      "eval_id": "case_1_search_and_details",
+      "final_eval_status": 1,
+      "eval_metric_results": null,
+      "overall_eval_metric_results": [
+        {
+          "metric_name": "tool_trajectory_avg_score",
+          "threshold": 0.8,
+          "criterion": {
+            "threshold": 0.8
+          },
+          "custom_function_path": null,
+          "score": 1.0,
+          "eval_status": 1,
+          "details": {
+            "rubric_scores": null
+          }
+        },
+        {
+          "metric_name": "response_evaluation_score",
+          "threshold": 0.8,
+          "criterion": {
+            "threshold": 0.8
+          },
+          "custom_function_path": null,
+          "score": 5.0,
+          "eval_status": 1,
+          "details": {
+            "rubric_scores": null
+          }
+        },
+        {
+          "metric_name": "response_match_score",
+          "threshold": 0.7,
+          "criterion": {
+            "threshold": 0.7
+          },
+          "custom_function_path": null,
+          "score": 0.8135593220338982,
+          "eval_status": 1,
+          "details": {
+            "rubric_scores": null
+          }
+        }
+      ],
+      "eval_metric_result_per_invocation": [
+        {
+          "actual_invocation": {
+            "invocation_id": "e-379609a8-9a1a-4632-b2d8-8bd93815f4af",
+            "user_content": {
+              "parts": [
+                {
+                  "media_resolution": null,
+                  "code_execution_result": null,
+                  "executable_code": null,
+                  "file_data": null,
+                  "function_call": null,
+                  "function_response": null,
+                  "inline_data": null,
+                  "text": "Search for company GOOGLE UK LIMITED and give me its details.",
+                  "thought": null,
+                  "thought_signature": null,
+                  "video_metadata": null
+                }
+              ],
+              "role": "user"
+            },
+            "final_response": {
+              "parts": [
+                {
+                  "media_resolution": null,
+                  "code_execution_result": null,
+                  "executable_code": null,
+                  "file_data": null,
+                  "function_call": null,
+                  "function_response": null,
+                  "inline_data": null,
+                  "text": "GOOGLE UK LIMITED (company number 03977902) was incorporated on 2000-04-20, is active, and its registered office address is 1 St. Giles High Street, London, United Kingdom, WC2H 8AG.",
+                  "thought": null,
+                  "thought_signature": "CpMCAY89a18bwug1ebbhMLAaMNhrX3brz8r2lrQdzLcgvwKqX2G4p8C97C6FOV-odDV2bXigQGn4C9D6XQn7LwY83tntB9yEBIOdWsztIeXNwjC-TiQi1DXqIQuWRyEu0_tBUG2tNTQLnMWZuBLAxzRdvx-q8Qyh-kqUrBfEUxoU736ECLHTUfhEFiQrT0-5riGg_Ypfn-um6PPFD4kY-Onc7lsiYSbgxkbcahptJgrJNyrkghCvajJT0T4u1clORZTS3Q4t7Afqb7chLOuJEyfChx3lfJ40eSkdNZ3L2cWXRstoCFcBvIuxuUTPBkemuEwog3xvJ1rhaB4ahZcGpjtWoPDWNXd-AFKPIRVM2B-VVRBpUe0=",
+                  "video_metadata": null
+                }
+              ],
+              "role": "model"
+            },
+            "intermediate_data": {
+              "invocation_events": [
+                {
+                  "author": "root_agent",
+                  "content": {
+                    "parts": [
+                      {
+                        "media_resolution": null,
+                        "code_execution_result": null,
+                        "executable_code": null,
+                        "file_data": null,
+                        "function_call": {
+                          "id": "adk-cbaff388-048f-4845-bcf6-f90910dcc348",
+                          "args": {
+                            "search_query": "GOOGLE UK LIMITED"
+                          },
+                          "name": "search_companies",
+                          "partial_args": null,
+                          "will_continue": null
+                        },
+                        "function_response": null,
+                        "inline_data": null,
+                        "text": null,
+                        "thought": null,
+                        "thought_signature": "CvkEAY89a18OdFH9TPEYKxIGj-6xGY64whEKEuTP7d0LzVbl1Vkby9xcCCaMRy1HdIhpTe1XK35zaxcCShjbp74p9yIWn_Bn7RODoMGjJwx2hiHy4zQmUYthwHRzHpd3dm83qTuaBJx8qS_OGOQum1-t6mBEwiDK13IsDb888OaDKi3vBD8FvbgjP06YIYDIDMmiwwKiCdzY1cFxXjbZL4AMqCNQkBZtKTo1tn4xfrCWL6qcVfZ1nSjUCBAzwH3m1O4MJ8wKVgj2BfmWjgjYke0pap_dhQnue0EkK9GMVB4I2sYdpJ83KY-zs5GnnaZV1WBHIO_HqKRyNqyVTwhao9wxCHZYwE1FONb8G1d9Y5-LblbmurERZINXzcZJQ1pHOEB1nCEe-O1i714JU3VkMu-BWDq_xXf1IidzJOxJJrhPeJFojPbyRFawI2clf9TZeuMW-zJ2rcUpkz16Bvs3PAnYjZPxZJA1mR6na2W_QZp-7Kh1H3D06hFifIJyjoYPym8wWIlJ-xZvBlqS4FQAZUmIqNs75jkPTqpLhjz-rnQAFQemSk7cI8nBVthynYjRHr8RdfGSZG8hU1ygHRDq3l7mJ-oGWa2NpGuumQP7RXX2qj_DGd10tQUYZ-2tEHprLZfQVKNQy8Hib_gMeCHQl8hodrPw2KaL6S0g8X7fM50ShaD8JaL2pXY0Da4jA84VyLFIYi2ONGq2azEU27yJ8DHBm1QLAnauIkQP0AivRZvOGcNaJs8xXTofXgjrEg57dv6LuNqC1nHUmEvX3o4UQ8CoZGZZKV-3wztzDa-BM_qwtTHaKX7E1WXRJoNIN9OkRbg35k66Qu4Ah068",
+                        "video_metadata": null
+                      }
+                    ],
+                    "role": "model"
+                  }
+                },
+                {
+                  "author": "root_agent",
+                  "content": {
+                    "parts": [
+                      {
+                        "media_resolution": null,
+                        "code_execution_result": null,
+                        "executable_code": null,
+                        "file_data": null,
+                        "function_call": null,
+                        "function_response": {
+                          "will_continue": null,
+                          "scheduling": null,
+                          "parts": null,
+                          "id": "adk-cbaff388-048f-4845-bcf6-f90910dcc348",
+                          "name": "search_companies",
+                          "response": {
+                            "items": [
+                              {
+                                "kind": "searchresults#company",
+                                "description_identifier": [
+                                  "incorporated-on"
+                                ],
+                                "company_status": "active",
+                                "date_of_creation": "2000-04-20",
+                                "company_type": "ltd",
+                                "company_number": "03977902",
+                                "address": {
+                                  "address_line_1": "St. Giles High Street",
+                                  "country": "United Kingdom",
+                                  "locality": "London",
+                                  "postal_code": "WC2H 8AG",
+                                  "premises": "1"
+                                },
+                                "title": "GOOGLE UK LIMITED",
+                                "address_snippet": "1 St. Giles High Street, London, United Kingdom, WC2H 8AG",
+                                "description": "03977902 - Incorporated on 20 April 2000",
+                                "links": {
+                                  "self": "/company/03977902"
+                                },
+                                "snippet": "",
+                                "matches": {
+                                  "snippet": []
+                                }
+                              },
+                              {
+                                "kind": "searchresults#company",
+                                "description_identifier": [
+                                  "incorporated-on"
+                                ],
+                                "company_status": "active",
+                                "date_of_creation": "2024-12-27",
+                                "company_type": "ltd",
+                                "company_number": "16153698",
+                                "address": {
+                                  "address_line_1": "Westrow Drive",
+                                  "country": "England",
+                                  "locality": "Barking",
+                                  "postal_code": "IG11 9BL",
+                                  "premises": "33"
+                                },
+                                "title": "GOOGLE(UK) LIMITED",
+                                "address_snippet": "33 Westrow Drive, Barking, England, IG11 9BL",
+                                "description": "16153698 - Incorporated on 27 December 2024",
+                                "links": {
+                                  "self": "/company/16153698"
+                                },
+                                "snippet": "",
+                                "matches": {
+                                  "snippet": []
+                                }
+                              },
+                              {
+                                "kind": "searchresults#company",
+                                "description_identifier": [
+                                  "dissolved-on"
+                                ],
+                                "company_status": "dissolved",
+                                "date_of_creation": "2020-11-19",
+                                "date_of_cessation": "2022-08-02",
+                                "company_type": "ltd",
+                                "company_number": "13031578",
+                                "address": {
+                                  "address_line_1": "Acworth Crescent",
+                                  "country": "England",
+                                  "locality": "Luton",
+                                  "postal_code": "LU4 9JB",
+                                  "premises": "147"
+                                },
+                                "title": "GOOGLE UK 1 LIMITED",
+                                "address_snippet": "147 Acworth Crescent, Luton, England, LU4 9JB",
+                                "description": "13031578 - Dissolved on 2 August 2022",
+                                "links": {
+                                  "self": "/company/13031578"
+                                },
+                                "snippet": "",
+                                "matches": {
+                                  "snippet": []
+                                }
+                              },
+                              {
+                                "kind": "searchresults#company",
+                                "description_identifier": [
+                                  "incorporated-on"
+                                ],
+                                "company_status": "active",
+                                "date_of_creation": "2025-02-09",
+                                "company_type": "ltd",
+                                "company_number": "16239033",
+                                "address": {
+                                  "address_line_1": "Periman Close",
+                                  "country": "England",
+                                  "locality": "Newmarket",
+                                  "postal_code": "CB8 0SU",
+                                  "premises": "46"
+                                },
+                                "title": "GOOGLE CARS UK LIMITED",
+                                "address_snippet": "46 Periman Close, Newmarket, England, CB8 0SU",
+                                "description": "16239033 - Incorporated on 9 February 2025",
+                                "links": {
+                                  "self": "/company/16239033"
+                                },
+                                "snippet": "",
+                                "matches": {
+                                  "snippet": []
+                                }
+                              },
+                              {
+                                "kind": "searchresults#company",
+                                "description_identifier": [
+                                  "opened-on"
+                                ],
+                                "company_status": "open",
+                                "date_of_creation": "2014-06-24",
+                                "company_type": "uk-establishment",
+                                "company_number": "BR017040",
+                                "address": {
+                                  "address_line_1": "St Giles High Street",
+                                  "locality": "London",
+                                  "postal_code": "WC2H 8AG",
+                                  "premises": "1"
+                                },
+                                "title": "GOOGLE COMMERCE LIMITED UK ESTABLISHMENT",
+                                "address_snippet": "1 St Giles High Street, London, WC2H 8AG",
+                                "description": "BR017040 - Opened on 24 June 2014",
+                                "links": {
+                                  "self": "/company/BR017040"
+                                },
+                                "snippet": "",
+                                "matches": {
+                                  "snippet": []
+                                }
+                              },
+                              {
+                                "kind": "searchresults#company",
+                                "description_identifier": [
+                                  "first-uk-establishment-opened-on"
+                                ],
+                                "company_status": "active",
+                                "date_of_creation": "2014-06-24",
+                                "company_type": "oversea-company",
+                                "company_number": "FC031970",
+                                "address": {
+                                  "address_line_1": "Sir John Rogerson'S Quay",
+                                  "country": "Ireland",
+                                  "locality": "Dublin 2",
+                                  "premises": "70"
+                                },
+                                "title": "GOOGLE COMMERCE LIMITED UK ESTABLISHMENT",
+                                "address_snippet": "70 Sir John Rogerson'S Quay, Dublin 2, Ireland",
+                                "description": "FC031970 - First UK establishment opened on 24 June 2014",
+                                "links": {
+                                  "self": "/company/FC031970"
+                                },
+                                "snippet": "",
+                                "matches": {
+                                  "snippet": []
+                                }
+                              },
+                              {
+                                "kind": "searchresults#company",
+                                "description_identifier": [
+                                  "incorporated-on"
+                                ],
+                                "company_status": "active",
+                                "date_of_creation": "2023-02-08",
+                                "company_type": "ltd",
+                                "company_number": "14649837",
+                                "address": {
+                                  "address_line_1": "Warwick Road",
+                                  "country": "England",
+                                  "locality": "Henley-In-Arden",
+                                  "postal_code": "B95 5BH",
+                                  "premises": "207"
+                                },
+                                "title": "GOOGLE CONNECT UK LTD",
+                                "address_snippet": "207 Warwick Road, Henley-In-Arden, England, B95 5BH",
+                                "description": "14649837 - Incorporated on 8 February 2023",
+                                "links": {
+                                  "self": "/company/14649837"
+                                },
+                                "snippet": "",
+                                "matches": {
+                                  "snippet": []
+                                }
+                              },
+                              {
+                                "kind": "searchresults#company",
+                                "description_identifier": [
+                                  "incorporated-on"
+                                ],
+                                "company_status": "active",
+                                "date_of_creation": "2017-08-04",
+                                "company_type": "ltd",
+                                "company_number": "10901160",
+                                "address": {
+                                  "address_line_1": "New Street Square",
+                                  "country": "United Kingdom",
+                                  "locality": "London",
+                                  "postal_code": "EC4A 3TW",
+                                  "premises": "5"
+                                },
+                                "title": "GOOGLE ENGINEERING UK HOLDINGS LIMITED",
+                                "address_snippet": "5 New Street Square, London, United Kingdom, EC4A 3TW",
+                                "description": "10901160 - Incorporated on 4 August 2017",
+                                "links": {
+                                  "self": "/company/10901160"
+                                },
+                                "snippet": "",
+                                "matches": {
+                                  "snippet": []
+                                }
+                              },
+                              {
+                                "kind": "searchresults#company",
+                                "description_identifier": [
+                                  "incorporated-on"
+                                ],
+                                "company_status": "active",
+                                "date_of_creation": "2019-01-28",
+                                "company_type": "ltd",
+                                "company_number": "11791281",
+                                "address": {
+                                  "address_line_1": "New Street Square",
+                                  "country": "United Kingdom",
+                                  "locality": "London",
+                                  "postal_code": "EC4A 3TW",
+                                  "premises": "5"
+                                },
+                                "title": "GOOGLE HEALTH UK LIMITED",
+                                "address_snippet": "5 New Street Square, London, United Kingdom, EC4A 3TW",
+                                "description": "11791281 - Incorporated on 28 January 2019",
+                                "links": {
+                                  "self": "/company/11791281"
+                                },
+                                "snippet": "",
+                                "matches": {
+                                  "snippet": []
+                                }
+                              },
+                              {
+                                "kind": "searchresults#company",
+                                "description_identifier": [
+                                  "incorporated-on"
+                                ],
+                                "company_status": "active",
+                                "date_of_creation": "2025-06-16",
+                                "company_type": "ltd",
+                                "company_number": "16520783",
+                                "address": {
+                                  "address_line_1": "St. Giles High Street",
+                                  "country": "United Kingdom",
+                                  "locality": "London",
+                                  "postal_code": "WC2H 8AG",
+                                  "premises": "1"
+                                },
+                                "title": "GOOGLE STORE UK LIMITED",
+                                "address_snippet": "1 St. Giles High Street, London, United Kingdom, WC2H 8AG",
+                                "description": "16520783 - Incorporated on 16 June 2025",
+                                "links": {
+                                  "self": "/company/16520783"
+                                },
+                                "snippet": "",
+                                "matches": {
+                                  "snippet": []
+                                }
+                              },
+                              {
+                                "kind": "searchresults#company",
+                                "description_identifier": [
+                                  "incorporated-on"
+                                ],
+                                "company_status": "active",
+                                "date_of_creation": "2025-09-01",
+                                "company_type": "ltd",
+                                "company_number": "16686970",
+                                "address": {
+                                  "address_line_1": "Canada Square",
+                                  "country": "England",
+                                  "locality": "London",
+                                  "postal_code": "E14 5AB",
+                                  "premises": "1"
+                                },
+                                "title": "UK GOOGLE BUSINESS SUPPORT & EMPLOYMENT ALLIANCE LTD",
+                                "address_snippet": "1 Canada Square, London, England, E14 5AB",
+                                "description": "16686970 - Incorporated on 1 September 2025",
+                                "links": {
+                                  "self": "/company/16686970"
+                                },
+                                "snippet": "",
+                                "matches": {
+                                  "snippet": []
+                                }
+                              },
+                              {
+                                "kind": "searchresults#company",
+                                "description_identifier": [
+                                  "dissolved-on"
+                                ],
+                                "company_status": "dissolved",
+                                "date_of_creation": "2020-06-01",
+                                "date_of_cessation": "2022-03-22",
+                                "company_type": "ltd",
+                                "company_number": "12636686",
+                                "address": {
+                                  "address_line_1": "West Dumpton Lane",
+                                  "country": "England",
+                                  "locality": "Ramsgate",
+                                  "postal_code": "CT11 7BL",
+                                  "premises": "96"
+                                },
+                                "title": "GOOGLE ACADEMY UK LTD",
+                                "address_snippet": "96 West Dumpton Lane, Ramsgate, England, CT11 7BL",
+                                "description": "12636686 - Dissolved on 22 March 2022",
+                                "links": {
+                                  "self": "/company/12636686"
+                                },
+                                "snippet": "",
+                                "matches": {
+                                  "snippet": []
+                                }
+                              },
+                              {
+                                "kind": "searchresults#company",
+                                "description_identifier": [
+                                  "dissolved-on"
+                                ],
+                                "company_status": "dissolved",
+                                "date_of_creation": "2016-02-17",
+                                "date_of_cessation": "2016-08-23",
+                                "company_type": "ltd",
+                                "company_number": "10009361",
+                                "address": {
+                                  "address_line_1": "New Street Square",
+                                  "country": "United Kingdom",
+                                  "locality": "London",
+                                  "postal_code": "EC4A 3TW",
+                                  "premises": "5"
+                                },
+                                "title": "GOOGLE CLOUD UK LIMITED",
+                                "address_snippet": "5 New Street Square, London, United Kingdom, EC4A 3TW",
+                                "description": "10009361 - Dissolved on 23 August 2016",
+                                "links": {
+                                  "self": "/company/10009361"
+                                },
+                                "snippet": "",
+                                "matches": {
+                                  "snippet": []
+                                }
+                              },
+                              {
+                                "kind": "searchresults#company",
+                                "description_identifier": [
+                                  "incorporated-on"
+                                ],
+                                "company_status": "active",
+                                "date_of_creation": "2014-08-20",
+                                "company_type": "ltd",
+                                "company_number": "09183796",
+                                "address": {
+                                  "address_line_1": "New Street Square",
+                                  "locality": "London",
+                                  "postal_code": "EC4A 3TW",
+                                  "premises": "5"
+                                },
+                                "title": "GV UK MANAGEMENT COMPANY, LIMITED",
+                                "address_snippet": "5 New Street Square, London, EC4A 3TW",
+                                "description": "09183796 - Incorporated on 20 August 2014",
+                                "links": {
+                                  "self": "/company/09183796"
+                                },
+                                "snippet": "GOOGLE VENTURES UK MANAGEMENT COMPANY,",
+                                "matches": {
+                                  "snippet": []
+                                }
+                              },
+                              {
+                                "kind": "searchresults#company",
+                                "description_identifier": [
+                                  "dissolved-on"
+                                ],
+                                "company_status": "dissolved",
+                                "date_of_creation": "2012-06-26",
+                                "date_of_cessation": "2014-02-04",
+                                "company_type": "ltd",
+                                "company_number": "08118754",
+                                "address": {
+                                  "address_line_1": "Rose Lane",
+                                  "country": "England",
+                                  "locality": "Romford",
+                                  "postal_code": "RM6 5LP",
+                                  "premises": "106"
+                                },
+                                "title": "GOOGLERZ UK LIMITED",
+                                "address_snippet": "106 Rose Lane, Romford, England, RM6 5LP",
+                                "description": "08118754 - Dissolved on 4 February 2014",
+                                "links": {
+                                  "self": "/company/08118754"
+                                },
+                                "snippet": "",
+                                "matches": {
+                                  "snippet": []
+                                }
+                              },
+                              {
+                                "kind": "searchresults#company",
+                                "description_identifier": [
+                                  "dissolved-on"
+                                ],
+                                "company_status": "dissolved",
+                                "date_of_creation": "2011-10-10",
+                                "date_of_cessation": "2013-05-21",
+                                "company_type": "ltd",
+                                "company_number": "07803211",
+                                "address": {
+                                  "address_line_1": "Connaught Close",
+                                  "country": "England",
+                                  "locality": "Maidenhead",
+                                  "postal_code": "SL6 7SQ",
+                                  "premises": "9"
+                                },
+                                "title": "GOOGLE TRADERS UK LTD",
+                                "address_snippet": "9 Connaught Close, Maidenhead, England, SL6 7SQ",
+                                "description": "07803211 - Dissolved on 21 May 2013",
+                                "links": {
+                                  "self": "/company/07803211"
+                                },
+                                "snippet": "",
+                                "matches": {
+                                  "snippet": []
+                                }
+                              },
+                              {
+                                "kind": "searchresults#company",
+                                "description_identifier": [
+                                  "dissolved-on"
+                                ],
+                                "company_status": "dissolved",
+                                "date_of_creation": "2019-04-01",
+                                "date_of_cessation": "2021-01-19",
+                                "company_type": "ltd",
+                                "company_number": "11918659",
+                                "address": {
+                                  "address_line_1": "Richardshaw Lane",
+                                  "address_line_2": "Stanningley",
+                                  "country": "England",
+                                  "locality": "Pudsey",
+                                  "postal_code": "LS28 6BN",
+                                  "premises": "118"
+                                },
+                                "title": "GOO GLE UK GROUP LTD",
+                                "address_snippet": "118 Richardshaw Lane, Stanningley, Pudsey, England, LS28 6BN",
+                                "description": "11918659 - Dissolved on 19 January 2021",
+                                "links": {
+                                  "self": "/company/11918659"
+                                },
+                                "snippet": "",
+                                "matches": {
+                                  "snippet": []
+                                }
+                              },
+                              {
+                                "kind": "searchresults#company",
+                                "description_identifier": [
+                                  "incorporated-on"
+                                ],
+                                "company_status": "active",
+                                "date_of_creation": "2019-12-20",
+                                "company_type": "ltd",
+                                "company_number": "12372612",
+                                "address": {
+                                  "address_line_1": "Windsor Street",
+                                  "country": "England",
+                                  "locality": "Uxbridge",
+                                  "postal_code": "UB8 1AB",
+                                  "premises": "52a"
+                                },
+                                "title": "CAR GOOGLE LTD",
+                                "address_snippet": "52a Windsor Street, Uxbridge, England, UB8 1AB",
+                                "description": "12372612 - Incorporated on 20 December 2019",
+                                "links": {
+                                  "self": "/company/12372612"
+                                },
+                                "snippet": "",
+                                "matches": {
+                                  "snippet": []
+                                }
+                              },
+                              {
+                                "kind": "searchresults#company",
+                                "description_identifier": [
+                                  "incorporated-on"
+                                ],
+                                "company_status": "active",
+                                "date_of_creation": "2025-04-02",
+                                "company_type": "ltd",
+                                "company_number": "16360624",
+                                "address": {
+                                  "address_line_1": "Floor College House",
+                                  "address_line_2": "17 King Edwards Road,",
+                                  "country": "United Kingdom",
+                                  "locality": "Ruislip,",
+                                  "postal_code": "HA4 7AE",
+                                  "premises": "2nd",
+                                  "region": "London,"
+                                },
+                                "title": "COMPUTER CHAP - DIGITAL COWBOY SCHOOL - GOOGLE MY BUSINESS PROFILE MAPS MARKETING AND AI SERVICES LIMITED",
+                                "address_snippet": "2nd Floor College House, 17 King Edwards Road,, Ruislip,, London,, United Kingdom, HA4 7AE",
+                                "description": "16360624 - Incorporated on 2 April 2025",
+                                "links": {
+                                  "self": "/company/16360624"
+                                },
+                                "snippet": "",
+                                "matches": {
+                                  "snippet": []
+                                }
+                              },
+                              {
+                                "kind": "searchresults#company",
+                                "description_identifier": [
+                                  "incorporated-on"
+                                ],
+                                "company_status": "active",
+                                "date_of_creation": "2025-06-05",
+                                "company_type": "ltd",
+                                "company_number": "16498345",
+                                "address": {
+                                  "address_line_1": "Shap",
+                                  "country": "United Kingdom",
+                                  "locality": "Penrith",
+                                  "postal_code": "CA10 3NY",
+                                  "premises": "Fell View"
+                                },
+                                "title": "GOGGLEBY STONE LTD",
+                                "address_snippet": "Fell View, Shap, Penrith, United Kingdom, CA10 3NY",
+                                "description": "16498345 - Incorporated on 5 June 2025",
+                                "links": {
+                                  "self": "/company/16498345"
+                                },
+                                "snippet": "GOOGLEBY STONE",
+                                "matches": {
+                                  "snippet": []
+                                }
+                              }
+                            ],
+                            "kind": "search#companies",
+                            "page_number": 1,
+                            "items_per_page": 20,
+                            "total_results": 10000,
+                            "start_index": 0
+                          }
+                        },
+                        "inline_data": null,
+                        "text": null,
+                        "thought": null,
+                        "thought_signature": null,
+                        "video_metadata": null
+                      }
+                    ],
+                    "role": "user"
+                  }
+                },
+                {
+                  "author": "root_agent",
+                  "content": {
+                    "parts": [
+                      {
+                        "media_resolution": null,
+                        "code_execution_result": null,
+                        "executable_code": null,
+                        "file_data": null,
+                        "function_call": {
+                          "id": "adk-2fb47c5b-bf8a-4742-abe8-f5f6c9fcba36",
+                          "args": {
+                            "company_number": "03977902"
+                          },
+                          "name": "get_company_profile",
+                          "partial_args": null,
+                          "will_continue": null
+                        },
+                        "function_response": null,
+                        "inline_data": null,
+                        "text": null,
+                        "thought": null,
+                        "thought_signature": "CoUDAY89a19IkwJljW-V8Ll_Jn5n8p6hxkYeDWuROWirIcV_3NTvIEm-Zl4Y4x2Yp7MEZg2Z3jfHA4njNEL8JegnUK8BYE-Zt_5FIW0w1AdrLzn0y6vfkVaCyDwp00Yu_uGMjlQ350ulTqfj7NIHygMoijCzPmkmZ8xyC1bb88oKjsuAe-LL1nfqOoASQdB8j2MNnlm8gC9HNr53n4--_CHa59VcfCat32bog5aFhC6tV8shPtFc3TH22W7c7cVdED_gMLaBtoyeBj00_2uYt2BfDQH8E6v6-mLHtT2lGqgG21G9uQzL4iEEXmP4tfWxrRsccrXSduZe7aUE-K97wRevW790tqD_o1x2fZiXIuSio2q0XtxLqcILGYTRHEXfqDcUg6_mxyzvnoRUdCWXdDiy1JF9cw40nzJlJ7oTY5s7dumG0e7wVBUcdnyq-65x2h-61HLvw0afJNOUBPYQS7-kAN-kTRcRKqu1sBoU69rRhbQaCJ56H7ptfcX9Nz97EPEF-GXlv5Y=",
+                        "video_metadata": null
+                      }
+                    ],
+                    "role": "model"
+                  }
+                },
+                {
+                  "author": "root_agent",
+                  "content": {
+                    "parts": [
+                      {
+                        "media_resolution": null,
+                        "code_execution_result": null,
+                        "executable_code": null,
+                        "file_data": null,
+                        "function_call": null,
+                        "function_response": {
+                          "will_continue": null,
+                          "scheduling": null,
+                          "parts": null,
+                          "id": "adk-2fb47c5b-bf8a-4742-abe8-f5f6c9fcba36",
+                          "name": "get_company_profile",
+                          "response": {
+                            "accounts": {
+                              "accounting_reference_date": {
+                                "day": "31",
+                                "month": "12"
+                              },
+                              "last_accounts": {
+                                "made_up_to": "2024-12-31",
+                                "period_end_on": "2024-12-31",
+                                "period_start_on": "2024-01-01",
+                                "type": "full"
+                              },
+                              "next_accounts": {
+                                "due_on": "2026-09-30",
+                                "overdue": false,
+                                "period_end_on": "2025-12-31",
+                                "period_start_on": "2025-01-01"
+                              },
+                              "next_due": "2026-09-30",
+                              "next_made_up_to": "2025-12-31",
+                              "overdue": false
+                            },
+                            "can_file": true,
+                            "company_name": "GOOGLE UK LIMITED",
+                            "company_number": "03977902",
+                            "company_status": "active",
+                            "confirmation_statement": {
+                              "last_made_up_to": "2025-04-20",
+                              "next_due": "2026-05-04",
+                              "next_made_up_to": "2026-04-20",
+                              "overdue": false
+                            },
+                            "date_of_creation": "2000-04-20",
+                            "etag": "9e8cbc1c3704e62502f6703edd764951140264de",
+                            "has_been_liquidated": false,
+                            "has_charges": false,
+                            "has_insolvency_history": false,
+                            "jurisdiction": "england-wales",
+                            "last_full_members_list_date": "2016-04-20",
+                            "links": {
+                              "persons_with_significant_control": "/company/03977902/persons-with-significant-control",
+                              "self": "/company/03977902",
+                              "charges": "/company/03977902/charges",
+                              "filing_history": "/company/03977902/filing-history",
+                              "officers": "/company/03977902/officers"
+                            },
+                            "previous_company_names": [
+                              {
+                                "ceased_on": "2000-05-04",
+                                "effective_from": "2000-04-20",
+                                "name": "LAW 2138 LIMITED"
+                              }
+                            ],
+                            "registered_office_address": {
+                              "address_line_1": "1 St. Giles High Street",
+                              "country": "United Kingdom",
+                              "locality": "London",
+                              "postal_code": "WC2H 8AG"
+                            },
+                            "registered_office_is_in_dispute": false,
+                            "sic_codes": [
+                              "82990"
+                            ],
+                            "type": "ltd",
+                            "undeliverable_registered_office_address": false,
+                            "has_super_secure_pscs": false
+                          }
+                        },
+                        "inline_data": null,
+                        "text": null,
+                        "thought": null,
+                        "thought_signature": null,
+                        "video_metadata": null
+                      }
+                    ],
+                    "role": "user"
+                  }
+                }
+              ]
+            },
+            "creation_timestamp": 1773624255.9845,
+            "rubrics": null,
+            "app_details": {
+              "agent_details": {
+                "root_agent": {
+                  "name": "root_agent",
+                  "instructions": "You are a Companies House Assistant. You have access to tools and specialized sub-agents.**Guideline**: Use tools directly to answer specific questions whenever possible. Transfer to specialized sub-agents only for complex tasks or if explicitly requested.1. If you need to find a company number from a name, use the `search_companies` tool.2. To get general profile details, use the `get_company_profile` tool.3. To get officer details, use the `get_company_officers` tool.4. To check charges, use the `get_company_charges` tool.5. To check insolvency, use the `get_company_insolvency` tool.6. For complex queries involving credit risk, compliance, or corporate structure, you can still transfer to the relevant specialized agents (`credit_risk_agent`, `compliance_kyc_agent`, etc.).7. If the user explicitly asks for a **full report** or a comprehensive analysis, transfer to `company_report_creation_agent` (ensure you have gathered relevant data first).**Important**: You are a concise question-answering system. Answer specific questions in a single **short** natural language sentence. Do NOT use bullet points, lists, headers, or bold text. Just provide the direct answer to the question.\n\nYou are an agent. Your internal name is \"root_agent\". The description about you is \"Companies House Assistant. Uses tools or specialized sub-agents to answer questions.\".\n\n\nYou have a list of other agents to transfer to:\n\n\nAgent name: search_companies_agent\nAgent description: You are an agent helping to analyse companies and search in the companies house database\n\n\nAgent name: get_company_profile_agent\nAgent description: You are an agent helping to analyse companies get company details from the companies house database\n\n\nAgent name: get_company_officers_agent\nAgent description: You are an agent helping to analyse companies officers from company details from the companies house database\n\n\nAgent name: credit_risk_agent\nAgent description: You are an agent helping to analyse companies credit risk from company details from the companies house database\n\n\nAgent name: compliance_kyc_agent\nAgent description: You are an agent helping to analyse companies compliance and KYC details from company details from the companies house database\n\n\nAgent name: corporate_structure_agent\nAgent description: You are an agent helping to analyse companies corporate structure from company details from the companies house database\n\n\nAgent name: filing_history_agent\nAgent description: You are an agent helping to analyse companies filings history from company details from the companies house database\n\n\nAgent name: company_report_creation_agent\nAgent description: You are an agent helping a final report on a company based on the data retrieved from the companies house database\n\n\nIf you are the best to answer the question according to your description,\nyou can answer it.\n\nIf another agent is better for answering the question according to its\ndescription, call `transfer_to_agent` function to transfer the question to that\nagent. When transferring, do not generate any text other than the function\ncall.\n\n**NOTE**: the only available agents for `transfer_to_agent` function are\n`company_report_creation_agent`, `compliance_kyc_agent`, `corporate_structure_agent`, `credit_risk_agent`, `filing_history_agent`, `get_company_officers_agent`, `get_company_profile_agent`, `search_companies_agent`.\n",
+                  "tool_declarations": [
+                    {
+                      "retrieval": null,
+                      "computer_use": null,
+                      "file_search": null,
+                      "code_execution": null,
+                      "enterprise_web_search": null,
+                      "function_declarations": [
+                        {
+                          "description": "Transfer the question to another agent.\n\nThis tool hands off control to another agent when it's more suitable to\nanswer the user's question according to the agent's description.\n\nNote:\n  For most use cases, you should use TransferToAgentTool instead of this\n  function directly. TransferToAgentTool provides additional enum constraints\n  that prevent LLMs from hallucinating invalid agent names.\n\nArgs:\n  agent_name: the agent name to transfer to.\n",
+                          "name": "transfer_to_agent",
+                          "parameters": {
+                            "additional_properties": null,
+                            "defs": null,
+                            "ref": null,
+                            "any_of": null,
+                            "default": null,
+                            "description": null,
+                            "enum": null,
+                            "example": null,
+                            "format": null,
+                            "items": null,
+                            "max_items": null,
+                            "max_length": null,
+                            "max_properties": null,
+                            "maximum": null,
+                            "min_items": null,
+                            "min_length": null,
+                            "min_properties": null,
+                            "minimum": null,
+                            "nullable": null,
+                            "pattern": null,
+                            "properties": {
+                              "agent_name": {
+                                "additional_properties": null,
+                                "defs": null,
+                                "ref": null,
+                                "any_of": null,
+                                "default": null,
+                                "description": null,
+                                "enum": [
+                                  "search_companies_agent",
+                                  "get_company_profile_agent",
+                                  "get_company_officers_agent",
+                                  "credit_risk_agent",
+                                  "compliance_kyc_agent",
+                                  "corporate_structure_agent",
+                                  "filing_history_agent",
+                                  "company_report_creation_agent"
+                                ],
+                                "example": null,
+                                "format": null,
+                                "items": null,
+                                "max_items": null,
+                                "max_length": null,
+                                "max_properties": null,
+                                "maximum": null,
+                                "min_items": null,
+                                "min_length": null,
+                                "min_properties": null,
+                                "minimum": null,
+                                "nullable": null,
+                                "pattern": null,
+                                "properties": null,
+                                "property_ordering": null,
+                                "required": null,
+                                "title": null,
+                                "type": "STRING"
+                              }
+                            },
+                            "property_ordering": null,
+                            "required": [
+                              "agent_name"
+                            ],
+                            "title": null,
+                            "type": "OBJECT"
+                          },
+                          "parameters_json_schema": null,
+                          "response": {
+                            "additional_properties": null,
+                            "defs": null,
+                            "ref": null,
+                            "any_of": null,
+                            "default": null,
+                            "description": null,
+                            "enum": null,
+                            "example": null,
+                            "format": null,
+                            "items": null,
+                            "max_items": null,
+                            "max_length": null,
+                            "max_properties": null,
+                            "maximum": null,
+                            "min_items": null,
+                            "min_length": null,
+                            "min_properties": null,
+                            "minimum": null,
+                            "nullable": null,
+                            "pattern": null,
+                            "properties": null,
+                            "property_ordering": null,
+                            "required": null,
+                            "title": null,
+                            "type": "NULL"
+                          },
+                          "response_json_schema": null,
+                          "behavior": null
+                        },
+                        {
+                          "description": "\nGets the profile of a company in the Companies House database based on the given company number.\n\nArgs:\n    company_number: The company number of the company. Usaully returned in the company search response\n\nReturns:\n    A dictionary containing the company profile.\n",
+                          "name": "get_company_profile",
+                          "parameters": {
+                            "additional_properties": null,
+                            "defs": null,
+                            "ref": null,
+                            "any_of": null,
+                            "default": null,
+                            "description": null,
+                            "enum": null,
+                            "example": null,
+                            "format": null,
+                            "items": null,
+                            "max_items": null,
+                            "max_length": null,
+                            "max_properties": null,
+                            "maximum": null,
+                            "min_items": null,
+                            "min_length": null,
+                            "min_properties": null,
+                            "minimum": null,
+                            "nullable": null,
+                            "pattern": null,
+                            "properties": {
+                              "company_number": {
+                                "additional_properties": null,
+                                "defs": null,
+                                "ref": null,
+                                "any_of": null,
+                                "default": null,
+                                "description": null,
+                                "enum": null,
+                                "example": null,
+                                "format": null,
+                                "items": null,
+                                "max_items": null,
+                                "max_length": null,
+                                "max_properties": null,
+                                "maximum": null,
+                                "min_items": null,
+                                "min_length": null,
+                                "min_properties": null,
+                                "minimum": null,
+                                "nullable": null,
+                                "pattern": null,
+                                "properties": null,
+                                "property_ordering": null,
+                                "required": null,
+                                "title": null,
+                                "type": "STRING"
+                              }
+                            },
+                            "property_ordering": null,
+                            "required": [
+                              "company_number"
+                            ],
+                            "title": null,
+                            "type": "OBJECT"
+                          },
+                          "parameters_json_schema": null,
+                          "response": {
+                            "additional_properties": null,
+                            "defs": null,
+                            "ref": null,
+                            "any_of": null,
+                            "default": null,
+                            "description": null,
+                            "enum": null,
+                            "example": null,
+                            "format": null,
+                            "items": null,
+                            "max_items": null,
+                            "max_length": null,
+                            "max_properties": null,
+                            "maximum": null,
+                            "min_items": null,
+                            "min_length": null,
+                            "min_properties": null,
+                            "minimum": null,
+                            "nullable": null,
+                            "pattern": null,
+                            "properties": null,
+                            "property_ordering": null,
+                            "required": null,
+                            "title": null,
+                            "type": null
+                          },
+                          "response_json_schema": null,
+                          "behavior": null
+                        },
+                        {
+                          "description": "\nGets the company officers from the Companies House database based on the given company number.\n\nArgs:\n    company_number: The company number.\n\nReturns:\n    A dictionary containing the company officers details.\n",
+                          "name": "get_company_officers",
+                          "parameters": {
+                            "additional_properties": null,
+                            "defs": null,
+                            "ref": null,
+                            "any_of": null,
+                            "default": null,
+                            "description": null,
+                            "enum": null,
+                            "example": null,
+                            "format": null,
+                            "items": null,
+                            "max_items": null,
+                            "max_length": null,
+                            "max_properties": null,
+                            "maximum": null,
+                            "min_items": null,
+                            "min_length": null,
+                            "min_properties": null,
+                            "minimum": null,
+                            "nullable": null,
+                            "pattern": null,
+                            "properties": {
+                              "company_number": {
+                                "additional_properties": null,
+                                "defs": null,
+                                "ref": null,
+                                "any_of": null,
+                                "default": null,
+                                "description": null,
+                                "enum": null,
+                                "example": null,
+                                "format": null,
+                                "items": null,
+                                "max_items": null,
+                                "max_length": null,
+                                "max_properties": null,
+                                "maximum": null,
+                                "min_items": null,
+                                "min_length": null,
+                                "min_properties": null,
+                                "minimum": null,
+                                "nullable": null,
+                                "pattern": null,
+                                "properties": null,
+                                "property_ordering": null,
+                                "required": null,
+                                "title": null,
+                                "type": "STRING"
+                              }
+                            },
+                            "property_ordering": null,
+                            "required": [
+                              "company_number"
+                            ],
+                            "title": null,
+                            "type": "OBJECT"
+                          },
+                          "parameters_json_schema": null,
+                          "response": {
+                            "additional_properties": null,
+                            "defs": null,
+                            "ref": null,
+                            "any_of": null,
+                            "default": null,
+                            "description": null,
+                            "enum": null,
+                            "example": null,
+                            "format": null,
+                            "items": null,
+                            "max_items": null,
+                            "max_length": null,
+                            "max_properties": null,
+                            "maximum": null,
+                            "min_items": null,
+                            "min_length": null,
+                            "min_properties": null,
+                            "minimum": null,
+                            "nullable": null,
+                            "pattern": null,
+                            "properties": null,
+                            "property_ordering": null,
+                            "required": null,
+                            "title": null,
+                            "type": null
+                          },
+                          "response_json_schema": null,
+                          "behavior": null
+                        },
+                        {
+                          "description": "\nGets the company charges (mortgages).\n\nArgs:\n    company_number: The company number.\n\nReturns:\n    A dictionary containing the company charges.\n",
+                          "name": "get_company_charges",
+                          "parameters": {
+                            "additional_properties": null,
+                            "defs": null,
+                            "ref": null,
+                            "any_of": null,
+                            "default": null,
+                            "description": null,
+                            "enum": null,
+                            "example": null,
+                            "format": null,
+                            "items": null,
+                            "max_items": null,
+                            "max_length": null,
+                            "max_properties": null,
+                            "maximum": null,
+                            "min_items": null,
+                            "min_length": null,
+                            "min_properties": null,
+                            "minimum": null,
+                            "nullable": null,
+                            "pattern": null,
+                            "properties": {
+                              "company_number": {
+                                "additional_properties": null,
+                                "defs": null,
+                                "ref": null,
+                                "any_of": null,
+                                "default": null,
+                                "description": null,
+                                "enum": null,
+                                "example": null,
+                                "format": null,
+                                "items": null,
+                                "max_items": null,
+                                "max_length": null,
+                                "max_properties": null,
+                                "maximum": null,
+                                "min_items": null,
+                                "min_length": null,
+                                "min_properties": null,
+                                "minimum": null,
+                                "nullable": null,
+                                "pattern": null,
+                                "properties": null,
+                                "property_ordering": null,
+                                "required": null,
+                                "title": null,
+                                "type": "STRING"
+                              }
+                            },
+                            "property_ordering": null,
+                            "required": [
+                              "company_number"
+                            ],
+                            "title": null,
+                            "type": "OBJECT"
+                          },
+                          "parameters_json_schema": null,
+                          "response": {
+                            "additional_properties": null,
+                            "defs": null,
+                            "ref": null,
+                            "any_of": null,
+                            "default": null,
+                            "description": null,
+                            "enum": null,
+                            "example": null,
+                            "format": null,
+                            "items": null,
+                            "max_items": null,
+                            "max_length": null,
+                            "max_properties": null,
+                            "maximum": null,
+                            "min_items": null,
+                            "min_length": null,
+                            "min_properties": null,
+                            "minimum": null,
+                            "nullable": null,
+                            "pattern": null,
+                            "properties": null,
+                            "property_ordering": null,
+                            "required": null,
+                            "title": null,
+                            "type": null
+                          },
+                          "response_json_schema": null,
+                          "behavior": null
+                        },
+                        {
+                          "description": "\nGets the company insolvency records.\n\nArgs:\n    company_number: The company number.\n\nReturns:\n    A dictionary containing the insolvency records.\n",
+                          "name": "get_company_insolvency",
+                          "parameters": {
+                            "additional_properties": null,
+                            "defs": null,
+                            "ref": null,
+                            "any_of": null,
+                            "default": null,
+                            "description": null,
+                            "enum": null,
+                            "example": null,
+                            "format": null,
+                            "items": null,
+                            "max_items": null,
+                            "max_length": null,
+                            "max_properties": null,
+                            "maximum": null,
+                            "min_items": null,
+                            "min_length": null,
+                            "min_properties": null,
+                            "minimum": null,
+                            "nullable": null,
+                            "pattern": null,
+                            "properties": {
+                              "company_number": {
+                                "additional_properties": null,
+                                "defs": null,
+                                "ref": null,
+                                "any_of": null,
+                                "default": null,
+                                "description": null,
+                                "enum": null,
+                                "example": null,
+                                "format": null,
+                                "items": null,
+                                "max_items": null,
+                                "max_length": null,
+                                "max_properties": null,
+                                "maximum": null,
+                                "min_items": null,
+                                "min_length": null,
+                                "min_properties": null,
+                                "minimum": null,
+                                "nullable": null,
+                                "pattern": null,
+                                "properties": null,
+                                "property_ordering": null,
+                                "required": null,
+                                "title": null,
+                                "type": "STRING"
+                              }
+                            },
+                            "property_ordering": null,
+                            "required": [
+                              "company_number"
+                            ],
+                            "title": null,
+                            "type": "OBJECT"
+                          },
+                          "parameters_json_schema": null,
+                          "response": {
+                            "additional_properties": null,
+                            "defs": null,
+                            "ref": null,
+                            "any_of": null,
+                            "default": null,
+                            "description": null,
+                            "enum": null,
+                            "example": null,
+                            "format": null,
+                            "items": null,
+                            "max_items": null,
+                            "max_length": null,
+                            "max_properties": null,
+                            "maximum": null,
+                            "min_items": null,
+                            "min_length": null,
+                            "min_properties": null,
+                            "minimum": null,
+                            "nullable": null,
+                            "pattern": null,
+                            "properties": null,
+                            "property_ordering": null,
+                            "required": null,
+                            "title": null,
+                            "type": null
+                          },
+                          "response_json_schema": null,
+                          "behavior": null
+                        },
+                        {
+                          "description": "\nSearches for companies in the Companies House database based on the given search query.\n\nArgs:\n    search_query (str): The search query. Usually a name of a company\n\nReturns:\n    A dictionary containing the search results.\n",
+                          "name": "search_companies",
+                          "parameters": {
+                            "additional_properties": null,
+                            "defs": null,
+                            "ref": null,
+                            "any_of": null,
+                            "default": null,
+                            "description": null,
+                            "enum": null,
+                            "example": null,
+                            "format": null,
+                            "items": null,
+                            "max_items": null,
+                            "max_length": null,
+                            "max_properties": null,
+                            "maximum": null,
+                            "min_items": null,
+                            "min_length": null,
+                            "min_properties": null,
+                            "minimum": null,
+                            "nullable": null,
+                            "pattern": null,
+                            "properties": {
+                              "search_query": {
+                                "additional_properties": null,
+                                "defs": null,
+                                "ref": null,
+                                "any_of": null,
+                                "default": null,
+                                "description": null,
+                                "enum": null,
+                                "example": null,
+                                "format": null,
+                                "items": null,
+                                "max_items": null,
+                                "max_length": null,
+                                "max_properties": null,
+                                "maximum": null,
+                                "min_items": null,
+                                "min_length": null,
+                                "min_properties": null,
+                                "minimum": null,
+                                "nullable": null,
+                                "pattern": null,
+                                "properties": null,
+                                "property_ordering": null,
+                                "required": null,
+                                "title": null,
+                                "type": "STRING"
+                              }
+                            },
+                            "property_ordering": null,
+                            "required": [
+                              "search_query"
+                            ],
+                            "title": null,
+                            "type": "OBJECT"
+                          },
+                          "parameters_json_schema": null,
+                          "response": {
+                            "additional_properties": null,
+                            "defs": null,
+                            "ref": null,
+                            "any_of": null,
+                            "default": null,
+                            "description": null,
+                            "enum": null,
+                            "example": null,
+                            "format": null,
+                            "items": null,
+                            "max_items": null,
+                            "max_length": null,
+                            "max_properties": null,
+                            "maximum": null,
+                            "min_items": null,
+                            "min_length": null,
+                            "min_properties": null,
+                            "minimum": null,
+                            "nullable": null,
+                            "pattern": null,
+                            "properties": null,
+                            "property_ordering": null,
+                            "required": null,
+                            "title": null,
+                            "type": null
+                          },
+                          "response_json_schema": null,
+                          "behavior": null
+                        }
+                      ],
+                      "google_maps": null,
+                      "google_search": null,
+                      "google_search_retrieval": null,
+                      "url_context": null
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "expected_invocation": {
+            "invocation_id": "inv_1",
+            "user_content": {
+              "parts": [
+                {
+                  "media_resolution": null,
+                  "code_execution_result": null,
+                  "executable_code": null,
+                  "file_data": null,
+                  "function_call": null,
+                  "function_response": null,
+                  "inline_data": null,
+                  "text": "Search for company GOOGLE UK LIMITED and give me its details.",
+                  "thought": null,
+                  "thought_signature": null,
+                  "video_metadata": null
+                }
+              ],
+              "role": "user"
+            },
+            "final_response": {
+              "parts": [
+                {
+                  "media_resolution": null,
+                  "code_execution_result": null,
+                  "executable_code": null,
+                  "file_data": null,
+                  "function_call": null,
+                  "function_response": null,
+                  "inline_data": null,
+                  "text": "GOOGLE UK LIMITED (Company Number: 03977902) is a private limited company incorporated on 20 April 2000. Its registered office address is 1 St. Giles High Street, London, WC2H 8AG.",
+                  "thought": null,
+                  "thought_signature": null,
+                  "video_metadata": null
+                }
+              ],
+              "role": "model"
+            },
+            "intermediate_data": {
+              "tool_uses": [
+                {
+                  "id": null,
+                  "args": {
+                    "search_query": "GOOGLE UK LIMITED"
+                  },
+                  "name": "search_companies",
+                  "partial_args": null,
+                  "will_continue": null
+                },
+                {
+                  "id": null,
+                  "args": {
+                    "company_number": "03977902"
+                  },
+                  "name": "get_company_profile",
+                  "partial_args": null,
+                  "will_continue": null
+                }
+              ],
+              "tool_responses": [],
+              "intermediate_responses": []
+            },
+            "creation_timestamp": 0.0,
+            "rubrics": null,
+            "app_details": null
+          },
+          "eval_metric_results": [
+            {
+              "metric_name": "tool_trajectory_avg_score",
+              "threshold": 0.8,
+              "criterion": {
+                "threshold": 0.8
+              },
+              "custom_function_path": null,
+              "score": 1.0,
+              "eval_status": 1,
+              "details": {
+                "rubric_scores": null
+              }
+            },
+            {
+              "metric_name": "response_evaluation_score",
+              "threshold": 0.8,
+              "criterion": {
+                "threshold": 0.8
+              },
+              "custom_function_path": null,
+              "score": 5.0,
+              "eval_status": 1,
+              "details": {
+                "rubric_scores": null
+              }
+            },
+            {
+              "metric_name": "response_match_score",
+              "threshold": 0.7,
+              "criterion": {
+                "threshold": 0.7
+              },
+              "custom_function_path": null,
+              "score": 0.8135593220338982,
+              "eval_status": 1,
+              "details": {
+                "rubric_scores": null
+              }
+            }
+          ]
+        }
+      ],
+      "session_id": "___eval___session___16c33bf9-6205-43c3-aa19-a6c19008d5a6",
+      "session_details": null,
+      "user_id": "test_user_id"
+    }
+  ],
+  "creation_timestamp": 1773624294.7384288
+}

@@ -96,7 +96,11 @@ dmypy.json
 .DS_Store
 
 # Local configuration and dependencies
-.adk
+**/.adk/**/*
+!**/.adk/eval_history/
+!**/.adk/eval_history/**
+
+
 read-only/
 
 # Logs

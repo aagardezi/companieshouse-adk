@@ -1,0 +1,1562 @@
+{
+  "eval_set_result_id": "companies_house_agent_companies_house_agent_eval_v1_1773626074.7630851",
+  "eval_set_result_name": "companies_house_agent_companies_house_agent_eval_v1_1773626074.7630851",
+  "eval_set_id": "companies_house_agent_eval_v1",
+  "eval_case_results": [
+    {
+      "eval_set_file": "companies_house_agent_eval_v1",
+      "eval_set_id": "companies_house_agent_eval_v1",
+      "eval_id": "case_2_officers",
+      "final_eval_status": 1,
+      "eval_metric_results": null,
+      "overall_eval_metric_results": [
+        {
+          "metric_name": "tool_trajectory_avg_score",
+          "threshold": 0.8,
+          "criterion": {
+            "threshold": 0.8
+          },
+          "custom_function_path": null,
+          "score": 1.0,
+          "eval_status": 1,
+          "details": {
+            "rubric_scores": null
+          }
+        },
+        {
+          "metric_name": "response_evaluation_score",
+          "threshold": 0.8,
+          "criterion": {
+            "threshold": 0.8
+          },
+          "custom_function_path": null,
+          "score": 5.0,
+          "eval_status": 1,
+          "details": {
+            "rubric_scores": null
+          }
+        },
+        {
+          "metric_name": "response_match_score",
+          "threshold": 0.6,
+          "criterion": {
+            "threshold": 0.6
+          },
+          "custom_function_path": null,
+          "score": 0.7848101265822786,
+          "eval_status": 1,
+          "details": {
+            "rubric_scores": null
+          }
+        }
+      ],
+      "eval_metric_result_per_invocation": [
+        {
+          "actual_invocation": {
+            "invocation_id": "e-1d404c90-12e5-477a-8c09-34f54ac5545b",
+            "user_content": {
+              "parts": [
+                {
+                  "media_resolution": null,
+                  "code_execution_result": null,
+                  "executable_code": null,
+                  "file_data": null,
+                  "function_call": null,
+                  "function_response": null,
+                  "inline_data": null,
+                  "text": "Who are the officers of company 07496944?",
+                  "thought": null,
+                  "thought_signature": null,
+                  "video_metadata": null
+                }
+              ],
+              "role": "user"
+            },
+            "final_response": {
+              "parts": [
+                {
+                  "media_resolution": null,
+                  "code_execution_result": null,
+                  "executable_code": null,
+                  "file_data": null,
+                  "function_call": null,
+                  "function_response": null,
+                  "inline_data": null,
+                  "text": "The officers of company 07496944 are HATHERALL, Stephen Andrew (secretary), COOPER, Philip David (director), DUNN, Rosemary Patricia (director), FERGUSON, Gregor James (director), GILHOOLY, Chevonese (director), MARLAND, John Clive (director), MATHEW, Josephine Elizabeth (director), and TURNER, Robert (director).",
+                  "thought": null,
+                  "thought_signature": "Ct4GAY89a1_8uAf5iIxMrQlblEX9w5O_BmVkFH0Hq8ygrY4J6HHYqjYqA-G0uKQGQLxj1vSlERYB-Csj2zf-Oq_M69t1mam0mvoSD3dzvlrvLIfHUyJ_vsYM-hDvFNWvnHnET3fyheTxyTd2IidiXJe6BCme95jRSP4nTna-jdsYdvTeYdcaVfeKzdqhmKVf0nsnd7mtKG_XOfW9tHwWW3A1reU45TBztKEaRHutgyuC0n2SevF-4X-fqdnGnll-wRoLvvwsujfGiyCdMQAbESOk8cNrLaHFWE3ZYIKVbv3BVigi_-39KiQ_OPiy8jA8Eylg3xeYYKej-YQ0c63JH82usgkXbSmXgHvSChv_vOEhPWRepCc2RwS4oZPSUEexZ1ESyVabxMagUtwMsO0umvr4qHSkQ-Y18wqe8Gl3fbO4ox7aj7nJRui-ipdhEhOIBgcvyF2rZR8Y-nKQ1vG2CZjC0-5hCBXzesIxI8ozZ2CUKZWsFGU_FWRc-4wjepWGinqD3zeLJNeOGqYEor0OeGHvzCtqu6d4SgbsVFkLCSZjdzjyCzZPGT-91gbcFoL_29ZJhF7O3iIdp61Ksz1ZtuAvClbOWAxAd1SXmV7bQMLAills3dvTSRbGZPUahf6P6XF04yrQTMUci2tUeXjrhNZIsk2XpDWz1ZgFAQ7eW4nJjFna5LbbF5uo5JMSinYYfH67Zw_RiH-Rxwnd941TTZjzvreElEdoqi9B9xNwVscqrMBBA0PPhD-1RKwcuhnqBkeECF94_Sy-BQCVawTA8G_5UM-1LFKviWCjXWH3a4spx322pAKWtx247EqdLn5OGRQ3UPGYZ-OWo2Ix_5mZh8_EJfH-iHfqQinJHVD--CDXCt3S4skMu9UBIaYL8k6eBEfQfxMibksIoppT0d9Bkr2S3DksYt19oXgak2KBpF8PXuP16oQTx3umEioT5zvEmFIwmhLYtEklRlh9H1As6CTPfmzTIu02Sxpfo-RQ2oZJURqRYnp4TG_v8e6fLdobjckcZF_Zw47vGE5L8OBbaSZyy6HWzlO0V0OaTfcsS4wx9V5NUGqyK7UGhmZad9yPiMLZ9k0ZYYUeKdF_qgpH9nbczSiq3FETHdSZj8si5k9iK5tIuUvqzDpG8WQGako3AQ==",
+                  "video_metadata": null
+                }
+              ],
+              "role": "model"
+            },
+            "intermediate_data": {
+              "invocation_events": [
+                {
+                  "author": "root_agent",
+                  "content": {
+                    "parts": [
+                      {
+                        "media_resolution": null,
+                        "code_execution_result": null,
+                        "executable_code": null,
+                        "file_data": null,
+                        "function_call": {
+                          "id": "adk-4cef6245-54bb-4470-be63-22d7d36900a2",
+                          "args": {
+                            "company_number": "07496944"
+                          },
+                          "name": "get_company_officers",
+                          "partial_args": null,
+                          "will_continue": null
+                        },
+                        "function_response": null,
+                        "inline_data": null,
+                        "text": null,
+                        "thought": null,
+                        "thought_signature": "CpcCAY89a19CuxWP45cRQdWxDTe8w_5YugfXdh3JuxnJuIx3vGepoQKKeWLAGvKbbLrLe9KOaxNn8_Pa6rM8IDwCQAkalvr93GtX0HEI_pdRwsWrEM2ccJnaV3_JuLxyhRbWdigZfYOrocM57tYIj2x5lX9O8qHWcxhksXDyLdXIs0YSJVKKesu2p28-KqhaUoj3N0pDMO3Os1p3vFaxWqZSwJqVciLMt4nyG6xRgO0iRkkLNBnSFXxUx1biMepKAsRVvvA1QXoj6rY183YumWlEdzIAM0tRGcHRnmwxpPHMt1Ejv-braRO96Sw8tqB9j6rKxN2-R4sOJPEjX4KUV7yPA-Lm22Dz3IhUulqUqZXX_x0kIvyuBOJF",
+                        "video_metadata": null
+                      }
+                    ],
+                    "role": "model"
+                  }
+                },
+                {
+                  "author": "root_agent",
+                  "content": {
+                    "parts": [
+                      {
+                        "media_resolution": null,
+                        "code_execution_result": null,
+                        "executable_code": null,
+                        "file_data": null,
+                        "function_call": null,
+                        "function_response": {
+                          "will_continue": null,
+                          "scheduling": null,
+                          "parts": null,
+                          "id": "adk-4cef6245-54bb-4470-be63-22d7d36900a2",
+                          "name": "get_company_officers",
+                          "response": {
+                            "active_count": 8,
+                            "etag": "f11fa83006ff4984b4f139954997c2fc811b859f",
+                            "items": [
+                              {
+                                "etag": "f11fa83006ff4984b4f139954997c2fc811b859f",
+                                "address": {
+                                  "address_line_1": "Kingston Road",
+                                  "country": "England",
+                                  "locality": "London",
+                                  "postal_code": "SW20 8SA",
+                                  "premises": "577"
+                                },
+                                "appointed_on": "2011-01-18",
+                                "is_pre_1992_appointment": false,
+                                "links": {
+                                  "self": "/company/07496944/appointments/9pdLGc7rol_geNOpQx2CisiEn_o",
+                                  "officer": {
+                                    "appointments": "/officers/TfozCli1dZ7urW7380EgK1zlyOQ/appointments"
+                                  }
+                                },
+                                "name": "HATHERALL, Stephen Andrew",
+                                "officer_role": "secretary",
+                                "person_number": "157016390001"
+                              },
+                              {
+                                "etag": "1567bd145b19e5dec19cbc1903dfa9c923a4ceef",
+                                "address": {
+                                  "address_line_1": "Kingston Road",
+                                  "country": "England",
+                                  "locality": "London",
+                                  "postal_code": "SW20 8SA",
+                                  "premises": "577"
+                                },
+                                "appointed_on": "2011-01-18",
+                                "is_pre_1992_appointment": false,
+                                "country_of_residence": "United Kingdom",
+                                "date_of_birth": {
+                                  "month": 5,
+                                  "year": 1964
+                                },
+                                "links": {
+                                  "self": "/company/07496944/appointments/xah9cSj-Tt2wfLxFkHVtgKeG1xk",
+                                  "officer": {
+                                    "appointments": "/officers/HkjQXLw_sWcA0Mhb_kv8x2ZsZis/appointments"
+                                  }
+                                },
+                                "name": "COOPER, Philip David",
+                                "nationality": "British",
+                                "officer_role": "director",
+                                "person_number": "157016400001",
+                                "identity_verification_details": {
+                                  "appointment_verification_end_on": "9999-12-31",
+                                  "appointment_verification_start_on": "2026-01-17"
+                                }
+                              },
+                              {
+                                "etag": "16f95540ec3c13f433274ce47028e115b7d5e114",
+                                "address": {
+                                  "address_line_1": "Kingston Road",
+                                  "country": "England",
+                                  "locality": "London",
+                                  "postal_code": "SW20 8SA",
+                                  "premises": "577"
+                                },
+                                "appointed_on": "2022-07-12",
+                                "is_pre_1992_appointment": false,
+                                "country_of_residence": "England",
+                                "date_of_birth": {
+                                  "month": 5,
+                                  "year": 1967
+                                },
+                                "links": {
+                                  "self": "/company/07496944/appointments/ZHIjlLBeN2gyiu6VDh7DqD2Zj3Y",
+                                  "officer": {
+                                    "appointments": "/officers/h8273LNyOqsVKcuSC-df476HrTc/appointments"
+                                  }
+                                },
+                                "name": "DUNN, Rosemary Patricia",
+                                "nationality": "British",
+                                "officer_role": "director",
+                                "person_number": "157420100002",
+                                "identity_verification_details": {
+                                  "appointment_verification_end_on": "9999-12-31",
+                                  "appointment_verification_start_on": "2026-01-17"
+                                }
+                              },
+                              {
+                                "etag": "8e32010a77dc6d3db0a71ae71b06d9bb6555620e",
+                                "address": {
+                                  "address_line_1": "Kingston Road",
+                                  "country": "England",
+                                  "locality": "London",
+                                  "postal_code": "SW20 8SA",
+                                  "premises": "577"
+                                },
+                                "appointed_on": "2018-06-04",
+                                "is_pre_1992_appointment": false,
+                                "country_of_residence": "England",
+                                "date_of_birth": {
+                                  "month": 7,
+                                  "year": 1971
+                                },
+                                "links": {
+                                  "self": "/company/07496944/appointments/ecTDDqKs5C7nkXT73Nx0HWIoUPw",
+                                  "officer": {
+                                    "appointments": "/officers/iC2HMDbHm7dg3iZM6K0mkz2_Qes/appointments"
+                                  }
+                                },
+                                "name": "FERGUSON, Gregor James",
+                                "nationality": "British",
+                                "officer_role": "director",
+                                "person_number": "247144000001",
+                                "identity_verification_details": {
+                                  "appointment_verification_end_on": "9999-12-31",
+                                  "appointment_verification_start_on": "2026-01-17"
+                                }
+                              },
+                              {
+                                "etag": "38565b6f9969c17fef41012f65587ab7189f3f7f",
+                                "address": {
+                                  "address_line_1": "Kingston Road",
+                                  "country": "England",
+                                  "locality": "London",
+                                  "postal_code": "SW20 8SA",
+                                  "premises": "577"
+                                },
+                                "appointed_on": "2024-09-27",
+                                "is_pre_1992_appointment": false,
+                                "country_of_residence": "England",
+                                "date_of_birth": {
+                                  "month": 5,
+                                  "year": 1982
+                                },
+                                "links": {
+                                  "self": "/company/07496944/appointments/OOvBatR9pHkGRSyyZD9TdPD3pxg",
+                                  "officer": {
+                                    "appointments": "/officers/kOnaqILJ6GoHQaYbnDH4zrRKlGs/appointments"
+                                  }
+                                },
+                                "name": "GILHOOLY, Chevonese",
+                                "nationality": "British",
+                                "officer_role": "director",
+                                "person_number": "327622440001",
+                                "identity_verification_details": {
+                                  "appointment_verification_end_on": "9999-12-31",
+                                  "appointment_verification_start_on": "2026-01-17"
+                                }
+                              },
+                              {
+                                "etag": "79453b81f85e3b9e5505dfd637c0324a530fac70",
+                                "address": {
+                                  "address_line_1": "Kingston Road",
+                                  "country": "England",
+                                  "locality": "London",
+                                  "postal_code": "SW20 8SA",
+                                  "premises": "577"
+                                },
+                                "appointed_on": "2013-01-11",
+                                "is_pre_1992_appointment": false,
+                                "country_of_residence": "England",
+                                "date_of_birth": {
+                                  "month": 8,
+                                  "year": 1975
+                                },
+                                "links": {
+                                  "self": "/company/07496944/appointments/UXjy37zhvSjc8GagCHxMEwDzhlo",
+                                  "officer": {
+                                    "appointments": "/officers/VfOrkigNznCFNBdDL6wINbhxuSQ/appointments"
+                                  }
+                                },
+                                "name": "MARLAND, John Clive",
+                                "nationality": "British",
+                                "officer_role": "director",
+                                "person_number": "122362280002",
+                                "identity_verification_details": {
+                                  "appointment_verification_end_on": "9999-12-31",
+                                  "appointment_verification_start_on": "2026-01-17"
+                                }
+                              },
+                              {
+                                "etag": "de2d0c441bdef2f1ae057470d6a22f6ccd1633d1",
+                                "address": {
+                                  "address_line_1": "Kingston Road",
+                                  "country": "England",
+                                  "locality": "London",
+                                  "postal_code": "SW20 8SA",
+                                  "premises": "577"
+                                },
+                                "appointed_on": "2024-09-27",
+                                "is_pre_1992_appointment": false,
+                                "country_of_residence": "England",
+                                "date_of_birth": {
+                                  "month": 1,
+                                  "year": 1985
+                                },
+                                "links": {
+                                  "self": "/company/07496944/appointments/01XfgM8-l5Wkns_x1QwemdexHps",
+                                  "officer": {
+                                    "appointments": "/officers/6VCnonp_p7hlUAz6u7TYrUudPZQ/appointments"
+                                  }
+                                },
+                                "name": "MATHEW, Josephine Elizabeth",
+                                "nationality": "British",
+                                "officer_role": "director",
+                                "person_number": "322611520001",
+                                "identity_verification_details": {
+                                  "appointment_verification_end_on": "9999-12-31",
+                                  "appointment_verification_start_on": "2026-01-17"
+                                }
+                              },
+                              {
+                                "etag": "3abdd7803b24c1b6f2701e369b22f36c68a205cf",
+                                "address": {
+                                  "address_line_1": "Kingston Road",
+                                  "country": "England",
+                                  "locality": "London",
+                                  "postal_code": "SW20 8SA",
+                                  "premises": "577"
+                                },
+                                "appointed_on": "2016-04-14",
+                                "is_pre_1992_appointment": false,
+                                "country_of_residence": "England",
+                                "date_of_birth": {
+                                  "month": 4,
+                                  "year": 1974
+                                },
+                                "links": {
+                                  "self": "/company/07496944/appointments/hvGx0xIKNvSQzI-U87aR-j3ep-s",
+                                  "officer": {
+                                    "appointments": "/officers/_4fZilPR1n1BkCAg8N16GN0-nlQ/appointments"
+                                  }
+                                },
+                                "name": "TURNER, Robert",
+                                "nationality": "English",
+                                "officer_role": "director",
+                                "person_number": "207286060001",
+                                "identity_verification_details": {
+                                  "appointment_verification_end_on": "9999-12-31",
+                                  "appointment_verification_start_on": "2026-01-17"
+                                }
+                              },
+                              {
+                                "etag": "f11fa83006ff4984b4f139954997c2fc811b859f",
+                                "address": {
+                                  "address_line_1": "Kingston Road",
+                                  "address_line_2": "Raynes Park",
+                                  "locality": "London",
+                                  "postal_code": "SW20 8SA",
+                                  "premises": "577"
+                                },
+                                "appointed_on": "2011-01-18",
+                                "is_pre_1992_appointment": false,
+                                "country_of_residence": "England",
+                                "date_of_birth": {
+                                  "month": 5,
+                                  "year": 1956
+                                },
+                                "links": {
+                                  "self": "/company/07496944/appointments/G6etjwkYOyufGxyZqEB4bRe4dF0",
+                                  "officer": {
+                                    "appointments": "/officers/CM17LKjTbT3yik5KEa40aJ6OAyA/appointments"
+                                  }
+                                },
+                                "name": "LAWES, Stephen Finlay Heron",
+                                "nationality": "British",
+                                "officer_role": "director",
+                                "resigned_on": "2013-01-11",
+                                "person_number": "9713700002"
+                              },
+                              {
+                                "etag": "f11fa83006ff4984b4f139954997c2fc811b859f",
+                                "address": {
+                                  "address_line_1": "Kingston Road",
+                                  "country": "England",
+                                  "locality": "London",
+                                  "postal_code": "SW20 8SA",
+                                  "premises": "577"
+                                },
+                                "appointed_on": "2011-01-18",
+                                "is_pre_1992_appointment": false,
+                                "country_of_residence": "England",
+                                "date_of_birth": {
+                                  "month": 7,
+                                  "year": 1963
+                                },
+                                "links": {
+                                  "self": "/company/07496944/appointments/VsMTLXRKo1VgGWozEPbullHeQ-M",
+                                  "officer": {
+                                    "appointments": "/officers/jS54DYluPKgzSjsaSJ2GxbAAtSI/appointments"
+                                  }
+                                },
+                                "name": "REID, Gordon William",
+                                "nationality": "British",
+                                "officer_role": "director",
+                                "resigned_on": "2023-10-24",
+                                "person_number": "96936770001"
+                              },
+                              {
+                                "etag": "f11fa83006ff4984b4f139954997c2fc811b859f",
+                                "address": {
+                                  "address_line_1": "Kingston Road",
+                                  "address_line_2": "Raynes Park",
+                                  "locality": "London",
+                                  "postal_code": "SW20 8SA",
+                                  "premises": "577"
+                                },
+                                "appointed_on": "2011-01-18",
+                                "is_pre_1992_appointment": false,
+                                "country_of_residence": "England",
+                                "date_of_birth": {
+                                  "month": 6,
+                                  "year": 1963
+                                },
+                                "links": {
+                                  "self": "/company/07496944/appointments/N3jkFanxW2ig2nkbl4IRtdrEwm4",
+                                  "officer": {
+                                    "appointments": "/officers/8OlW-GlM2W2Cf1NXUEaUADxoI3Y/appointments"
+                                  }
+                                },
+                                "name": "VERNON, Mark Lewis",
+                                "nationality": "British",
+                                "officer_role": "director",
+                                "resigned_on": "2018-06-30",
+                                "person_number": "117239580001"
+                              }
+                            ],
+                            "items_per_page": 35,
+                            "kind": "officer-list",
+                            "links": {
+                              "self": "/company/07496944/officers"
+                            },
+                            "resigned_count": 3,
+                            "inactive_count": 0,
+                            "start_index": 0,
+                            "total_results": 11
+                          }
+                        },
+                        "inline_data": null,
+                        "text": null,
+                        "thought": null,
+                        "thought_signature": null,
+                        "video_metadata": null
+                      }
+                    ],
+                    "role": "user"
+                  }
+                }
+              ]
+            },
+            "creation_timestamp": 1773626036.7056582,
+            "rubrics": null,
+            "app_details": {
+              "agent_details": {
+                "root_agent": {
+                  "name": "root_agent",
+                  "instructions": "You are a Companies House Assistant. You have access to tools.**Guideline**: Use tools directly to answer specific questions whenever possible.1. If you need to find a company number from a name, use the `search_companies` tool.2. To get general profile details, use the `get_company_profile` tool.3. To get officer details, use the `get_company_officers` tool.4. To check charges, use the `get_company_charges` tool.5. To check insolvency, use the `get_company_insolvency` tool.6. To get filing history, use the `get_company_filing_history` tool.7. To get corporate structure, use the `get_company_establishments` and `get_company_registers` tools.8. If the user explicitly asks for a **full report** or a comprehensive analysis, transfer to `report_generation_agent`.**Important**: You are a concise question-answering system. Answer specific questions in a single **short** natural language sentence. Do NOT use bullet points, lists, headers, or bold text. Just provide the direct answer to the question.\n\nYou are an agent. Your internal name is \"root_agent\". The description about you is \"Companies House Assistant. Uses tools to answer questions, or transfers to report_generation_agent for full reports.\".\n\n\nYou have a list of other agents to transfer to:\n\n\nAgent name: report_generation_agent\nAgent description: Generates a comprehensive report on a company.\n\n\nIf you are the best to answer the question according to your description,\nyou can answer it.\n\nIf another agent is better for answering the question according to its\ndescription, call `transfer_to_agent` function to transfer the question to that\nagent. When transferring, do not generate any text other than the function\ncall.\n\n**NOTE**: the only available agents for `transfer_to_agent` function are\n`report_generation_agent`.\n",
+                  "tool_declarations": [
+                    {
+                      "retrieval": null,
+                      "computer_use": null,
+                      "file_search": null,
+                      "code_execution": null,
+                      "enterprise_web_search": null,
+                      "function_declarations": [
+                        {
+                          "description": "Transfer the question to another agent.\n\nThis tool hands off control to another agent when it's more suitable to\nanswer the user's question according to the agent's description.\n\nNote:\n  For most use cases, you should use TransferToAgentTool instead of this\n  function directly. TransferToAgentTool provides additional enum constraints\n  that prevent LLMs from hallucinating invalid agent names.\n\nArgs:\n  agent_name: the agent name to transfer to.\n",
+                          "name": "transfer_to_agent",
+                          "parameters": {
+                            "additional_properties": null,
+                            "defs": null,
+                            "ref": null,
+                            "any_of": null,
+                            "default": null,
+                            "description": null,
+                            "enum": null,
+                            "example": null,
+                            "format": null,
+                            "items": null,
+                            "max_items": null,
+                            "max_length": null,
+                            "max_properties": null,
+                            "maximum": null,
+                            "min_items": null,
+                            "min_length": null,
+                            "min_properties": null,
+                            "minimum": null,
+                            "nullable": null,
+                            "pattern": null,
+                            "properties": {
+                              "agent_name": {
+                                "additional_properties": null,
+                                "defs": null,
+                                "ref": null,
+                                "any_of": null,
+                                "default": null,
+                                "description": null,
+                                "enum": [
+                                  "report_generation_agent"
+                                ],
+                                "example": null,
+                                "format": null,
+                                "items": null,
+                                "max_items": null,
+                                "max_length": null,
+                                "max_properties": null,
+                                "maximum": null,
+                                "min_items": null,
+                                "min_length": null,
+                                "min_properties": null,
+                                "minimum": null,
+                                "nullable": null,
+                                "pattern": null,
+                                "properties": null,
+                                "property_ordering": null,
+                                "required": null,
+                                "title": null,
+                                "type": "STRING"
+                              }
+                            },
+                            "property_ordering": null,
+                            "required": [
+                              "agent_name"
+                            ],
+                            "title": null,
+                            "type": "OBJECT"
+                          },
+                          "parameters_json_schema": null,
+                          "response": {
+                            "additional_properties": null,
+                            "defs": null,
+                            "ref": null,
+                            "any_of": null,
+                            "default": null,
+                            "description": null,
+                            "enum": null,
+                            "example": null,
+                            "format": null,
+                            "items": null,
+                            "max_items": null,
+                            "max_length": null,
+                            "max_properties": null,
+                            "maximum": null,
+                            "min_items": null,
+                            "min_length": null,
+                            "min_properties": null,
+                            "minimum": null,
+                            "nullable": null,
+                            "pattern": null,
+                            "properties": null,
+                            "property_ordering": null,
+                            "required": null,
+                            "title": null,
+                            "type": "NULL"
+                          },
+                          "response_json_schema": null,
+                          "behavior": null
+                        },
+                        {
+                          "description": "\nGets the profile of a company in the Companies House database based on the given company number.\n\nArgs:\n    company_number: The company number of the company. Usaully returned in the company search response\n\nReturns:\n    A dictionary containing the company profile.\n",
+                          "name": "get_company_profile",
+                          "parameters": {
+                            "additional_properties": null,
+                            "defs": null,
+                            "ref": null,
+                            "any_of": null,
+                            "default": null,
+                            "description": null,
+                            "enum": null,
+                            "example": null,
+                            "format": null,
+                            "items": null,
+                            "max_items": null,
+                            "max_length": null,
+                            "max_properties": null,
+                            "maximum": null,
+                            "min_items": null,
+                            "min_length": null,
+                            "min_properties": null,
+                            "minimum": null,
+                            "nullable": null,
+                            "pattern": null,
+                            "properties": {
+                              "company_number": {
+                                "additional_properties": null,
+                                "defs": null,
+                                "ref": null,
+                                "any_of": null,
+                                "default": null,
+                                "description": null,
+                                "enum": null,
+                                "example": null,
+                                "format": null,
+                                "items": null,
+                                "max_items": null,
+                                "max_length": null,
+                                "max_properties": null,
+                                "maximum": null,
+                                "min_items": null,
+                                "min_length": null,
+                                "min_properties": null,
+                                "minimum": null,
+                                "nullable": null,
+                                "pattern": null,
+                                "properties": null,
+                                "property_ordering": null,
+                                "required": null,
+                                "title": null,
+                                "type": "STRING"
+                              }
+                            },
+                            "property_ordering": null,
+                            "required": [
+                              "company_number"
+                            ],
+                            "title": null,
+                            "type": "OBJECT"
+                          },
+                          "parameters_json_schema": null,
+                          "response": {
+                            "additional_properties": null,
+                            "defs": null,
+                            "ref": null,
+                            "any_of": null,
+                            "default": null,
+                            "description": null,
+                            "enum": null,
+                            "example": null,
+                            "format": null,
+                            "items": null,
+                            "max_items": null,
+                            "max_length": null,
+                            "max_properties": null,
+                            "maximum": null,
+                            "min_items": null,
+                            "min_length": null,
+                            "min_properties": null,
+                            "minimum": null,
+                            "nullable": null,
+                            "pattern": null,
+                            "properties": null,
+                            "property_ordering": null,
+                            "required": null,
+                            "title": null,
+                            "type": null
+                          },
+                          "response_json_schema": null,
+                          "behavior": null
+                        },
+                        {
+                          "description": "\nGets the company officers from the Companies House database based on the given company number.\n\nArgs:\n    company_number: The company number.\n\nReturns:\n    A dictionary containing the company officers details.\n",
+                          "name": "get_company_officers",
+                          "parameters": {
+                            "additional_properties": null,
+                            "defs": null,
+                            "ref": null,
+                            "any_of": null,
+                            "default": null,
+                            "description": null,
+                            "enum": null,
+                            "example": null,
+                            "format": null,
+                            "items": null,
+                            "max_items": null,
+                            "max_length": null,
+                            "max_properties": null,
+                            "maximum": null,
+                            "min_items": null,
+                            "min_length": null,
+                            "min_properties": null,
+                            "minimum": null,
+                            "nullable": null,
+                            "pattern": null,
+                            "properties": {
+                              "company_number": {
+                                "additional_properties": null,
+                                "defs": null,
+                                "ref": null,
+                                "any_of": null,
+                                "default": null,
+                                "description": null,
+                                "enum": null,
+                                "example": null,
+                                "format": null,
+                                "items": null,
+                                "max_items": null,
+                                "max_length": null,
+                                "max_properties": null,
+                                "maximum": null,
+                                "min_items": null,
+                                "min_length": null,
+                                "min_properties": null,
+                                "minimum": null,
+                                "nullable": null,
+                                "pattern": null,
+                                "properties": null,
+                                "property_ordering": null,
+                                "required": null,
+                                "title": null,
+                                "type": "STRING"
+                              }
+                            },
+                            "property_ordering": null,
+                            "required": [
+                              "company_number"
+                            ],
+                            "title": null,
+                            "type": "OBJECT"
+                          },
+                          "parameters_json_schema": null,
+                          "response": {
+                            "additional_properties": null,
+                            "defs": null,
+                            "ref": null,
+                            "any_of": null,
+                            "default": null,
+                            "description": null,
+                            "enum": null,
+                            "example": null,
+                            "format": null,
+                            "items": null,
+                            "max_items": null,
+                            "max_length": null,
+                            "max_properties": null,
+                            "maximum": null,
+                            "min_items": null,
+                            "min_length": null,
+                            "min_properties": null,
+                            "minimum": null,
+                            "nullable": null,
+                            "pattern": null,
+                            "properties": null,
+                            "property_ordering": null,
+                            "required": null,
+                            "title": null,
+                            "type": null
+                          },
+                          "response_json_schema": null,
+                          "behavior": null
+                        },
+                        {
+                          "description": "\nGets the company charges (mortgages).\n\nArgs:\n    company_number: The company number.\n\nReturns:\n    A dictionary containing the company charges.\n",
+                          "name": "get_company_charges",
+                          "parameters": {
+                            "additional_properties": null,
+                            "defs": null,
+                            "ref": null,
+                            "any_of": null,
+                            "default": null,
+                            "description": null,
+                            "enum": null,
+                            "example": null,
+                            "format": null,
+                            "items": null,
+                            "max_items": null,
+                            "max_length": null,
+                            "max_properties": null,
+                            "maximum": null,
+                            "min_items": null,
+                            "min_length": null,
+                            "min_properties": null,
+                            "minimum": null,
+                            "nullable": null,
+                            "pattern": null,
+                            "properties": {
+                              "company_number": {
+                                "additional_properties": null,
+                                "defs": null,
+                                "ref": null,
+                                "any_of": null,
+                                "default": null,
+                                "description": null,
+                                "enum": null,
+                                "example": null,
+                                "format": null,
+                                "items": null,
+                                "max_items": null,
+                                "max_length": null,
+                                "max_properties": null,
+                                "maximum": null,
+                                "min_items": null,
+                                "min_length": null,
+                                "min_properties": null,
+                                "minimum": null,
+                                "nullable": null,
+                                "pattern": null,
+                                "properties": null,
+                                "property_ordering": null,
+                                "required": null,
+                                "title": null,
+                                "type": "STRING"
+                              }
+                            },
+                            "property_ordering": null,
+                            "required": [
+                              "company_number"
+                            ],
+                            "title": null,
+                            "type": "OBJECT"
+                          },
+                          "parameters_json_schema": null,
+                          "response": {
+                            "additional_properties": null,
+                            "defs": null,
+                            "ref": null,
+                            "any_of": null,
+                            "default": null,
+                            "description": null,
+                            "enum": null,
+                            "example": null,
+                            "format": null,
+                            "items": null,
+                            "max_items": null,
+                            "max_length": null,
+                            "max_properties": null,
+                            "maximum": null,
+                            "min_items": null,
+                            "min_length": null,
+                            "min_properties": null,
+                            "minimum": null,
+                            "nullable": null,
+                            "pattern": null,
+                            "properties": null,
+                            "property_ordering": null,
+                            "required": null,
+                            "title": null,
+                            "type": null
+                          },
+                          "response_json_schema": null,
+                          "behavior": null
+                        },
+                        {
+                          "description": "\nGets the company insolvency records.\n\nArgs:\n    company_number: The company number.\n\nReturns:\n    A dictionary containing the insolvency records.\n",
+                          "name": "get_company_insolvency",
+                          "parameters": {
+                            "additional_properties": null,
+                            "defs": null,
+                            "ref": null,
+                            "any_of": null,
+                            "default": null,
+                            "description": null,
+                            "enum": null,
+                            "example": null,
+                            "format": null,
+                            "items": null,
+                            "max_items": null,
+                            "max_length": null,
+                            "max_properties": null,
+                            "maximum": null,
+                            "min_items": null,
+                            "min_length": null,
+                            "min_properties": null,
+                            "minimum": null,
+                            "nullable": null,
+                            "pattern": null,
+                            "properties": {
+                              "company_number": {
+                                "additional_properties": null,
+                                "defs": null,
+                                "ref": null,
+                                "any_of": null,
+                                "default": null,
+                                "description": null,
+                                "enum": null,
+                                "example": null,
+                                "format": null,
+                                "items": null,
+                                "max_items": null,
+                                "max_length": null,
+                                "max_properties": null,
+                                "maximum": null,
+                                "min_items": null,
+                                "min_length": null,
+                                "min_properties": null,
+                                "minimum": null,
+                                "nullable": null,
+                                "pattern": null,
+                                "properties": null,
+                                "property_ordering": null,
+                                "required": null,
+                                "title": null,
+                                "type": "STRING"
+                              }
+                            },
+                            "property_ordering": null,
+                            "required": [
+                              "company_number"
+                            ],
+                            "title": null,
+                            "type": "OBJECT"
+                          },
+                          "parameters_json_schema": null,
+                          "response": {
+                            "additional_properties": null,
+                            "defs": null,
+                            "ref": null,
+                            "any_of": null,
+                            "default": null,
+                            "description": null,
+                            "enum": null,
+                            "example": null,
+                            "format": null,
+                            "items": null,
+                            "max_items": null,
+                            "max_length": null,
+                            "max_properties": null,
+                            "maximum": null,
+                            "min_items": null,
+                            "min_length": null,
+                            "min_properties": null,
+                            "minimum": null,
+                            "nullable": null,
+                            "pattern": null,
+                            "properties": null,
+                            "property_ordering": null,
+                            "required": null,
+                            "title": null,
+                            "type": null
+                          },
+                          "response_json_schema": null,
+                          "behavior": null
+                        },
+                        {
+                          "description": "\nSearches for companies in the Companies House database based on the given search query.\n\nArgs:\n    search_query (str): The search query. Usually a name of a company\n\nReturns:\n    A dictionary containing the search results.\n",
+                          "name": "search_companies",
+                          "parameters": {
+                            "additional_properties": null,
+                            "defs": null,
+                            "ref": null,
+                            "any_of": null,
+                            "default": null,
+                            "description": null,
+                            "enum": null,
+                            "example": null,
+                            "format": null,
+                            "items": null,
+                            "max_items": null,
+                            "max_length": null,
+                            "max_properties": null,
+                            "maximum": null,
+                            "min_items": null,
+                            "min_length": null,
+                            "min_properties": null,
+                            "minimum": null,
+                            "nullable": null,
+                            "pattern": null,
+                            "properties": {
+                              "search_query": {
+                                "additional_properties": null,
+                                "defs": null,
+                                "ref": null,
+                                "any_of": null,
+                                "default": null,
+                                "description": null,
+                                "enum": null,
+                                "example": null,
+                                "format": null,
+                                "items": null,
+                                "max_items": null,
+                                "max_length": null,
+                                "max_properties": null,
+                                "maximum": null,
+                                "min_items": null,
+                                "min_length": null,
+                                "min_properties": null,
+                                "minimum": null,
+                                "nullable": null,
+                                "pattern": null,
+                                "properties": null,
+                                "property_ordering": null,
+                                "required": null,
+                                "title": null,
+                                "type": "STRING"
+                              }
+                            },
+                            "property_ordering": null,
+                            "required": [
+                              "search_query"
+                            ],
+                            "title": null,
+                            "type": "OBJECT"
+                          },
+                          "parameters_json_schema": null,
+                          "response": {
+                            "additional_properties": null,
+                            "defs": null,
+                            "ref": null,
+                            "any_of": null,
+                            "default": null,
+                            "description": null,
+                            "enum": null,
+                            "example": null,
+                            "format": null,
+                            "items": null,
+                            "max_items": null,
+                            "max_length": null,
+                            "max_properties": null,
+                            "maximum": null,
+                            "min_items": null,
+                            "min_length": null,
+                            "min_properties": null,
+                            "minimum": null,
+                            "nullable": null,
+                            "pattern": null,
+                            "properties": null,
+                            "property_ordering": null,
+                            "required": null,
+                            "title": null,
+                            "type": null
+                          },
+                          "response_json_schema": null,
+                          "behavior": null
+                        },
+                        {
+                          "description": "\nGets the UK establishments of a company.\n\nArgs:\n    company_number: The company number.\n\nReturns:\n    A dictionary containing the UK establishments.\n",
+                          "name": "get_company_establishments",
+                          "parameters": {
+                            "additional_properties": null,
+                            "defs": null,
+                            "ref": null,
+                            "any_of": null,
+                            "default": null,
+                            "description": null,
+                            "enum": null,
+                            "example": null,
+                            "format": null,
+                            "items": null,
+                            "max_items": null,
+                            "max_length": null,
+                            "max_properties": null,
+                            "maximum": null,
+                            "min_items": null,
+                            "min_length": null,
+                            "min_properties": null,
+                            "minimum": null,
+                            "nullable": null,
+                            "pattern": null,
+                            "properties": {
+                              "company_number": {
+                                "additional_properties": null,
+                                "defs": null,
+                                "ref": null,
+                                "any_of": null,
+                                "default": null,
+                                "description": null,
+                                "enum": null,
+                                "example": null,
+                                "format": null,
+                                "items": null,
+                                "max_items": null,
+                                "max_length": null,
+                                "max_properties": null,
+                                "maximum": null,
+                                "min_items": null,
+                                "min_length": null,
+                                "min_properties": null,
+                                "minimum": null,
+                                "nullable": null,
+                                "pattern": null,
+                                "properties": null,
+                                "property_ordering": null,
+                                "required": null,
+                                "title": null,
+                                "type": "STRING"
+                              }
+                            },
+                            "property_ordering": null,
+                            "required": [
+                              "company_number"
+                            ],
+                            "title": null,
+                            "type": "OBJECT"
+                          },
+                          "parameters_json_schema": null,
+                          "response": {
+                            "additional_properties": null,
+                            "defs": null,
+                            "ref": null,
+                            "any_of": null,
+                            "default": null,
+                            "description": null,
+                            "enum": null,
+                            "example": null,
+                            "format": null,
+                            "items": null,
+                            "max_items": null,
+                            "max_length": null,
+                            "max_properties": null,
+                            "maximum": null,
+                            "min_items": null,
+                            "min_length": null,
+                            "min_properties": null,
+                            "minimum": null,
+                            "nullable": null,
+                            "pattern": null,
+                            "properties": null,
+                            "property_ordering": null,
+                            "required": null,
+                            "title": null,
+                            "type": null
+                          },
+                          "response_json_schema": null,
+                          "behavior": null
+                        },
+                        {
+                          "description": "\nGets the company registers.\n\nArgs:\n    company_number: The company number.\n\nReturns:\n    A dictionary containing the company registers.\n",
+                          "name": "get_company_registers",
+                          "parameters": {
+                            "additional_properties": null,
+                            "defs": null,
+                            "ref": null,
+                            "any_of": null,
+                            "default": null,
+                            "description": null,
+                            "enum": null,
+                            "example": null,
+                            "format": null,
+                            "items": null,
+                            "max_items": null,
+                            "max_length": null,
+                            "max_properties": null,
+                            "maximum": null,
+                            "min_items": null,
+                            "min_length": null,
+                            "min_properties": null,
+                            "minimum": null,
+                            "nullable": null,
+                            "pattern": null,
+                            "properties": {
+                              "company_number": {
+                                "additional_properties": null,
+                                "defs": null,
+                                "ref": null,
+                                "any_of": null,
+                                "default": null,
+                                "description": null,
+                                "enum": null,
+                                "example": null,
+                                "format": null,
+                                "items": null,
+                                "max_items": null,
+                                "max_length": null,
+                                "max_properties": null,
+                                "maximum": null,
+                                "min_items": null,
+                                "min_length": null,
+                                "min_properties": null,
+                                "minimum": null,
+                                "nullable": null,
+                                "pattern": null,
+                                "properties": null,
+                                "property_ordering": null,
+                                "required": null,
+                                "title": null,
+                                "type": "STRING"
+                              }
+                            },
+                            "property_ordering": null,
+                            "required": [
+                              "company_number"
+                            ],
+                            "title": null,
+                            "type": "OBJECT"
+                          },
+                          "parameters_json_schema": null,
+                          "response": {
+                            "additional_properties": null,
+                            "defs": null,
+                            "ref": null,
+                            "any_of": null,
+                            "default": null,
+                            "description": null,
+                            "enum": null,
+                            "example": null,
+                            "format": null,
+                            "items": null,
+                            "max_items": null,
+                            "max_length": null,
+                            "max_properties": null,
+                            "maximum": null,
+                            "min_items": null,
+                            "min_length": null,
+                            "min_properties": null,
+                            "minimum": null,
+                            "nullable": null,
+                            "pattern": null,
+                            "properties": null,
+                            "property_ordering": null,
+                            "required": null,
+                            "title": null,
+                            "type": null
+                          },
+                          "response_json_schema": null,
+                          "behavior": null
+                        },
+                        {
+                          "description": "\nGets the company filing history.\n\nArgs:\n    company_number: The company number.\n\nReturns:\n    A dictionary containing the filing history.\n",
+                          "name": "get_company_filing_history",
+                          "parameters": {
+                            "additional_properties": null,
+                            "defs": null,
+                            "ref": null,
+                            "any_of": null,
+                            "default": null,
+                            "description": null,
+                            "enum": null,
+                            "example": null,
+                            "format": null,
+                            "items": null,
+                            "max_items": null,
+                            "max_length": null,
+                            "max_properties": null,
+                            "maximum": null,
+                            "min_items": null,
+                            "min_length": null,
+                            "min_properties": null,
+                            "minimum": null,
+                            "nullable": null,
+                            "pattern": null,
+                            "properties": {
+                              "company_number": {
+                                "additional_properties": null,
+                                "defs": null,
+                                "ref": null,
+                                "any_of": null,
+                                "default": null,
+                                "description": null,
+                                "enum": null,
+                                "example": null,
+                                "format": null,
+                                "items": null,
+                                "max_items": null,
+                                "max_length": null,
+                                "max_properties": null,
+                                "maximum": null,
+                                "min_items": null,
+                                "min_length": null,
+                                "min_properties": null,
+                                "minimum": null,
+                                "nullable": null,
+                                "pattern": null,
+                                "properties": null,
+                                "property_ordering": null,
+                                "required": null,
+                                "title": null,
+                                "type": "STRING"
+                              }
+                            },
+                            "property_ordering": null,
+                            "required": [
+                              "company_number"
+                            ],
+                            "title": null,
+                            "type": "OBJECT"
+                          },
+                          "parameters_json_schema": null,
+                          "response": {
+                            "additional_properties": null,
+                            "defs": null,
+                            "ref": null,
+                            "any_of": null,
+                            "default": null,
+                            "description": null,
+                            "enum": null,
+                            "example": null,
+                            "format": null,
+                            "items": null,
+                            "max_items": null,
+                            "max_length": null,
+                            "max_properties": null,
+                            "maximum": null,
+                            "min_items": null,
+                            "min_length": null,
+                            "min_properties": null,
+                            "minimum": null,
+                            "nullable": null,
+                            "pattern": null,
+                            "properties": null,
+                            "property_ordering": null,
+                            "required": null,
+                            "title": null,
+                            "type": null
+                          },
+                          "response_json_schema": null,
+                          "behavior": null
+                        },
+                        {
+                          "description": "\nGets the details of a specific company filing.\n\nArgs:\n    company_number: The company number.\n    transaction_id: The transaction ID.\n\nReturns:\n    A dictionary containing the filing details.\n",
+                          "name": "get_company_filing_detail",
+                          "parameters": {
+                            "additional_properties": null,
+                            "defs": null,
+                            "ref": null,
+                            "any_of": null,
+                            "default": null,
+                            "description": null,
+                            "enum": null,
+                            "example": null,
+                            "format": null,
+                            "items": null,
+                            "max_items": null,
+                            "max_length": null,
+                            "max_properties": null,
+                            "maximum": null,
+                            "min_items": null,
+                            "min_length": null,
+                            "min_properties": null,
+                            "minimum": null,
+                            "nullable": null,
+                            "pattern": null,
+                            "properties": {
+                              "company_number": {
+                                "additional_properties": null,
+                                "defs": null,
+                                "ref": null,
+                                "any_of": null,
+                                "default": null,
+                                "description": null,
+                                "enum": null,
+                                "example": null,
+                                "format": null,
+                                "items": null,
+                                "max_items": null,
+                                "max_length": null,
+                                "max_properties": null,
+                                "maximum": null,
+                                "min_items": null,
+                                "min_length": null,
+                                "min_properties": null,
+                                "minimum": null,
+                                "nullable": null,
+                                "pattern": null,
+                                "properties": null,
+                                "property_ordering": null,
+                                "required": null,
+                                "title": null,
+                                "type": "STRING"
+                              },
+                              "transaction_id": {
+                                "additional_properties": null,
+                                "defs": null,
+                                "ref": null,
+                                "any_of": null,
+                                "default": null,
+                                "description": null,
+                                "enum": null,
+                                "example": null,
+                                "format": null,
+                                "items": null,
+                                "max_items": null,
+                                "max_length": null,
+                                "max_properties": null,
+                                "maximum": null,
+                                "min_items": null,
+                                "min_length": null,
+                                "min_properties": null,
+                                "minimum": null,
+                                "nullable": null,
+                                "pattern": null,
+                                "properties": null,
+                                "property_ordering": null,
+                                "required": null,
+                                "title": null,
+                                "type": "STRING"
+                              }
+                            },
+                            "property_ordering": null,
+                            "required": [
+                              "company_number",
+                              "transaction_id"
+                            ],
+                            "title": null,
+                            "type": "OBJECT"
+                          },
+                          "parameters_json_schema": null,
+                          "response": {
+                            "additional_properties": null,
+                            "defs": null,
+                            "ref": null,
+                            "any_of": null,
+                            "default": null,
+                            "description": null,
+                            "enum": null,
+                            "example": null,
+                            "format": null,
+                            "items": null,
+                            "max_items": null,
+                            "max_length": null,
+                            "max_properties": null,
+                            "maximum": null,
+                            "min_items": null,
+                            "min_length": null,
+                            "min_properties": null,
+                            "minimum": null,
+                            "nullable": null,
+                            "pattern": null,
+                            "properties": null,
+                            "property_ordering": null,
+                            "required": null,
+                            "title": null,
+                            "type": null
+                          },
+                          "response_json_schema": null,
+                          "behavior": null
+                        }
+                      ],
+                      "google_maps": null,
+                      "google_search": null,
+                      "google_search_retrieval": null,
+                      "url_context": null
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "expected_invocation": {
+            "invocation_id": "inv_2",
+            "user_content": {
+              "parts": [
+                {
+                  "media_resolution": null,
+                  "code_execution_result": null,
+                  "executable_code": null,
+                  "file_data": null,
+                  "function_call": null,
+                  "function_response": null,
+                  "inline_data": null,
+                  "text": "Who are the officers of company 07496944?",
+                  "thought": null,
+                  "thought_signature": null,
+                  "video_metadata": null
+                }
+              ],
+              "role": "user"
+            },
+            "final_response": {
+              "parts": [
+                {
+                  "media_resolution": null,
+                  "code_execution_result": null,
+                  "executable_code": null,
+                  "file_data": null,
+                  "function_call": null,
+                  "function_response": null,
+                  "inline_data": null,
+                  "text": "The officers of company 07496944 are secretary Stephen Andrew HATHERALL, and directors Philip David COOPER, Rosemary Patricia DUNN, Gregor James FERGUSON, Chevonese GILHOOLY, John Clive MARLAND, Josephine Elizabeth MATHEW, Robert TURNER, Stephen Finlay Heron LAWES, Gordon William REID, and Mark Lewis VERNON.",
+                  "thought": null,
+                  "thought_signature": null,
+                  "video_metadata": null
+                }
+              ],
+              "role": "model"
+            },
+            "intermediate_data": {
+              "tool_uses": [
+                {
+                  "id": null,
+                  "args": {
+                    "company_number": "07496944"
+                  },
+                  "name": "get_company_officers",
+                  "partial_args": null,
+                  "will_continue": null
+                }
+              ],
+              "tool_responses": [],
+              "intermediate_responses": []
+            },
+            "creation_timestamp": 0.0,
+            "rubrics": null,
+            "app_details": null
+          },
+          "eval_metric_results": [
+            {
+              "metric_name": "tool_trajectory_avg_score",
+              "threshold": 0.8,
+              "criterion": {
+                "threshold": 0.8
+              },
+              "custom_function_path": null,
+              "score": 1.0,
+              "eval_status": 1,
+              "details": {
+                "rubric_scores": null
+              }
+            },
+            {
+              "metric_name": "response_evaluation_score",
+              "threshold": 0.8,
+              "criterion": {
+                "threshold": 0.8
+              },
+              "custom_function_path": null,
+              "score": 5.0,
+              "eval_status": 1,
+              "details": {
+                "rubric_scores": null
+              }
+            },
+            {
+              "metric_name": "response_match_score",
+              "threshold": 0.6,
+              "criterion": {
+                "threshold": 0.6
+              },
+              "custom_function_path": null,
+              "score": 0.7848101265822786,
+              "eval_status": 1,
+              "details": {
+                "rubric_scores": null
+              }
+            }
+          ]
+        }
+      ],
+      "session_id": "___eval___session___17655303-bda5-4408-8ae2-0ad262732904",
+      "session_details": null,
+      "user_id": "test_user_id"
+    }
+  ],
+  "creation_timestamp": 1773626074.7630851
+}
