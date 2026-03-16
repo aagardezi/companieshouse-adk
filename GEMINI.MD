@@ -17,7 +17,7 @@ The single most important step for successful development is to have a local, re
 mkdir -p read-only
 
 # Clone the SDK into it
-git clone https://github.com/GoogleCloudPlatform/vertex-ai-creative-studio.git read-only/adk-python
+git clone https://github.com/google/adk-python.git read-only/adk-python
 ```
 
 When you encounter an `ImportError`, `TypeError`, or `ValidationError`, use your IDE's search function or a command-line tool like `grep` or `rg` to find the class or function definition within this local copy.
