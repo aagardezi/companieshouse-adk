@@ -2,6 +2,50 @@
 
 This project provides a conversational agent powered by the Google ADK framework that can search for and retrieve information about companies from the UK Companies House database.
 
+## Agent Architecture
+
+The Companies House agent is built using a coordinated multi-agent architecture powered by the Google ADK. It features a root agent capable of directly fulfilling isolated queries, and delegating to a `SequentialAgent` pipeline to generate multifaceted, comprehensive reports.
+
+```mermaid
+flowchart TD
+    User(("User")) --> Root["root_agent<br/>(Companies House Assistant)"]
+    
+    Root -->|"Specific Query"| RootTools["Direct Tools<br/>(Profile, Officers, Charges, etc.)"]
+    RootTools -.-> FinalResponse(("Final Response"))
+
+    Root -->|"Full Report Request"| ReportGen["report_generation_agent<br/>(SequentialAgent)"]
+
+    subgraph "Report Generation Workflow"
+        direction TB
+        SearchSub["1. search_companies_agent<br/>(Finds Company Number)"]
+        
+        DataRetSub["2. data_retrieval_agent<br/>(ParallelAgent)"]
+        
+        subgraph "Data Retrieval (Parallel Execution)"
+            direction LR
+            PA1["get_company_profile_agent"]
+            PA2["get_company_officers_agent"]
+            PA3["search_companies_google_agent"]
+            PA4["credit_risk_agent"]
+            PA5["compliance_kyc_agent"]
+            PA6["corporate_structure_agent"]
+            PA7["filing_history_agent"]
+        end
+        
+        ReportSub["3. company_report_creation_agent<br/>(Synthesizes Report)"]
+        
+        SearchSub -->|"Company Number"| DataRetSub
+        DataRetSub -.- PA1 & PA2 & PA3 & PA4 & PA5 & PA6 & PA7
+        PA1 & PA2 & PA3 & PA4 & PA5 & PA6 & PA7 -->|"Aggregated Context"| ReportSub
+    end
+
+    ReportGen -.-> FinalResponse
+
+    style Root fill:#d4edda,stroke:#28a745,stroke-width:2px
+    style ReportGen fill:#fff3cd,stroke:#ffc107,stroke-width:2px
+    style DataRetSub fill:#cce5ff,stroke:#007bff,stroke-width:2px,stroke-dasharray: 5 5
+```
+
 ## Setup
 
 1.  **Clone the repository:**
